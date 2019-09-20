@@ -7,7 +7,7 @@
 body {
     font-size: 16px;
     line-height: 35px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   font-family: 'Teco', sans-serif;
     color: midnightblue;
 }
 
@@ -28,9 +28,24 @@ header, main, footer {
     padding: 0.5rem;
     max-width: 960px;
 }
+header, footer {
+    background-color: darkgreen;
+}
 
-header, footer, footer a {
+footer p {
     text-align: center;
     background-color: white;
     color: white;
+}
+footer .date {
+#photo{
+    position: absolute;
+    top:100px;
+    width: 200px;
+    margin: 300px;
+    margin-left: 20px;
+    background-color:rgba(100, 149, 237, 0.05);
+    padding: 2px;
+    border: solid thick rgba(100, 204, 250, 0.1);
+    border-radius:30px;  
 }
