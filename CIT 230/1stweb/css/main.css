@@ -18,7 +18,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    text-align: center;
+    padding-left: 20px;
     border-bottom: 1px solid chocolate;
     color: teal;
 }
@@ -30,22 +30,20 @@ header, main, footer {
 }
 header, footer {
     background-color: darkgreen;
+    border-radius: 10px;
+    padding: 7px
 }
 
 footer p {
-    text-align: center;
-    background-color: white;
+    text-align: center;    
     color: white;
 }
-footer .date {
+footer .date {}
 #photo{
-    position: absolute;
-    top:100px;
-    width: 200px;
-    margin: 300px;
-    margin-left: 20px;
+    float: right;
+    top: 10px;
+    margin: 10px;    
     background-color:rgba(100, 149, 237, 0.05);
-    padding: 2px;
     border: solid thick rgba(100, 204, 250, 0.1);
-    border-radius:30px;  
+    border-radius:50px;  
 }
