@@ -12,38 +12,66 @@ body {
 }
 
 h1 {
-    font-size: 3rem;
-    color: mintcream;    
+    font-size: 1.8rem;
+    color: mintcream;
+    padding-left: 60px;
 }
 
 h2 {
-    font-size: 2rem;
-    padding-left: 20px;
-    border-bottom: 1px solid chocolate;
+    font-size: 1.5rem;
+    padding-left: 5px;
+    border-bottom: 2px solid chocolate;
     color: teal;
 }
-
-header, main, footer {
-    margin: 1.25rem auto;
-    padding: 0.5rem;
+li{
+    padding-left: 20px;
+    margin-bottom: -10px;    
+}
+ul{
+    list-style-position: inside;    
+}
+header, main, footer {    
+    padding: 15px;
     max-width: 960px;
 }
+main{
+padding: 7px;
+    margin-left: 24px;    
+}
 header, footer {
-    background-color: darkgreen;
+    background: rgb(57,135,0);
+    background: linear-gradient(45deg, rgba(57,135,0,1) 0%, rgba(0,122,72,1) 35%, rgba(14,65,0,1) 100%);
     border-radius: 10px;
-    padding: 7px
+    padding: 7px;
+    margin:14px 14px  14px; 
+}
+#content{    
+    max-width: 760px;
+    margin:0px auto;
 }
 
 footer p {
     text-align: center;    
     color: white;
+    font-size: 10pt;
 }
-footer .date {}
-#photo{
+footer .date {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 8pt;
+    margin-top:-10px;
+}
+#robert{
+    padding-right:150px;
+    text-align: center;
+}
+#photo img{
     float: right;
-    top: 10px;
-    margin: 10px;    
+    margin-top: -35px;    
     background-color:rgba(100, 149, 237, 0.05);
-    border: solid thick rgba(100, 204, 250, 0.1);
-    border-radius:50px;  
+    border: solid thick rgba(1, 158, 119, 0.1);
+    border-radius:15px;      
+}
+#portal_assigment{
+    margin-right: 45px;
 }
