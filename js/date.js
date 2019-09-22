@@ -25,8 +25,11 @@ let d = new Date();
 let dayName = daynames[d.getDay()];
 let monthName = months[d.getMonth()];
 let year = d.getFullYear();
-let fulldate = dayName + ", " + monthName + " " + d.getDate() +", " + year;
+let hour = d.getHours();
+let minutes = d.getMinutes();
+let seconds = d.getSeconds();
+let fulldate = dayName + ", " + monthName + " " + d.getDate() +", " + year + " " + hour + ":" + minutes + ":" + seconds;
 document.getElementById("currentdate").textContent = fulldate;
 // ****************************
   let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
-  document.getElementById('currentdate2').textContent = new Date().toLocaleDateString('en-US', options);
+  document.getElementById('currentdate2').textContent = new Date().toLocaleDateString('en-US', options) + " " + new Date().toLocaleTimeString('en-US');
