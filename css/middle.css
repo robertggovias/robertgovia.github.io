@@ -1,0 +1,10 @@
+@media {
+    min-width: 32.5em;
+}
+#photo img{
+    float: right;
+    margin-top: -35px;    
+    background-color:rgba(100, 149, 237, 0.05);
+    border: solid thick rgba(1, 158, 119, 0.1);
+    border-radius:15px;      
+}
