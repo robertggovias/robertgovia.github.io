@@ -2,15 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    font-size: 16px;
-    line-height: 35px;
-    font-family: 'Teco', sans-serif;
-    color: midnightblue;
-}
-
+    }
+    header, main, footer {    
+        padding: 15px;
+        max-width: 960px;
+        }
 h1 {
     font-size: 1.5rem;
     color: mintcream;
@@ -19,32 +15,23 @@ h1 {
 }
 
 h2 {
-    font-size: 1rem;
-    padding-left: 5px;
+    font-size: 1rem;    
     border-bottom: 2px solid chocolate;
-    color: yellowgreen;
+    color: rgb(190, 224, 36);
     background-color: rgba(0,122,72,1);
     text-align: center;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
 }
-
-header, main, footer {    
-    padding: 15px;
-    max-width: 960px;
-}
-article{
-    display: grid;
-    grid-template-columns: 1fr;
-    padding: 7px;    
+#subtitle{
+    text-align: center;
+    color:wheat;
 }
 header, footer {
     background: rgb(57,135,0);
     background: linear-gradient(45deg, rgba(57,135,0,1) 0%, rgba(0,122,72,1) 35%, rgba(14,65,0,1) 100%);    
     padding: 7px;
-    margin:14px 14px  14px; 
-}
-#content{    
-    max-width: 760px;
-    margin:0px auto;
+    margin:14px 4px 14px 4px; 
 }
 
 footer p {
@@ -59,30 +46,33 @@ footer .date {
     margin-top:-10px;
 }
 
-img{
-    display: block;
-    margin: 0px auto;    
-    border-radius:5px;      
-}
-
-footer a:visited{
-    color: yellowgreen;
-}
-footer a:link{
-    color:white;
-}
-#centered{
-    text-align: center;
-}
 section{
-    border: solid green;
-    border-radius: 10px;
-    
+   border: solid green;
+   border-radius: 0px;
+   margin: 15px;
+   
 }
 section p{
+    font-size: 14px;    
     padding: 10px;
 }
-#subtitle{
-    text-align: center;
-    color:wheat;
+article{
+    display: grid;
+    justify-content: stretch;
+    max-width: 960px;
+    grid-template-columns: 1fr;
+    grid-column-gap: 16px;
+    padding: 7px;
 }
+body {
+    font-size: 16px;
+    line-height: 35px;
+    font-family: 'Teco', sans-serif;
+    color: midnightblue;
+}
+img{
+    display: none;
+    margin: 0px auto;    
+    border-radius:5px;
+    max-width: 280px;;      
+    }
