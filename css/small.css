@@ -71,3 +71,9 @@ footer .date {
 #portal_assigment{
     margin-right: 45px;
 }
+footer a:visited{
+    color: yellowgreen;
+}
+footer a:link{
+    color:white;
+}
