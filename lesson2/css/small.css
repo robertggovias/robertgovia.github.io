@@ -33,7 +33,7 @@ header, main, footer {
 }
 article{
     display: grid;
-    grid-template-columns: 3fr;
+    grid-template-columns: 1fr;
     padding: 7px;    
 }
 header, footer {
