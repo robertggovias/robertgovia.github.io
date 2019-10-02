@@ -15,6 +15,7 @@ h1 {
     font-size: 1.5rem;
     color: mintcream;
     padding-left: 0px;
+    text-align: center;
 }
 
 h2 {
@@ -22,6 +23,7 @@ h2 {
     padding-left: 5px;
     border-bottom: 2px solid chocolate;
     color: teal;
+    background-color: rgba(0,122,72,1);
 }
 li{
     padding-left: 20px;
@@ -36,7 +38,7 @@ header, main, footer {
 }
 main{
 padding: 7px;
-    margin-left: 24px;    
+margin-left: 24px;    
 }
 header, footer {
     background: rgb(57,135,0);
@@ -77,6 +79,9 @@ footer a:visited{
 footer a:link{
     color:white;
 }
-#centered{
+#centered p{
     text-align: center;
+}
+section{
+    border: solid green;
 }
