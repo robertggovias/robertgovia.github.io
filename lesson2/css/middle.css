@@ -17,8 +17,14 @@
     }
     section{
        border: solid green;
-       border-radius: 10px;       
-       
+       border-radius: 10px;              
+    }
+    .third{
+        grid-column: span 2;
+    }
+    .third img{
+        max-width: 450px;
+        margin: 0px auto;  
     }
     article{
         display: grid;
