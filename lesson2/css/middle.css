@@ -37,5 +37,9 @@
     img{        
         margin: 0px auto;            
         }
+    #example_image{
+        display: block;
+        text-align: center;
+    }
 }
     
