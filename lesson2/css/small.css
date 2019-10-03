@@ -8,12 +8,13 @@
         max-width: 960px;
         }
 
-        h1 {
+    h1 {
             font-size: 1.5rem;
             color: mintcream;
+            text-align: center;
             
         }
-        h2 {
+    h2 {
             font-size: 1rem;
             border-bottom: 2px solid chocolate;
             color: rgb(190, 224, 36);
