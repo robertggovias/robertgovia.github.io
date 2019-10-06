@@ -25,7 +25,9 @@
         color:white;        
     }
     ul{
-        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         overflow: hidden;
     }
     nav li{
@@ -33,7 +35,7 @@
     }
     
    nav li a{
-        display: block;
+        
         color: white ;        
         padding: 8px 16px;
         text-decoration: none;    
