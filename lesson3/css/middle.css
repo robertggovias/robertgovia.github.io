@@ -1,4 +1,4 @@
-@media only screen and (min-width: 32.5em){
+@media only screen and (min-width: 33.85em){
     h1 {
         font-size: 1.8rem;
         }
@@ -15,6 +15,28 @@
     header, footer {
         border-radius: 10px;     
     }
+    nav{
+        background: rgb(57,135,0);    
+        padding: 0px;
+        margin:14px 4px 14px 4px; 
+        color:white;        
+    }
+    ul{
+        
+        overflow: hidden;
+    }
+    nav li{
+        float: left;
+    }
+    
+   nav li a{
+        display: block;
+        color: white ;        
+        padding: 8px 16px;
+        text-decoration: none;    
+        text-align: center;
+    }
+
     section{
        border: solid green;
        border-radius: 10px;              
