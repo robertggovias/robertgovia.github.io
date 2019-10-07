@@ -110,8 +110,9 @@ body {
     color: midnightblue;
 }
 img{
+    display: block;
+    width: 93%;
     margin: 0px auto;
-    width: 95%;
 
     }
 .active{
