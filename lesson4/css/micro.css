@@ -157,10 +157,13 @@ body {
 }
 img{
     display: block;
-    width: 93%;
+    width: 100%;
     margin: 0px auto;
 
     }
+article img{
+        max-width: 500px;
+        }
 .active{
     background-color: rgba(70, 70, 70, 0.25);
     color: #cfeaff;   
