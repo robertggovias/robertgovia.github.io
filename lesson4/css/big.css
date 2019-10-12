@@ -1,0 +1,52 @@
+@media only screen and (min-width: 60em){
+    h1 {
+        font-size: 1.8rem;
+        color: mintcream;
+        
+    }
+    h2 {
+        font-size: 1.3rem;
+        border-bottom: 2px solid chocolate;
+        color: rgb(190, 224, 36);
+        background-color: rgba(0,122,72,1);
+        text-align: center;
+    }
+
+    article{
+    display: grid;
+    justify-content: stretch;
+    max-width: 960px;
+    grid-template-columns: 1fr 3fr;
+    grid-column-gap: 16px;
+    padding: 7px;
+    }
+
+    #content{    
+    max-width: 960px;
+    margin:0px auto;
+    }
+
+    
+
+    section{
+     border: solid green;
+    border-radius: 10px;
+   
+    }
+
+    footer a:visited{
+    color: yellowgreen;
+    }
+    footer a:link{
+    color:white;
+    }
+    
+    section p{
+    padding: 10px;
+    font-size: 16px;
+    }
+    .third{
+        grid-column: span 1;        
+    }
+}
+  
