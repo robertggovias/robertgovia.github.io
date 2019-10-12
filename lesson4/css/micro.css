@@ -55,6 +55,11 @@
     .title{    
         text-align: center;
     }
+    .heroImage{
+        background-image: url("/lesson4/img/spiralstorm1.jpg");
+        background-size: 100%;
+        background-position-y: bottom ;
+    }
     h1 {        
         font-size: 0.9rem;
         color:#1394f6;
@@ -79,7 +84,7 @@
         margin-block-start: 0em;
         margin-block-end: 0em;
         padding-bottom: 
-       }                
+       }
 
 nav{
     background:linear-gradient(80deg, #1394f6 0%, #0e81d8 50%, #095fa1 100%);    
@@ -131,13 +136,12 @@ footer .date {
 section{
    background-color: #cfeaff;
    border-radius: 0px;
-   margin-bottom: 15px;
-   
-   
-}
+   margin-bottom: 15px;}
 section p{
     font-size: 14px;    
-    padding: 10px;
+    padding: 10px;}
+section .arriba{
+
 }
 
 article{
@@ -145,8 +149,7 @@ article{
     justify-content: stretch;    
     grid-template-columns: 1fr;    
     grid-column-gap: 16px;
-    padding: 7px;
-    }
+    padding: 7px;}
     
 body {
     font-size: 16px;
