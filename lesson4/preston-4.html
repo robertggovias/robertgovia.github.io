@@ -5,12 +5,13 @@
         <title>CIT:230 Assigment Portal - Robert Govia</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=devive-width, initial-scale=1">
+        
         <link rel="stylesheet" href="css/normalize.css">    
         <link rel="stylesheet" href="css/micro.css">                
         <link rel="stylesheet" href="css/small.css">                
-            <link rel="stylesheet" href="css/middle.css">
-            <link rel="stylesheet" href="css/big.css">
-            
+        <link rel="stylesheet" href="css/middle.css">
+        <link rel="stylesheet" href="css/big.css">
+           
             <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
     </head>
@@ -18,7 +19,7 @@
         <header>
           
             <div class="logod">
-            <img class="logo" src="/lesson4/img/logo_listo.png" height="50px" width="50px">
+            <img class="logo" src="/lesson4/img/logo_listo.png" height="80px">
         
     </div>
         <div id="hhead">
@@ -33,9 +34,10 @@
             
     </header>
     <nav>
-            <ul>
-                    <li ><a href="preston-4.html#">Home</a></li>
-                    <li><a class="active" href="preston-4.html">Preston</a></li>
+            <ul class="menu">
+                <li><a href="#" onclick="toggleMenu()">&#9776 Menu</a></li>
+                <li ><a href="preston-4.html#">Home</a></li>
+                <li><a class="active" href="preston-4.html">Preston</a></li>
                 <li><a href="preston-4.html#">Soda Spring</a></li>
                 <li><a href="preston-4.html#">Fish Haven</a></li>
                 <li><a href="preston-4.html#">Storm Center</a></li>
@@ -43,7 +45,9 @@
 
             
     </nav>
-    <article>
+    <script src="/lesson4/js/menu.js"></script>
+       <article>
+           <h3>Preston</h3>
             <section class="first">
                 <h2>
                     Site Name

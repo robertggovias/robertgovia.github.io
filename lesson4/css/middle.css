@@ -4,9 +4,7 @@
         }
      
     h2 {
-            font-size: 1.2rem;
-            border-bottom: 2px solid chocolate;
-            color: rgb(190, 224, 36);
+            font-size: 1.2rem;            
             background-color:linear-gradient(80deg, #1394f6 0%, #0e81d8 50%, #095fa1 100%);
             text-align: center;
             margin-block-start: 0em;
@@ -18,34 +16,33 @@
     header, footer {
         border-radius: 10px;     
     }
-    nav{
-        background: rgb(57,135,0);    
-        padding: 0px;
-        margin:14px 4px 14px 4px; 
-        color:white;        
-    }
-    ul{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        overflow: hidden;
-    }
-    nav li{
-        float: left;
+    #hhead{
+        margin-left: 25px;
     }
     
-   nav li a{
-        
-        color: white ;        
+    .menu{
+        display: flex;
+     
+    }
+    .menu li{
+        display: block;
+        flex: 1 1 100%;
+    }
+
+    
+   .menu li a{     
+       display: block;   
+        color: white ;  
         padding: 8px 16px;
         text-decoration: none;    
         text-align: center;
     }
 
-    section{
-       border: solid green;
-       border-radius: 10px;              
+    .menu li:first-child{
+        display:none;
     }
+    
+    
     .third{
         grid-column: span 2;
     }
