@@ -3,12 +3,12 @@
     padding: 0;
     box-sizing: border-box;
     }
-    header, main, footer {    
+    main {    
         
         max-width: 960px;        
         }
     header, footer {
-        margin:14px 4px 14px 4px; 
+        margin:14px 0px 14px 0px; 
         }
     main, footer{
             padding: 15px;
@@ -89,7 +89,7 @@
 nav{
     background:linear-gradient(80deg, #1394f6 0%, #0e81d8 50%, #095fa1 100%);    
     padding: 0px;
-    margin:14px 4px 14px 4px; 
+    margin:14px 0px 14px 0px; 
     color:white;        
 }
 .menu {

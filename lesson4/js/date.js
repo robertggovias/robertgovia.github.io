@@ -28,7 +28,7 @@ let year = d.getFullYear();
 let hour = d.getHours();
 let minutes = d.getMinutes();
 let seconds = d.getSeconds();
-let fulldate = dayName + ", " + monthName + " " + d.getDate() +", " + year + " " + hour + ":" + minutes + ":" + seconds;
+let fulldate = dayName + ", " + monthName + " " + d.getDate() +", " + year;
 document.getElementById("currentdate").textContent = fulldate;
 // ****************************
   let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
