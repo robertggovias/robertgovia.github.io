@@ -58,6 +58,7 @@
     .heroImage{
         background-image: url("/robertgovia.github.io/lesson4/img/spiralstorm1.jpg");
         background-size: 100%;
+        min-height: 171px;
         background-position-y: bottom ;
     }
     h1 {        
