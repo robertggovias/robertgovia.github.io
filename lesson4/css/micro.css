@@ -8,13 +8,13 @@
         max-width: 960px;        
         }
     header, footer {
-        margin:14px 0px 14px 0px; 
+        margin:14px 0px 0px 0px; 
         }
     main, footer{
             padding: 15px;
 
         }
-    footer{
+    footer{ 
         background:linear-gradient(80deg, #1394f6 0%, #0e81d8 50%, #095fa1 100%);
         color: ffffff;         
     }
@@ -145,7 +145,7 @@ section p{
 article{
     display: grid;
     justify-content: stretch;    
-    grid-template-columns: 1fr;    
+    grid-template-columns: 1fr 1fr;    
     grid-column-gap: 16px;
     padding: 7px;}
     
