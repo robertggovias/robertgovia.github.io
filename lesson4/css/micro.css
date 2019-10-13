@@ -56,10 +56,11 @@
         text-align: center;
     }
     .heroImage{
-        background-image: url("/robertgovia.github.io/lesson4/img/spiralstorm1.jpg");
-        background-size: 100%;
+        background-image: url("/lesson4/img/spiralstorm1.jpg");
+        background-size:cover; 
         min-height: 171px;
         background-position-y: bottom ;
+        background-position-x: center;
     }
     h1 {        
         font-size: 0.9rem;
@@ -164,6 +165,11 @@ img{
     }
 article img{
         max-width: 500px;
+        background-size:cover; 
+        min-height: 267px;
+        background-position-y: bottom ;
+        background-position-x: center;
+        
         }
 .active{
     background-color: rgba(70, 70, 70, 0.25);
