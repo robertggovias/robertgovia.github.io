@@ -46,6 +46,12 @@
         grid-template-columns: 2fr 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 16px;
+        background-color: #cfeaff;
+        }
+        .top-right{
+            position: relative;
+            top:30px;
+            right: 15px;
         }
     .left{
         display: grid;

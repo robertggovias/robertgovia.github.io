@@ -52,7 +52,7 @@ grid-area: header;
     grid-template-areas:
     "header header header header"
     "nav title title image"
-    "footer footer footer footer" 
+    "footer footer footer footer" ;
     
 }
 main {max-width:820px;margin:0 auto;}
