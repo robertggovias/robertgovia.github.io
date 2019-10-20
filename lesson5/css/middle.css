@@ -13,7 +13,9 @@
     h3 {
         font-size: 1.1rem;
     }
-    
+    .adout{
+        display: none;
+    }
     #hhead{
         margin-left: 25px;
     }
