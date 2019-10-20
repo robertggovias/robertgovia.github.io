@@ -39,13 +39,29 @@
         color:#1394f6;
         font-size: 13px;
     }
-    #centered{
+    .topic{color:#f5d73;
+    font-weight: bold;
+}
+    .report{color:#095fa1;
+
+    }
+    .centered{
         text-align: center;
-        }       
-    
+        }
+    .center{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    table{
+        background-color: #cfeaff;
+        width: 100%;
+    }
+    tr :hover{
+        background-color:#095fa1;
+        color:white;
+    }
     .logod{
-        float: left;
-        
+        float: left;        
         min-height: 80px;
         padding: 15px 15px;
         }
@@ -56,7 +72,8 @@
         text-align: center;
     }
     .heroImage{
-        background-image: url("/robertgovia.github.io/lesson4/img/spiralstorm1.jpg");
+        /*background-image: url("/robertgovia.github.io/lesson4/img/spiralstorm1.jpg");*/
+        background-image: url("/lesson4/img/spiralstorm1.jpg");
         background-size:cover; 
         min-height: 171px;
         background-position-y: bottom ;
@@ -139,10 +156,6 @@ footer .date {
     margin-top:-10px;
 }
 
-section{
-   background-color: #cfeaff;
-   border-radius: 0px;
-   margin-bottom: 15px;}
 section p{
     font-size: 14px;    
     padding: 10px;}
@@ -154,7 +167,17 @@ article{
     grid-template-columns: 1fr 1fr;    
     grid-column-gap: 16px;
     padding: 7px;}
-    
+section{
+        background-color: #cfeaff;
+        border-radius: 0px;
+        margin-bottom: 15px;}
+.arriba{    
+    position:absolute;
+    top:30px;
+    left:20px; 
+    min-height: 180px;
+    background-color: #91cfffd3;    
+    }    
 body {
     font-size: 16px;
     line-height: 35px;
@@ -164,9 +187,13 @@ body {
 img{
     display: block;
     width: 100%;
-    margin: 0px auto;
+    margin: 0px auto;}
+article .arriba{
+    position: relative;
+}
 
-    }
+
+
     section .middle{
         vertical-align: middle;
     }
