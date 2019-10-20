@@ -57,9 +57,10 @@
         display: grid;
         justify-content: stretch;
         max-width: 960px;
-        grid-template-columns: 1fr 2fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-column-gap: 16px;
         grid-row-gap: 16px;
+        background-color: #cfeaff;
         }
     
     .third{
@@ -69,7 +70,7 @@
         max-width: 450px;
         margin: 0px auto;  
     }
-    article{
+    article {
         display: grid;
         justify-content: stretch;
         max-width: 960px;
@@ -77,6 +78,14 @@
         grid-column-gap: 16px;
         grid-row-gap: 16px;
         }
+        article .left{
+            display: grid;
+            justify-content: stretch;
+            max-width: 960px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+            }
     img{        
         margin: 0px auto;            
         }

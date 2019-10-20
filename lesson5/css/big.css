@@ -27,7 +27,7 @@
             display: grid;
             justify-content: stretch;
             max-width: 960px;
-            grid-template-columns: 1fr 3fr;
+            grid-template-columns: 1fr 1fr 1fr;
             grid-column-gap: 16px;
             padding: 7px;
             }   
