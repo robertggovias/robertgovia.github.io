@@ -167,21 +167,24 @@ img{
     margin: 0px auto;
 
     }
+    section .middle{
+        vertical-align: middle;
+    }
+    section .contact{
+        height: 300px;
+    }
     section img{
+        vertical-align: middle;
         max-width: 500px;
-        background-size:cover; 
-        min-height: 267px;
-        background-position-y: bottom ;
-        background-position-x: center;
-        
+        object-fit: cover;
+        min-height: 267px;                
         }
 
     article img{
         max-width: 500px;
-        background-size:cover; 
+        object-fit: cover;
         min-height: 267px;
-        background-position-y: bottom ;
-        background-position-x: center;
+        
         
         }
 .active{
