@@ -10,5 +10,10 @@ h1{
 #hhead{
     margin-left: 10px;
 }
-
+th{
+    font-size: 6pt;
+}
+tr{
+    font-size: 10pt;
+}
 }

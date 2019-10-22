@@ -60,6 +60,12 @@
         background-color:#095fa1;
         color:white;
     }
+    th{
+        font-size: 4pt;
+    }
+    tr{
+        font-size: 7pt;
+    }
     .logod{
         float: left;        
         min-height: 80px;

@@ -15,6 +15,12 @@
     grid-column-gap: 16px;
     padding: 7px;
     }
+    th{
+        font-size: 13pt;
+    }
+    tr{
+        font-size: 16pt;
+    }
     .right{
         display: grid;
         justify-content: stretch;

@@ -19,7 +19,13 @@
     #hhead{
         margin-left: 25px;
     }
-    
+    th{
+        font-size: 9pt;
+    }
+    tr{
+        font-size: 12pt;
+    }
+
     .menu{
         display: flex;
      
