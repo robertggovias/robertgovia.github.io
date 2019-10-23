@@ -150,6 +150,7 @@ nav{
 }
 #announce{
     font-weight: bolder;
+    display: block;
 }
 .menu li :hover{
     background-color: rgba(70, 70, 70, 0.25);
