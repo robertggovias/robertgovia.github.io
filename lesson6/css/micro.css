@@ -78,8 +78,8 @@
         text-align: center;
     }
     .heroImage{
-        /*background-image: url("/robertgovia.github.io/lesson4/img/spiralstorm1.jpg");*/
-        background-image: url("/lesson4/img/spiralstorm1.jpg");
+        background-image: url("/robertgovia.github.io/lesson4/img/spiralstorm1.jpg");
+        /*background-image: url("/lesson4/img/spiralstorm1.jpg");*/
         background-size:cover; 
         min-height: 171px;
         background-position-y: bottom ;
