@@ -33,11 +33,3 @@ document.getElementById("currentdate").textContent = fulldate;
 // ****************************
   let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
   document.getElementById('currentdate2').textContent = new Date().toLocaleDateString('en-US', options) + " " + new Date().toLocaleTimeString('en-US');
-
-  function panquekes(){
-	  if(dayName=="Tuesday"){
-		document.getElementsById("announce").style.display = "none";
-	  }
-	  else{
-		document.getElementsById("announce").style.display = "block";
-	  }
