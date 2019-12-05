@@ -1,0 +1,31 @@
+.weatherSummary{
+    position:relative;
+    top:-154px;
+    max-width:213px;
+    left:20px; 
+    min-height: 180px;
+    background-color: #91cfffd3;    
+    }  }
+@media only screen and (min-width:414px){
+    .weatherSummary{       
+        top:-181px;       
+        }  }
+        @media only screen and (min-width:736px){
+            .weatherSummary{
+              top:-333px;                
+                }  }
+                @media only screen and (min-width: 1024px){
+                    .weatherSummary{                     
+                        top:-444px;                         
+                        } 
+                }
+                @media only screen and (min-width: 1366px){
+                    .weatherSummary{
+                       top:-444px;                      
+                        } 
+                }
+                
+            
+        
+
+            

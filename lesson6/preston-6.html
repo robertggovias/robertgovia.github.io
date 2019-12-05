@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    <head>
+        <title>CIT:230 Assigment Portal - Robert Govia</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=devive-width, initial-scale=1">
+        <link rel="shortcut icon" href="/robertgovia.github.io/lesson6/favicon.ico">
+        <link rel="stylesheet" href="css/normalize.css">    
+        <link rel="stylesheet" href="css/micro.css">                
+        <link rel="stylesheet" href="css/small.css">                
+        <link rel="stylesheet" href="css/middle.css">
+        <link rel="stylesheet" href="css/weatherSummary.css">
+        <link rel="stylesheet" href="css/big.css">
+           
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    </head>
+    <body>        
+        <div id="announce"><p class="centered">Saturday Preston Pancakes in the Park!<br>
+            9:00 a.m. Friday at the city park</p></div>
+        <header>
+            <div class="logod">
+            <img class="logo" src="/robertgovia.github.io/lesson6/img/logo_listo.png" height="80px">
+        
+    </div>
+        <div id="hhead">
+
+            <h1 class="title">
+                Weather Schedule
+            </h1 class="title">
+            <p id="subtitle">
+                Because weather is never late
+            </p>
+            
+        </div>
+            
+    </header>
+    <nav>
+            <ul class="menu">
+                <li><a href="#" onclick="toggleMenu()">&#9776 Menu</a></li>
+                <li ><a href="preston-6.html#">Home</a></li>
+                <li><a class="active" href="preston-6.html">Preston</a></li>
+                <li><a href="preston-6.html#">Soda Spring</a></li>
+                <li><a href="preston-6.html#">Fish Haven</a></li>
+                <li><a href="preston-6.html#">Storm Center</a></li>
+                <li><a href="preston-6.html#">Gallery</a></li>              
+    </nav>
+    <script src="/robertgovia.github.io/lesson4/js/menu.js"></script>
+    <div id="content">
+    <h1 class="title">
+           Preston    
+    </h1>
+    </br>
+    <div class="heroImage">
+        
+        <picture>
+            <source srcset="img/cit230_image_franklin_Micro_414.jpg" media="(max-width:414px)">
+            <source srcset="img/cit230_image_franklin_Small_736.jpg" media="(min-width:415px) and (max-width:736px)">
+            <source srcset="img/cit230_image_franklin_Medium_1024.jpg" media="(min-width:737px) and (max-width:1024px)">
+                <source srcset="img/cit230_image_franklin_Big_1366.jpg" media="(min-width:1025px) and (max-width:1366px)">
+            <img src="img/cit230_image_franklin_Huge_1920.jpg">            
+        </picture>
+        <div class="weatherSummary transp">
+                <h2>
+                    Weather Summary
+                 </h2>
+                        <p>
+                            <span class="topic">Currently: </span><span class="report">Sunny</span></br>
+                            <span class="topic">Temperature: </span><span class="report">76 °F</span></br>
+                            <span class="topic">Humidity: </span><span class="report">69%</span></br>
+                            <span class="topic">Precipitation: </span><span class="report">0 inches</span></br>
+                            <span class="topic">Wind Speed: </span><span class="report">5 mph</span></br>
+                        </p>
+            </div>      
+    </div>
+        <div>
+        </br>
+            <h2>High temperature forecast</h2>
+            <table class="centered center">
+                <tr>
+                    <th>Day</th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wendnesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday</th>
+                    <th>Sunday</th>                    
+                </tr>
+                <tr>
+                        <th>Temperarture</th>
+                        <td><span id="t1">40</span><span>ºF</span></td>
+                        <td><span id="t2">37</span><span>ºF</span></td>
+                        <td><span id="t3">38</span><span>ºF</span></td>
+                        <td><span id="t4">29</span><span>ºF</span></td>
+                        <td><span id="t5">39</span><span>ºF</span></td>
+                        <td><span id="t6">45</span><span>ºF</span></td>
+                        <td><span id="t7">33</span><span>ºF</span></td>                 
+                    </tr>
+                    <tr>
+                        <th>Wind Speed</th>
+                        <td><span id="s1">4</span><span>mph</span></td>
+                        <td><span id="s2">3.9</span><span>mph</span></td>
+                        <td><span id="s3">4.3</span><span>mph</span></td>
+                        <td><span id="s4">5.7</span><span>mph</span></td>
+                        <td><span id="s5">6.3</span><span>mph</span></td>
+                        <td><span id="s6">4.2</span><span>mph</span></td>
+                        <td><span id="s7">4.3</span><span>mph</span></td>                                         
+                    </tr>
+                    <tr>
+                        <th>Wind Chill</th>
+                        <td id="w1"></td>
+                        <td id="w2"></td>
+                        <td id="w3"></td>
+                        <td id="w4"></td>
+                        <td id="w5"></td>
+                        <td id="w6"></td>
+                        <td id="w7"></td>                    
+                    </tr>
+
+            </table>        Place holder, Place holder, Place holder,Place holder,Place holder,Place holder,Place holder,Place holder,Place holder.
+            </p>
+        </br>
+        </div>        
+    
+           <div class="right">            
+            <section>
+                    <h3 class="s">
+                        Article
+                    </h3>
+                    <p id="centered">
+                            “Weather Schedule” was designed for organized people like you, yes, you prefer to be aware from a storm before that picnic, beach day, hiking adventure, or your outdoor weeding, but you never found a weather warning in the same place just right there with your schedule plan.
+                        </p>                    
+                </section>
+                <section>
+                        <img class="top-right" src="/robertgovia.github.io/lesson4/img/katrina-08-28-2005.jpg">
+                        <!--<img class="top-right" src="/lesson4/img/katrina-08-28-2005.jpg">-->
+                        
+                    </section>
+                </div>
+                <br><br>
+                <div class="left">            
+                    <section class="contact middle">
+                        <img  src="/robertgovia.github.io/lesson6/img/rain.jpg">
+                        <!--<img  src="/lesson6/img/rain.jpg">-->
+                        
+                    </section>
+                    <section class="contact middle">
+                            <h3 class="s">
+                                Contact
+                            </h3>
+                            <p id="centered">
+                                    “Weather Schedule” was designed for organized people like you, yes, you prefer to be aware from a storm before that picnic, beach day, hiking adventure, or your outdoor weeding, but you never found a weather warning in the same place just right there with your schedule plan.
+                                </p>                    
+                        </section>
+                        <section>
+                            <img src="/robertgovia.github.io/lesson6/img/map.jpg">
+                            <!--<img src="/lesson6/img/map.jpg">-->
+                                
+                            </section>
+                        </div>
+            
+    </body></div>
+    <footer>
+            <p>© 2019 | Robert Govia | Utah | <a href="http://www.byui.edu/"> BYUI Online Learning</a></p>
+            <div class="date">Last updated: <span id="currentdate"></span></div>
+
+        <script src="js/date.js"></script>
+        <script src="js/windchill.js"></script>
+        <script src="js/panqueke.js"></script>
+        
+        </script>
+    </footer>
+</div>
+</html>
