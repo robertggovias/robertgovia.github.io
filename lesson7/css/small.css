@@ -18,8 +18,8 @@ tr{
 }
 
 .weatherSummary{
-    position:relative;
-    top:-173px;
+    position:absolute;
+    top:10px;
     left:20px; 
     min-height: 180px;
     background-color: #91cfffd3;    
