@@ -22,5 +22,9 @@ tr{
     left:20px; 
     min-height: 180px;
     background-color: #91cfffd3;    
-    } 
+    }
+    #forecast{
+        display: none;
+    }
+    
 }

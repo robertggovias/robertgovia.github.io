@@ -59,5 +59,9 @@
     .third{
         grid-column: span 1;        
     }
+    #forecast{
+        display: block;
+    }
+
 }
   

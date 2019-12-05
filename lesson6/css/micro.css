@@ -230,3 +230,6 @@ article .arriba{
 .blueB{
     background-color: #cfeaff;
 }
+#forecast{
+    display: none;
+}

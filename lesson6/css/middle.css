@@ -97,6 +97,11 @@
         display: block;
         text-align: center;
     }
-       
-}
     
+   
+}
+@media only screen and (min-width: 580px){
+    #forecast{
+        display: block;
+    }
+}
