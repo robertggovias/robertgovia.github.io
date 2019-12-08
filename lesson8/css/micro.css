@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    main {    
+        
+        max-width: 960px;        
+        }
+    header, footer {
+        margin:14px 0px 0px 0px; 
+        }
+    main, footer{
+            padding: 15px;
+
+        }
+    footer{ 
+        background:linear-gradient(80deg, #1394f6 0%, #0e81d8 50%, #095fa1 100%);
+        color: ffffff;         
+    }
+    header{
+        height: 80px;
+        color: #1394f6;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+    header img .logod{
+        width: 80px;
+        height: auto;
+    }
+    .hhead{
+        display: flex;
+        flex-direction: column;
+    }    
+    
+        #subtitle{
+        text-align: center;
+        color:#1394f6;
+        font-size: 13px;
+    }
+    .topic{color:#f5d73;
+    font-weight: bold;
+    margin-left: 10px;
+}
+    .report{color:#095fa1;
+
+    }
+    .centered{
+        text-align: center;
+        }
+    .center{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+    table{
+        background-color: #cfeaff;
+        width: 100%;
+    }
+    tr :hover{
+        background-color:#095fa1;
+        color:white;
+    }
+    th{
+        font-size: 4pt;
+    }
+    tr{
+        font-size: 7pt;
+    }
+    .logod{
+        float: left;        
+        min-height: 80px;
+        padding: 15px 15px;
+        }
+    .logo{
+        width: 80px;
+    }
+    .title{    
+        text-align: center;
+    }
+    .heroImage{
+        /*background-image: url("/robertgovia.github.io/lesson5/img/spiralstorm1.jpg");
+        background-image: url("/lesson5/img/spiralstorm1.jpg");
+        background-size:cover;*/
+        position: relative;
+        min-height: 171px;
+        /*background-position-y: bottom ;
+        background-position-x: center;*/
+    }
+    h1 {        
+        font-size: 0.9rem;
+        color:#1394f6;
+            text-align: center;
+            margin-block-start: 0em;
+            margin-block-end: 0em;           
+            
+        }
+    h2 {
+            font-size: 1rem;
+            border-bottom: 2px solid #c75c5c;
+            color: #cfeaff;
+            background-color:#1394f6;
+            text-align: center;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }   
+        h3 .s{
+            color: #1394f6;
+
+        }     
+    h3 {
+        font-size: 1.8rem;
+            color: #1394f6;
+        text-align: center;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        
+       }
+
+nav{
+    background:linear-gradient(80deg, #1394f6 0%, #0e81d8 50%, #095fa1 100%);    
+    padding: 0px;
+    margin:14px 0px 14px 0px; 
+    color:white;        
+}
+.menu {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    max-width:1600px;    
+    background:linear-gradient(80deg, #1394f6 0%, #0e81d8 50%, #095fa1 100%);    
+    text-align: center;
+    border-bottom: 2px solid #c75c5c;
+}
+.menu li:first-child{
+    display: block;
+}
+    .menu li{
+        display: none;
+}
+.menu li a{
+    display: block;
+    color: white ;        
+    padding: 8px 16px;
+    text-decoration: none;    
+}
+.responsive li{
+    display: block;
+}
+#adout {
+    display: inline;
+}
+#announce{
+    font-weight: bolder;
+    display: block;
+}
+.menu li :hover{
+    background-color: rgba(70, 70, 70, 0.25);
+    color: #cfeaff;
+    }
+
+footer p {
+    text-align: center;    
+    color: white;
+    font-size: 10pt;
+}
+footer .date {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 8pt;
+    margin-top:-10px;
+}
+
+section p{
+    font-size: 14px;    
+    padding: 10px;}
+
+
+article{
+    display: grid;
+    justify-content: stretch;    
+    grid-template-columns: 1fr 1fr;    
+    grid-column-gap: 16px;
+    padding: 7px;}
+section{
+        background-color: #cfeaff;
+        border-radius: 0px;
+        margin-bottom: 15px;}
+  
+body {
+    font-size: 16px;
+    line-height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    color: #4F5D73;
+}
+img{
+    display: block;
+    width: 100%;
+    margin: 0px auto;}
+article .arriba{
+    position: relative;
+}
+
+
+
+    section .middle{
+        vertical-align: middle;
+    }
+    section .contact{
+        height: 300px;
+    }
+    section img{
+        vertical-align: middle;
+        max-width: 500px;
+        object-fit: cover;
+        min-height: 267px;                
+        }
+
+    article img{
+        max-width: 500px;
+        object-fit: cover;
+        min-height: 267px;
+        
+        
+        }
+.active{
+    background-color: rgba(70, 70, 70, 0.25);
+    color: #cfeaff;   
+}
+.blueB{
+    background-color: #cfeaff;
+}
+#forecast{
+    display: none;
+}
