@@ -39,7 +39,7 @@
         color:#1394f6;
         font-size: 13px;
     }
-    .topic{color:#f5d73;
+    .topic{color: #f5d73;
     font-weight: bold;
     margin-left: 10px;
 }
@@ -232,4 +232,70 @@ article .arriba{
 }
 #forecast{
     display: none;
+}
+.upper{
+    display: block;
+    color: red;    
+}
+.upper input{
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    height: 46px;
+    border-radius: 0 20px 20px 10px;
+
+}
+fieldset{
+    border:solid violet;
+    border-radius: 0 60px 60px 30px;
+    background-color: blue;
+    color:white;
+    max-width: 420px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto 30px;
+}
+legend{
+    border-radius: 10px;
+    background:linear-gradient(80deg, #1394f6 0%, #0e81d8 150%);
+    padding: 0 15px;
+    font-weight: 500;
+}
+.lefted{
+    color: green;
+    background-color: red;
+    display: block;
+   }
+label{
+    margin: 10px 0 0 0;
+}
+
+option :disabled{
+    color: gray;
+}
+#ratingvalue{
+    display: inline;
+    text-align: center;
+}
+input[type="range" i] {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    ;
+}
+input[type="radio" i]{
+   width: 30px;
+   max-width: 30px;
+   height: 30px;  
+   display: inline;
+}
+.tt{
+    display: inline;
+    padding-bottom: 67px;
+}
+label.lefted{
+    background-color: #b0ea61;
+    color: aqua;
+    line-height: 30px;
+    padding-top: 10px;
 }
