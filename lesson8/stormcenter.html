@@ -57,7 +57,7 @@
     <form method="GET" action="thank.html">
         <fieldset>
             <legend>First, we need a way contact you!</legend>
-            <label class="upper">Full Name*<input type="text" name="fullname" required pattern="[A-Za-z]{5,}"></label>
+            <label class="upper">Full Name*<input type="text" name="fullname" required pattern="[A-Za-z ]{5,}"></label>
             <label class="upper">Email<input type="email" name="e-mail" placeholder="your_email@_____.com"></label>
             <label class="upper">Phone<input type="tel" name="phone_number" required></label>
             <label class="upper">ZipCode<input type="number" name="zip" required></label>
@@ -67,7 +67,7 @@
             <label class="lefted">It's happening right now? or when hapenned?<input type="date" name="stormdate"></label>
             <label class="lefted">What kind of storm is this one? <input list="stormtype">          
                 <datalist id="stormtype">
-                    <option value="" disabled>Select a Storm Type</option>
+                    <option disabled selected value="">Select a Storm Type</option>
                     <option value="Flash Food"></option>
                     <option value="Hail"></option>
                     <option value="Hurricane"></option>
@@ -108,8 +108,10 @@
         </fieldset>
         <fieldset>
             <legend>Any more else that is needed to be commented?</legend>
-            <textarea name="comment" form="usrform" rows="4" cols="50"></textarea>
+            <textarea name="comment" form="usrform" rows="6" cols="40"></textarea>
         </fieldset>
+        <input type="submit" name="sendreport" value="Send Report">
+
         
     </form>
             

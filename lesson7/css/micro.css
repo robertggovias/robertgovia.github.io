@@ -76,16 +76,7 @@
             margin-block-end: 0em;           
             
         }
-    h2 {
-            font-size: 1rem;
-            border-top: 2px solid #c75c5c;
-            color: #cfeaff;
-            background-color:#1394f6;
-            text-align: center;
-            margin-block-start: 0em;
-            margin-block-end: 0em;
-            border-radius: 0 0 50px 50px;
-        }   
+      
         h3 .s{
             color: #1394f6;
 
@@ -176,3 +167,14 @@ img{
 .blueB{
     background-color: #cfeaff;
 }
+
+picture img[data-src] {
+    filter: blur(0.2em);
+    }
+picture img {
+    filter: blur(0em);
+    transition: filter 1s;
+    }
+    h2{
+        display: none;
+    }

@@ -299,3 +299,14 @@ label.lefted{
     line-height: 30px;
     padding-top: 10px;
 }
+textarea {
+    overflow: auto;
+    border-radius: 0 30px 30px;
+    margin-bottom: -10px;
+}
+[type="submit"]{
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    border-radius: 0 15px 15px;
+}

@@ -1,4 +1,4 @@
-@media only screen and (min-width: 33.85em){
+@media only screen and (min-width: 35em){
     h1 {
         font-size: 1.8rem;
         }
@@ -94,13 +94,7 @@
     .image_gallery{
                 grid-template-columns:repeat(2, minmax(100px, 1fr));
             }
-            .image_gallery img{
-                border-top-right-radius: 35px;
-            }
-            .image_gallery div{
-                border-radius: 0px 35px 35px 35px;
-                
-            }
+           
     img{        
         margin: 0px auto;            
         }
@@ -108,6 +102,9 @@
         display: block;
         text-align: center;
     }
+h2 {
+    display: none;
+}
        
 }
     
