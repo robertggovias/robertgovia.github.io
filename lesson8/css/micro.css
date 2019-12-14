@@ -234,22 +234,26 @@ article .arriba{
     display: none;
 }
 .upper{
-    display: block;
-    color: red;    
+    display: block; 
 }
 .upper input{
+    padding-left: 20px;
+    color: darkblue;
     display: block;
     max-width: 400px;
     width: 100%;
     height: 46px;
     border-radius: 0 20px 20px 10px;
-
+}
+input{
+    padding:7px;
+    margin-top: 2px;
 }
 fieldset{
-    border:solid violet;
-    border-radius: 0 60px 60px 30px;
-    background-color: blue;
-    color:white;
+    border:solid rgba(78, 118, 163, 0.05);
+    
+    background-color: rgba(203, 231, 255, 0.822);
+    color:rgb(9, 51, 75);
     max-width: 420px;
     width: 100%;
     padding: 20px;
@@ -257,45 +261,58 @@ fieldset{
 }
 legend{
     border-radius: 10px;
+    color:white;
     background:linear-gradient(80deg, #1394f6 0%, #0e81d8 150%);
     padding: 0 15px;
     font-weight: 500;
+    font-size: x-large;
 }
 .lefted{
-    color: green;
-    background-color: red;
+    color: rgb(0, 66, 128);
     display: block;
    }
 label{
     margin: 10px 0 0 0;
 }
-
+p#ratingvalue{
+    color: rgb(0, 62, 196);
+    text-align: center;
+    display: block;
+    text-align: center;
+    margin-left: -82px;
+}
 option :disabled{
     color: gray;
 }
-#ratingvalue{
-    display: inline;
-    text-align: center;
-}
+
 input[type="range" i] {
     display: block;
     width: 100%;
     max-width: 320px;
     ;
 }
+.radio label{
+    display: inline-flex;
+
+}
 input[type="radio" i]{
    width: 30px;
    max-width: 30px;
    height: 30px;  
-   display: inline;
+   position: static;
+  align-self: center;
+  vertical-align: middle;
+  margin-right: 10px;
 }
 .tt{
     display: inline;
     padding-bottom: 67px;
 }
+label{
+    font-size: 14pt;
+}
 label.lefted{
-    background-color: #b0ea61;
-    color: aqua;
+    color: rgb(12, 54, 71);
     line-height: 30px;
     padding-top: 10px;
 }
@@ -309,4 +326,14 @@ textarea {
     display: block;
     padding: 10px;
     border-radius: 0 15px 15px;
+}
+input[type="date" i]{
+    padding: 7px;
+    margin-top: 1px;
+}
+.required{
+    color: red;
+}
+select{
+    padding: 7px;
 }

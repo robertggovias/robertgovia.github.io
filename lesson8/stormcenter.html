@@ -22,7 +22,7 @@
             9:00 a.m. Friday at the city park</p></div>
         <header>
             <div class="logod">
-            <img class="logo" src="/robertgovia.github.io/lesson6/img/logo_listo.png" height="80px">
+            <img class="logo" src="img/logo_listo.png" height="80px">
         
     </div>
         <div id="hhead">
@@ -56,18 +56,18 @@
     <!-- Form start here-->
     <form method="GET" action="thank.html">
         <fieldset>
-            <legend>First, we need a way contact you!</legend>
-            <label class="upper">Full Name*<input type="text" name="fullname" required pattern="[A-Za-z ]{5,}"></label>
+            <legend>Please, provide your contact details</legend>
+            <label class="upper">Full Name<span class="required">*</span><input type="text" name="fullname" required pattern="[A-Za-z ]{5,}"></label>
             <label class="upper">Email<input type="email" name="e-mail" placeholder="your_email@_____.com"></label>
-            <label class="upper">Phone<input type="tel" name="phone_number" required></label>
-            <label class="upper">ZipCode<input type="number" name="zip" required></label>
+            <label class="upper">Phone<span class="required">*</span><input type="tel" name="phone_number" required></label>
+            <label class="upper">ZipCode<span class="required">*</span><input type="number" name="zip" required></label>
         </fieldset>
         <fieldset>
             <legend>Ok, tell me about this storm.</legend>            
-            <label class="lefted">It's happening right now? or when hapenned?<input type="date" name="stormdate"></label>
+            <label class="lefted">It's happening right now? <br> or when it hapenned?<br><input type="date" name="stormdate"></label>
             <label class="lefted">What kind of storm is this one? <input list="stormtype">          
                 <datalist id="stormtype">
-                    <option disabled selected value="">Select a Storm Type</option>
+                    <option selected value="" disabled>Select a Storm Type</option>
                     <option value="Flash Food"></option>
                     <option value="Hail"></option>
                     <option value="Hurricane"></option>
@@ -88,8 +88,8 @@
                 <option value="9">
                 <option value="10">                                        
                 </datalist>
-            <label class="upper">Where?<select name="region">
-                <option value="">Select a region please</option>
+            <label class="upper">Where?<br><select name="region">
+                <option selected value="" disabled>Select a region please</option>
                 <option value="prest">Preston</option>
                 <option value="soda">Soda Springs</option>
                 <option value="fish">Fish Haven</option></select></label>
@@ -98,16 +98,16 @@
             <legend>Are you in danger?</legend>
                     
                 <label class="lefted">
-                        <input type="radio" name="danger" value="yes">yes</label>
+                        <input type="radio" name="danger" value="yes">Yes</label>
                 <label class="lefted">
-                        <input type="radio" name="danger" value="no">no</label>
+                        <input type="radio" name="danger" value="no">No</label>
                 <label class="lefted">
                         <input type="radio"
-                        name="danger" value="maybe">maybe
+                        name="danger" value="maybe">Maybe
                 </label>
         </fieldset>
         <fieldset>
-            <legend>Any more else that is needed to be commented?</legend>
+            <legend>Something else? <br>Comment below, please.</legend>
             <textarea name="comment" form="usrform" rows="6" cols="40"></textarea>
         </fieldset>
         <input type="submit" name="sendreport" value="Send Report">

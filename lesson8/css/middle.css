@@ -97,7 +97,9 @@
         display: block;
         text-align: center;
     }
-   
+   fieldset{
+    border-radius: 0 60px 60px 30px;
+   }
    
 }
 
