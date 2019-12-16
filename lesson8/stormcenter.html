@@ -57,15 +57,15 @@
     <form method="GET" action="thank.html">
         <fieldset>
             <legend>Please, provide your contact details</legend>
-            <label class="upper">Full Name<span class="required">*</span><input type="text" name="fullname" required pattern="[A-Za-z ]{5,}"></label>
-            <label class="upper">Email<input type="email" name="e-mail" placeholder="your_email@_____.com"></label>
-            <label class="upper">Phone<span class="required">*</span><input type="tel" name="phone_number" required></label>
-            <label class="upper">ZipCode<span class="required">*</span><input type="number" name="zip" required></label>
+            <label class="upper">Full Name<span class="required">*</span><input type="text" id="fullname" name="fullname" required pattern="[A-Za-z ]{5,}"></label>
+            <label class="upper">Email<input type="email" id="e-mail" name="e-mail" placeholder="your_email@_____.com"></label>
+            <label class="upper">Phone<span class="required">*</span><input type="tel" id="phone_number" name="phone_number" required></label>
+            <label class="upper">ZipCode<span class="required">*</span><input type="number" id="zip" name="zip" required></label>
         </fieldset>
         <fieldset>
             <legend>Ok, tell me about this storm.</legend>            
-            <label class="lefted">It's happening right now? <br> or when it hapenned?<br><input type="date" name="stormdate"></label>
-            <label class="lefted">What kind of storm is this one? <input list="stormtype">          
+            <label class="lefted">It's happening right now? <br> or when it hapenned?<br><input type="date" id="stormdate" name="stormdate"></label>
+            <label class="lefted">What kind of storm is this one? <input id="stormtype" list="stormtype">          
                 <datalist id="stormtype">
                     <option selected value="" disabled>Select a Storm Type</option>
                     <option value="Flash Food"></option>
@@ -75,7 +75,7 @@
                 </select>
                 
             </label>
-            <label class="lefted">A big storm, huh? How much?<input type="range" value="5" max="10" min="1" step="1" list="tickmarks" oninput="adjustRating(this.value)"><span id="ratingvalue">5</span></label>
+            <label class="lefted">A big storm, huh? How much?<input type="range" id="howmuch" value="5" max="10" min="1" step="1" list="tickmarks" oninput="adjustRating(this.value)"><span id="ratingvalue">5</span></label>
             <datalist id="tickmarks">
                 <option value="0">
                 <option value="1">
@@ -83,12 +83,13 @@
                 <option value="3">
                 <option value="4">                    
                 <option value="5">                    
-                <option value="6">                     <option value="7">
+                <option value="6">
+                <option value="7">
                 <option value="8">
                 <option value="9">
                 <option value="10">                                        
                 </datalist>
-            <label class="upper">Where?<br><select name="region">
+            <label class="upper">Where?<br><select id="region" name="region">
                 <option selected value="" disabled>Select a region please</option>
                 <option value="prest">Preston</option>
                 <option value="soda">Soda Springs</option>
@@ -98,19 +99,18 @@
             <legend>Are you in danger?</legend>
                     
                 <label class="lefted">
-                        <input type="radio" name="danger" value="yes">Yes</label>
+                        <input type="radio" id="danger-yes" name="danger" value="yes">Yes</label>
                 <label class="lefted">
-                        <input type="radio" name="danger" value="no">No</label>
+                        <input type="radio" id="danger-not" name="danger" value="no">No</label>
                 <label class="lefted">
-                        <input type="radio"
-                        name="danger" value="maybe">Maybe
+                        <input type="radio" id="danger-maybe" name="danger" value="maybe">Maybe
                 </label>
         </fieldset>
         <fieldset>
             <legend>Something else? <br>Comment below, please.</legend>
-            <textarea name="comment" form="usrform" rows="6" cols="40"></textarea>
+            <textarea id="comment" name="comment" form="usrform" rows="6" cols="40"></textarea>
         </fieldset>
-        <input type="submit" name="sendreport" value="Send Report">
+        <input type="submit" id="sendreport" name="sendreport" value="Send Report">
 
         
     </form>

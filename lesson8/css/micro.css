@@ -303,6 +303,7 @@ input[type="radio" i]{
   align-self: center;
   vertical-align: middle;
   margin-right: 10px;
+  margin-top: -7px;
 }
 .tt{
     display: inline;
