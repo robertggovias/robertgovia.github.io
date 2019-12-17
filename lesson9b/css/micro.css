@@ -55,13 +55,8 @@
     .title{    
         text-align: center;
     }
-    .heroImage{
-        background-image: url("/robertgovia.github.io/lesson4/img/spiralstorm1.jpg");
-        background-size:cover; 
-        min-height: 171px;
-        background-position-y: bottom ;
-        background-position-x: center;
-    }
+   
+    
     h1 {        
         font-size: 0.9rem;
         color:#1394f6;
