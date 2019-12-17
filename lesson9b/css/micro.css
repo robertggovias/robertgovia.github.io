@@ -166,15 +166,28 @@ img{
     margin: 0px auto;
 
     }
-    section img{
+    .three_middle{
+        line-height: 7px;
+    }
+
+    section img {
+        display: block;
+        width: 100%;
+        height: 183px;
+        margin: 0px auto;
+        object-fit: cover;        
+        object-position: center;        
+    }
+    .height{
         max-width: 500px;         
         min-height: 100%;
+        height: 100%;
         object-fit: cover;
         object-position: top;
         
         }
 
-    article img{
+        .height img{
         max-width: 500px;        
         height: 100%;
        object-fit: cover;
