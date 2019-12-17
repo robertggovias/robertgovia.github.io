@@ -10,5 +10,8 @@ h1{
 #hhead{
     margin-left: 10px;
 }
-
+nav{
+    position: sticky;
+    position: -webkit-sticky;
+}
 }

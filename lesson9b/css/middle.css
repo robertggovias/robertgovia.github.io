@@ -48,7 +48,7 @@
     
     .menu{
         display: flex;
-     
+        position: sticky;        
     }
     .menu li{
         display: block;
