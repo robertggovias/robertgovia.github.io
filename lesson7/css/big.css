@@ -9,13 +9,13 @@
     .image_gallery{
         grid-template-columns:repeat(3, minmax(100px, 1fr));
     }
-    .image_gallery div:hover{
+    .photo:hover{
         box-shadow:rgba(0, 75, 75, 0.212) 5px 5px 3px ;
     }
     .image_gallery img{
         border-top-right-radius: 35px;
     }
-    .image_gallery div{
+    .photo{
         border-radius: 0px 35px 35px 35px;
         
     }
