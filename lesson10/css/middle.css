@@ -13,6 +13,16 @@
     h3 {
         font-size: 1.1rem;
     }
+    .weatherSummary p, h2{
+        padding: 10px;    
+         
+        line-height: 30px; 
+        }
+.weatherSummary p{
+    font-size: 14px;  
+    font-weight: bolder;
+    color: rgb(21, 45, 110);
+}
    
     .third_middle  {
        margin: 0 auto;

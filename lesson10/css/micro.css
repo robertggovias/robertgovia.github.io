@@ -157,6 +157,15 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #4F5D73;
 }
+.heroImage{
+    /*background-image: url("/robertgovia.github.io/lesson5/img/spiralstorm1.jpg");
+    background-image: url("/lesson5/img/spiralstorm1.jpg");
+    background-size:cover;*/
+    position: relative;
+    min-height: 171px;
+    /*background-position-y: bottom ;
+    background-position-x: center;*/
+}
 img{
     display: block;
     width: 100%;
@@ -170,7 +179,7 @@ img{
     section img {
         display: block;
         width: 100%;
-        height: 183px;
+        /*height: 183px;*/
         margin: 0px auto;
         object-fit: cover;        
         object-position: center;        

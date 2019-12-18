@@ -14,4 +14,20 @@ nav{
     position: sticky;
     position: -webkit-sticky;
 }
+.weatherSummary{
+    position: absolute;
+    top:15px;
+    left:15px; 
+    min-height: 180px;
+    background-color: #91cfffd3;      
+    }
+    .weatherSummary p, h2{
+        padding: 10px;           
+        line-height: 25px; 
+        }
+        .weatherSummary p{
+            font-size: 14px;  
+            font-weight: bolder;
+            color: rgb(21, 45, 110);
+        }
 }
