@@ -32,4 +32,4 @@ let fulldate = dayName + ", " + monthName + " " + d.getDate() +", " + year;
 document.getElementById("currentdate").textContent = fulldate;
 // ****************************
   let options = {weekday: 'long', day: 'numeric', month: 'long', year: 'numeric'};
-  document.getElementById('currentdate2').textContent = new Date().toLocaleDateString('en-US', options) + " " + new Date().toLocaleTimeString('en-US');
+  

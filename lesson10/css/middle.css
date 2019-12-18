@@ -23,7 +23,18 @@
     font-weight: bolder;
     color: rgb(21, 45, 110);
 }
-   
+#forecast{
+    display: block;
+} 
+td img{height:35px;width: 75px;}
+
+ th{      
+     font-size: 13pt;                
+ }
+ tr{
+     text-align: center;
+     font-size: 16pt;        
+ }
     .third_middle  {
        margin: 0 auto;
         display:grid;
