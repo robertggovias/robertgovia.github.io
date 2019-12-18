@@ -19,15 +19,26 @@ document.getElementById('icon').setAttribute('alt', desc);
   
   //5 daays temperature
   const apifiveURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=89bc7a863b25584dbe9c64dc38e40845';
+var dtemp=["hola","amigo"];
+var t=[];
 
 fetch(apifiveURL)
   .then((response) => response.json())
   .then((jsObject) => {
     console.log(jsObject);
     for (let i = 0; i < jsObject.list.length; i++) {
+      document.getElementById("t3").innerHTML = i;
       if (jsObject.list[i].dt_txt.includes('18:00:00')) {
-        console.log(jsObject.list[i].main.temp);
-        console.log(jsObject.list[i].weather[0].icon);
-      }
+        t += jsObject.list[i].main.temp;
+        document.getElementById("t0").innerHTML = t[0]+t[1];
+        document.getElementById("t1").innerHTML = t[5]+t[6];
+        document.getElementById("t2").innerHTML = t[10]+t[11];
+        document.getElementById("t3").innerHTML = t[15]+t[16];
+        document.getElementById("t4").innerHTML = t[20]+t[21];        
+              }
     }
+    
+
   });
+ 
+  
