@@ -9,6 +9,8 @@
             text-align: center;
             margin-block-start: 0em;
             margin-block-end: 0em;
+            word-spacing: 4pt;
+            letter-spacing: 1px;   
     }
     h3 {
         font-size: 1.1rem;
@@ -28,9 +30,8 @@
 } 
 td img{height:35px;width: 75px;}
 
- th{      
-     font-size: 13pt;                
- }
+ 
+
  tr{
      text-align: center;
      font-size: 16pt;        
@@ -56,7 +57,7 @@ td img{height:35px;width: 75px;}
     }
    
     th{
-        font-size: 9pt;
+        font-size: 14pt;
         display: table-cell;
     }
     tr{

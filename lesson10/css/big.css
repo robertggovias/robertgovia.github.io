@@ -4,9 +4,12 @@
         
     }
     h2 {
-        font-size: 1.3rem;                
+        font-size: 1.3rem;  
+           
     }
-
+    th{      
+        font-size: 18pt;                
+    }
    
     article{
     display: grid;
