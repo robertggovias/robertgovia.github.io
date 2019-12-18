@@ -1,0 +1,32 @@
+function windchill(t, s){
+    return 35.74 + (0.6215 * t) - (35.75 *(s**0.16)) + 0.4275 * t * (s ** 0.16);
+}
+var tt1, ss1, ww1, tt2, ss2, ww2, tt3, ss3, ww3, tt4, ss4, ww4, tt5, ss5, ww5, tt6, ss6, ww6, tt7, ss7, ww7;
+    tt1 = document.getElementById("t1").innerHTML;
+    ss1 = document.getElementById("s1").innerHTML;  
+    ww1 = windchill(tt1,ss1);
+    document.getElementById("w1").innerHTML = ww1.toFixed(2);
+    tt2 = document.getElementById("t2").innerHTML;
+    ss2 = document.getElementById("s2").innerHTML;  
+    ww2 = windchill(tt2,ss2);
+    document.getElementById("w2").innerHTML = ww2.toFixed(2);
+    tt3 = document.getElementById("t3").innerHTML;
+    ss3 = document.getElementById("s3").innerHTML;  
+    ww3 = windchill(tt3,ss3);
+    document.getElementById("w3").innerHTML = ww3.toFixed(2);
+    tt4 = document.getElementById("t4").innerHTML;
+    ss4 = document.getElementById("s4").innerHTML;  
+    ww4 = windchill(tt4,ss4);
+    document.getElementById("w4").innerHTML = ww4.toFixed(2);
+    tt5 = document.getElementById("t5").innerHTML;
+    ss5 = document.getElementById("s5").innerHTML;  
+    ww5 = windchill(tt5,ss5);
+    document.getElementById("w5").innerHTML = ww5.toFixed(2);
+    tt6 = document.getElementById("t6").innerHTML;
+    ss6 = document.getElementById("s6").innerHTML;  
+    ww6 = windchill(tt6,ss6);
+    document.getElementById("w6").innerHTML = ww6.toFixed(2);
+    tt7 = document.getElementById("t7").innerHTML;
+    ss7 = document.getElementById("s7").innerHTML;  
+    ww7 = windchill(tt7,ss7);
+    document.getElementById("w7").innerHTML = ww7.toFixed(2);
