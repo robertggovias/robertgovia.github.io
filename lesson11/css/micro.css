@@ -134,9 +134,7 @@ footer .date {
     font-size: 8pt;
     margin-top:-10px;
 }
-#announce{
-    display: ;
-}
+
 section{
    background-color: #cfeaff;
    border-radius: 0px;
@@ -168,8 +166,14 @@ body {
     background-size:cover;*/
     position: relative;
     min-height: 171px;
+    
     /*background-position-y: bottom ;
     background-position-x: center;*/
+}
+.heroImage img{
+    max-height: 225px;
+    object-fit: cover;
+    object-position: top;
 }
 img{
     display: block;

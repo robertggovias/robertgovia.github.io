@@ -1,5 +1,26 @@
-const apiURL = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&units=imperial&APPID=89bc7a863b25584dbe9c64dc38e40845';
+var iidd, iid, twnname, twnname0, twnname1, twnname2, twnnamel, preston, soda, haven, http, unitapk, ic, n, nnn, t, icp, j, k, mic, mn, mt;
+http = "https://api.openweathermap.org/data/2.5/"
+unitapk = "&units=imperial&APPID=89bc7a863b25584dbe9c64dc38e40845"
+twnname = document.getElementById('twn_name').textContent;
 
+preston = 5604473;
+soda = 5607916;
+haven = 5585010;
+twnnamel = ["Preston","Soda Spring","Fish Haven"];
+
+switch (twnname) {
+  case twnnamel[0]:
+    iid = preston;
+    break;
+  case twnnamel[1]:
+    iid = soda;
+    break;
+  case twnnamel[2]:
+    iid = haven;
+}
+
+document.getElementById("testing").innerHTML = iid;
+var apiURL = http+"weather?id="+iid+unitapk;
 fetch(apiURL)
   .then((response) => response.json())
   .then((jsObject) => {
@@ -9,8 +30,8 @@ fetch(apiURL)
     document.getElementById('humid').textContent = jsObject.main.humidity;
     document.getElementById('wind').textContent = jsObject.wind.speed;
   });
-const apifiveURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&units=imperial&APPID=89bc7a863b25584dbe9c64dc38e40845';
-var ic, n, t, count, icp, j, k, mic, mn, mt, count, icp, j, k;
+
+const  apifiveURL = http+"forecast?id="+iid+unitapk;
 n = 0;
 ic = [];
 t = [];
