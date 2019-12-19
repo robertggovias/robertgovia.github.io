@@ -213,3 +213,125 @@ img{
     grid-gap: 15px;
     justify-content: center;       
 }
+/*Table styles*/
+.upper{
+    display: block; 
+}
+.upper input{
+    padding-left: 20px;
+    color: darkblue;
+    display: block;
+    max-width: 400px;
+    width: 100%;
+    height: 46px;
+    border-radius: 0 20px 20px 10px;
+}
+input{
+    padding:7px;
+    margin-top: 2px;
+}
+fieldset{
+    border:solid rgba(78, 118, 163, 0.05);
+    
+    background-color: rgba(203, 231, 255, 0.822);
+    color:rgb(9, 51, 75);
+    max-width: 420px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto 30px;
+    border-radius: 0px;
+}
+legend{
+    border-radius: 10px;
+    color:white;
+    background:linear-gradient(80deg, #1394f6 0%, #0e81d8 150%);
+    padding: 0 15px;
+    font-weight: 500;
+    font-size: x-large;
+}
+.lefted{
+    color: rgb(0, 66, 128);
+    display: block;
+   }
+label{
+    margin: 10px 0 0 0;
+}
+p#ratingvalue{
+    color: rgb(0, 62, 196);
+    text-align: center;
+    display: block;
+    text-align: center;
+    margin-left: -82px;
+}
+option :disabled{
+    color: gray;
+}
+
+input[type="range" i] {
+    display: block;
+    width: 100%;
+    max-width: 320px;
+    ;
+}
+.radio label{
+    display: inline-flex;
+
+}
+input[type="radio" i]{
+   width: 30px;
+   max-width: 30px;
+   height: 30px;  
+   position: static;
+  align-self: center;
+  vertical-align: middle;
+  margin-right: 10px;
+  margin-top: -7px;
+}
+.tt{
+    display: inline;
+    padding-bottom: 67px;
+}
+label{
+    font-size: 14pt;
+}
+label.lefted{
+    color: rgb(12, 54, 71);
+    line-height: 30px;
+    padding-top: 10px;
+}
+textarea {
+    overflow: auto;
+    border-radius: 0 30px 30px;
+    margin-bottom: -10px;
+}
+[type="submit"]{
+    margin: 0 auto;
+    display: block;
+    padding: 10px;
+    border-radius: 0 15px 15px;
+}
+input[type="date" i]{
+    padding: 7px;
+    margin-top: 1px;
+}
+.required{
+    color: red;
+}
+select{
+    padding: 7px;
+}
+.thanks{
+    height: 500px;
+    margin: 0 auto;
+    
+    
+}
+.vertical_aling-text{
+    position: relative;
+vertical-align: middle;
+display: flex;
+justify-content: center;
+flex-direction: column;
+height: 100%;
+text-align: center;
+}

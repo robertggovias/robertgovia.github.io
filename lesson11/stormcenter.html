@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    
+    <head>
+        <title>CIT:230 Assigment Portal - Robert Govia</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=devive-width, initial-scale=1">
+        <link rel="shortcut icon" href="/robertgovia.github.io/lesson6/favicon.ico">        
+        <link rel="stylesheet" href="css/normalize.css">    
+        <link rel="stylesheet" href="css/micro.css">                
+        <link rel="stylesheet" href="css/small.css">                
+        <link rel="stylesheet" href="css/middle.css">
+        <link rel="stylesheet" href="css/weatherSummary.css">
+        <link rel="stylesheet" href="css/big.css">
+
+           
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
+
+    </head>
+    <body>        
+        <div id="announce"><p class="centered">Saturday Preston Pancakes in the Park!<br>
+            9:00 a.m. Friday at the city park</p></div>
+        <header>
+            <div class="logod">
+            <img class="logo" src="img/logo_listo.png" height="80px">
+        
+    </div>
+        <div id="hhead">
+
+            <h1 class="title">
+                Weather Schedule
+            </h1 class="title">
+            <p id="subtitle">
+                Because weather is never late
+            </p>
+            
+        </div>
+            
+    </header>
+    <nav>
+            <ul class="menu">
+                <li><a href="#" onclick="toggleMenu()">&#9776 Menu</a></li>
+                <li ><a href="preston-6.html#">Home</a></li>
+                <li><a class="active" href="preston-6.html">Preston</a></li>
+                <li><a href="preston-6.html#">Soda Spring</a></li>
+                <li><a href="preston-6.html#">Fish Haven</a></li>
+                <li><a href="preston-6.html#">Storm Center</a></li>
+                <li><a href="preston-6.html#">Gallery</a></li>              
+    </nav>
+    <script src="/robertgovia.github.io/lesson4/js/menu.js"></script>
+    <div id="content">
+    <h1 class="title">
+           Form    
+    </h1>
+    </br>
+    <!-- Form start here-->
+    <form method="GET" action="thanks.html">
+        <fieldset>
+            <legend>Please, provide your contact details</legend>
+            <label class="upper">Full Name<span class="required">*</span><input type="text" id="fullname" name="fullname" required pattern="[A-Za-z ]{5,}"></label>
+            <label class="upper">Email<input type="email" id="e-mail" name="e-mail" placeholder="your_email@_____.com"></label>
+            <label class="upper">Phone<span class="required">*</span><input type="tel" id="phone_number" name="phone_number" required></label>
+            <label class="upper">ZipCode<span class="required">*</span><input type="number" id="zip" name="zip" required></label>
+        </fieldset>
+        <fieldset>
+            <legend>Ok, tell me about this storm.</legend>            
+            <label class="lefted">It's happening right now? <br> or when it hapenned?<br><input type="date" id="stormdate" name="stormdate"></label>
+            <label class="lefted">What kind of storm is this one? <input list="stormtype">          
+                <datalist id="stormtype">
+                    <option selected value="" disabled>Select a Storm Type</option>
+                    <option value="Flash Food"></option>
+                    <option value="Hail"></option>
+                    <option value="Hurricane"></option>
+                    <option value="Tornado"></option>
+                </select>
+                
+            </label>
+            <label class="lefted">A big storm, huh? How much?<input type="range" id="howmuch" value="5" max="10" min="1" step="1" list="tickmarks" oninput="adjustRating(this.value)"><span id="ratingvalue">5</span></label>
+            <datalist id="tickmarks">
+                <option value="0">
+                <option value="1">
+                <option value="2">
+                <option value="3">
+                <option value="4">                    
+                <option value="5">                    
+                <option value="6">
+                <option value="7">
+                <option value="8">
+                <option value="9">
+                <option value="10">                                        
+                </datalist>
+            <label class="upper">Where?<br><select id="region" name="region">
+                <option selected value="" disabled>Select a region please</option>
+                <option value="prest">Preston</option>
+                <option value="soda">Soda Springs</option>
+                <option value="fish">Fish Haven</option></select></label>
+        </fieldset>
+        <fieldset>
+            <legend>Are you in danger?</legend>
+                    
+                <label class="lefted">
+                        <input type="radio" id="danger-yes" name="danger" value="yes">Yes</label>
+                <label class="lefted">
+                        <input type="radio" id="danger-not" name="danger" value="no">No</label>
+                <label class="lefted">
+                        <input type="radio" id="danger-maybe" name="danger" value="maybe">Maybe
+                </label>
+        </fieldset>
+        <fieldset>
+            <legend>Something else? <br>Comment below, please.</legend>
+            <textarea id="comment" name="comment" form="usrform" rows="6" cols="40"></textarea>
+        </fieldset>
+        
+
+        
+    </form>
+            
+    </body></div>
+    <footer>
+            <p>© 2019 | Robert Govia | Utah | <a href="http://www.byui.edu/"> BYUI Online Learning</a></p>
+            <div class="date">Last updated: <span id="currentdate"></span></div>
+
+        <script src="js/date.js"></script>
+        <script src="js/windchill.js"></script>
+        <script src="js/panqueke.js"></script>
+        <script src="js/rating.js"></script>
+        
+        </script>
+    </footer>
+</div>
+</html>

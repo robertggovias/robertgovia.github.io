@@ -26,5 +26,7 @@ tr{
     #forecast{
         display: none;
     }
-    
+    fieldset{
+        border-radius: 0px;
+    }
 }

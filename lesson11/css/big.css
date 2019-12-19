@@ -7,6 +7,17 @@
         font-size: 1.3rem;  
            
     }
+    .disapear_m {
+        display: block;
+        font-size: 1rem;
+        border-top: 2px solid #c75c5c;
+        color: #cfeaff;
+        background-color:#1394f6;
+        text-align: center;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        border-radius: 0 0 31px 31px;
+    } 
     th{      
         font-size: 18pt;                
     }
