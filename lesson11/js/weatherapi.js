@@ -6,7 +6,7 @@ twnname = document.getElementById('twn_name').textContent;
 preston = 5604473;
 soda = 5607916;
 haven = 5585010;
-twnnamel = ["Preston","Soda Spring","Fish Haven"];
+twnnamel = ["Preston", "Soda Spring", "Fish Haven"];
 
 switch (twnname) {
   case twnnamel[0]:
@@ -17,10 +17,11 @@ switch (twnname) {
     break;
   case twnnamel[2]:
     iid = haven;
+  
 }
 
-document.getElementById("testing").innerHTML = iid;
-var apiURL = http+"weather?id="+iid+unitapk;
+
+const apiURL = http + "weather?id=" + iid + unitapk;
 fetch(apiURL)
   .then((response) => response.json())
   .then((jsObject) => {
@@ -31,7 +32,7 @@ fetch(apiURL)
     document.getElementById('wind').textContent = jsObject.wind.speed;
   });
 
-const  apifiveURL = http+"forecast?id="+iid+unitapk;
+const apifiveURL = http + "forecast?id=" + iid + unitapk;
 n = 0;
 ic = [];
 t = [];
