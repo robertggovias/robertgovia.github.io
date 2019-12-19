@@ -173,7 +173,7 @@ body {
 .heroImage img{
     max-height: 225px;
     object-fit: cover;
-    object-position: top;
+    object-position: center;
 }
 img{
     display: block;
