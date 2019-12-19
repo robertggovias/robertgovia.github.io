@@ -55,7 +55,9 @@
     .title{    
         text-align: center;
     }
-   
+    #twn_name{
+        margin-bottom: 12px;
+    }
     
     h1 {        
         font-size: 0.9rem;
@@ -105,6 +107,9 @@ nav{
 }
     .menu li{
         display: none;
+}
+ul{ list-style-type: none;
+    
 }
 .menu li a{
     display: block;
