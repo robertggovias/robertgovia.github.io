@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    header, main, footer {    
+        padding: 15px;
+        max-width: 960px;
+        }
+
+    h1 {
+            font-size: 1.5rem;
+            color: mintcream;
+            text-align: center;
+            
+        }
+    h2 {
+            font-size: 1rem;
+            border-bottom: 2px solid chocolate;
+            color: rgb(190, 224, 36);
+            background-color: rgba(0,122,72,1);
+            text-align: center;
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+        }        
+    h3 {
+        font-size: 0.8rem;        
+        color: rgb(218, 240, 123);
+        background-color: rgba(0, 122, 10, 0.7);
+        text-align: center;
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+       }                
+#subtitle{
+    text-align: center;
+    color:wheat;
+}
+#centered{
+    text-align: center;
+    }
+header, footer {
+    background: rgb(57,135,0);
+    background: linear-gradient(45deg, rgba(57,135,0,1) 0%, rgba(0,122,72,1) 35%, rgba(14,65,0,1) 100%);    
+    padding: 7px;
+    margin:14px 4px 14px 4px; 
+}
+nav{
+    background: rgb(57,135,0);    
+    padding: 0px;
+    margin:14px 4px 14px 4px; 
+    color:white;        
+}
+ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    max-width:1600px;    
+    background: linear-gradient(45deg, rgba(57,135,0,1) 0%, rgba(0,122,72,1) 35%, rgba(14,65,0,1) 100%);    
+    text-align: center;    
+    border-top: 2px solid chocolate;
+    border-bottom: 2px solid chocolate;
+}
+li a{
+    display: block;
+    color: white ;        
+    padding: 8px 16px;
+    text-decoration: none;    
+}
+nav li :hover{
+    background-color: rgba(64, 97, 11, 0.25);
+    color: rgb(190, 224, 36);
+    }
+
+footer p {
+    text-align: center;    
+    color: white;
+    font-size: 10pt;
+}
+footer .date {
+    color: antiquewhite;
+    text-align: center;
+    font-size: 8pt;
+    margin-top:-10px;
+}
+
+section{
+   border: solid green;
+   border-radius: 0px;
+   margin-bottom: 15px;
+   
+   
+}
+section p{
+    font-size: 14px;    
+    padding: 10px;
+}
+
+article{
+    display: grid;
+    justify-content: stretch;    
+    grid-template-columns: 1fr;    
+    grid-column-gap: 16px;
+    padding: 7px;
+    }
+    
+body {
+    font-size: 16px;
+    line-height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    color: midnightblue;
+}
+img{
+    display: block;
+    width: 93%;
+    margin: 0px auto;
+
+    }
+.active{
+    background-color: rgba(64, 97, 11, 0.25);
+    color: rgb(190, 224, 36);   
+}

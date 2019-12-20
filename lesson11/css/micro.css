@@ -355,3 +355,9 @@ text-align: center;
 p #disappear{
     display: none;
 }
+.third121{
+    display: grid;
+    justify-content: stretch;    
+    grid-template-columns: 1fr;
+    grid-column-gap: 16px;
+    } 

@@ -106,6 +106,14 @@ td img{height:40px;width: 75px;}
         grid-column-gap: 16px;
         grid-row-gap: 16px;
         }
+    .third121{
+            display: grid;
+            justify-content: stretch;
+            max-width: 960px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-column-gap: 16px;
+            grid-row-gap: 16px;
+            }
     
     .third{
         grid-column: span 2;

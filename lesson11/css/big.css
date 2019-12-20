@@ -18,7 +18,7 @@
         margin-block-end: 0em;
         border-radius: 0 0 31px 31px;
     } 
-    
+
     th{      
         font-size: 18pt;                
     }
@@ -45,7 +45,13 @@
             grid-template-columns: 1fr 3fr;
             grid-column-gap: 16px;
             }   
-
+    .third121{
+            display: grid;
+            justify-content: stretch;
+            max-width: 960px;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-column-gap: 16px;
+            }  
     #content{    
     max-width: 960px;
     margin:0px auto;
