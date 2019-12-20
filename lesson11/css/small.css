@@ -16,6 +16,7 @@ nav{
     position: sticky;
     position: -webkit-sticky;
 }
+
 .weatherSummary{
     position: absolute;
     top:15px;
