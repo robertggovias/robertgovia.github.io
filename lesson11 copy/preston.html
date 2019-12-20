@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <title>CIT:230 Assigment Portal - Robert Govia</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/micro.css">
+    <link rel="stylesheet" href="css/small.css">
+    <link rel="stylesheet" href="css/middle.css">
+    <link rel="stylesheet" href="css/big.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700,700i&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+
+        <div class="logod"><a href="index.html">
+                <img class="logo" src="img/logo_listo.png" height="80px"></a>
+
+        </div>
+
+        <div id="hhead">
+
+            <h1 class="title">
+                Weather Schedule
+            </h1 class="title">
+            <p id="subtitle">
+                Because weather is never late
+            </p>
+
+            <p id="announce"></p>
+        </div>
+    </header>
+    <nav>
+        <ul class="menu">
+            <li><a href="#" onclick="toggleMenu()">&#9776 Menu</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="preston.html">Preston</a></li>
+            <li><a href="soda_spring.html">Soda Spring</a></li>
+            <li><a href="fish_haven.html">Fish Haven</a></li>
+            <li><a href="storm_center.html">Storm Center</a></li>
+            <li><a href="gallery.html#">Gallery</a></li></ul>  
+    </nav>
+    <!--<script src="/robertgovia.github.io/lesson4/js/menu.js"></script>-->
+    <div id="content">
+
+        <h1 id="twn_name">Preston</h1>       
+        <div class="heroImage">
+
+
+
+            <picture>
+                <source srcset="img/cit230_image_franklin_Micro_414.jpg" media="(max-width:414px)">
+                <source srcset="img/cit230_image_franklin_Small_736.jpg"
+                    media="(min-width:415px) and (max-width:736px)">
+                <source srcset="img/cit230_image_franklin_Medium_1024.jpg"
+                    media="(min-width:737px) and (max-width:1024px)">
+                <source srcset="img/cit230_image_franklin_Big_1366.jpg"
+                    media="(min-width:1025px) and (max-width:1366px)">
+                <img src="img/cit230_image_franklin_Big_1366.jpg">
+            </picture>
+            <div class="weatherSummary transp">
+                <h2>
+                    Weather Summary
+                </h2>
+                <p>
+                    <span class="topic">Currently: </span><span class="report"><span id="current"></span></br>
+                        <span class="topic">Temperature: </span><span class="report"><span id="current-temp"></span>
+                            °F</span></br>
+                        <span class="topic">Humidity: </span><span class="report"><span id="humid"></span>%</span></br>
+                        <span class="topic">Wind Chill: </span><span class="report"><span
+                                id="chill"></span>ºF</span></br>
+                        <span class="topic">Wind Speed: </span><span class="report"><span
+                                id="wind"></span>mph</span></br>
+                </p>
+            </div>
+        </div>
+        <br>
+        <div id="forecast">
+            <section>
+
+                <h2>5 Day Forecast</h2>
+                <table class="centered center">
+                    <tbody>
+                        <tr>
+
+                            <th><span id="d0"></span></th>
+                            <th><span id="d1"></span></th>
+                            <th><span id="d2"></span></th>
+                            <th><span id="d3"></span></th>
+                            <th><span id="d4"></span></th>
+
+
+                        </tr>
+                        <tr>
+
+                            <td><span id="t0"></span><span>ºF</span></td>
+                            <td><span id="t1"></span><span>ºF</span></td>
+                            <td><span id="t2"></span><span>ºF</span></td>
+                            <td><span id="t3"></span><span>ºF</span></td>
+                            <td><span id="t4">39</span><span>ºF</span></td>
+
+
+                        </tr>
+                        <tr>
+                            <td><img src="" alt="" id="i0"></td>
+                            <td><img src="" alt="" id="i1"></td>
+                            <td><img src="" alt="" id="i2"></td>
+                            <td><img src="" alt="" id="i3"></td>
+                            <td><img src="" alt="" id="i4"></td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </section>
+            <p></p>
+        </div>
+        <br>
+        <div class="right">
+            <section>
+                <h2>
+                    Schedule Preston in your weatherproof Tour!
+                </h2>
+                <p id="centered">
+                    "In Preston, the summers are warm and mostly clear, the winters are freezing and partly cloudy, and it is dry year round. Over the course of the year, the temperature typically varies from 15°F to 88°F and is rarely below 1°F or above 94°F.
+                    <br>
+                    Based on the tourism score, the best time of year to visit Preston for warm-weather activities is
+                    from late June to mid August."(https://weatherspark.com/)
+                </p>
+            </section>
+            <section>
+                <img class="height" src="img/Preston_tourism.png">
+
+            </section>
+        </div>
+        <br>
+        <div class="left">
+            <section>
+                <img class="height" src="img/call_center.jpg">
+
+            </section>
+            <section>
+                <h2>
+                    Become a pioneer of this project and stay tune!
+                </h2>
+                <p id="centered">
+                    Right now we are testing the service within this places:
+                    <br><b>Preston, Soda Springs, Fish Haven.</b>
+                    <br>Living there?
+                    <br><B>mail us:</B> contact@weather-schedule.com
+                    <br><b>call us:</b> 0800 WEATHER
+                    <br>Or, much better! <a href=index.html> click here</a>, and fill up this short & sweet form.
+                </p>
+            </section>
+
+        </div>
+
+</body>
+</div>
+<footer>
+    <p>© 2019 | Robert Govia | Utah | <a href="http://www.byui.edu/"> BYUI Online Learning</a> weather data from <a
+            href="https://openweathermap.org/">Open Weather</a></p>
+    <div class="date">Last updated: <span id="currentdate"></span></div>
+
+    <!-- <script src="js/date.js"></script>
+    <script src="js/three_header_towns.js"></script>-->
+    <script src="js/weatherapi.js"></script>
+    <script src="js/windchill.js"></script>
+    <script src="js/date.js"></script>
+
+    </script>
+</footer>
+</div>
+
+</html>
