@@ -1,4 +1,4 @@
-var iidd, iid, twnname, twnname0, twnname1, twnname2, twnnamel, preston, soda, haven, http, unitapk, ic, n, nnn, t, icp, j, k, mic, mn, mt;
+var iidd, iid, twnname, twnname0, twnname1, twnname2, twnnamel, preston, soda, haven, http, unitapk, ic, n, nnn, t, icp, j, k, mic, mn, mt,ttwnname;
 http = "https://api.openweathermap.org/data/2.5/"
 unitapk = "&units=imperial&APPID=89bc7a863b25584dbe9c64dc38e40845"
 twnname = document.getElementById('twn_name').textContent;
@@ -6,7 +6,7 @@ twnname = document.getElementById('twn_name').textContent;
 preston = 5604473;
 soda = 5607916;
 haven = 5585010;
-twnnamel = ["Preston", "Soda Spring", "Fish Haven"];
+twnnamel = ["Preston", "Soda Springs", "Fish Haven"];
 
 switch (twnname) {
   case twnnamel[0]:
@@ -17,9 +17,8 @@ switch (twnname) {
     break;
   case twnnamel[2]:
     iid = haven;
-  
-}
 
+}
 
 const apiURL = http + "weather?id=" + iid + unitapk;
 fetch(apiURL)
@@ -56,3 +55,4 @@ fetch(apifiveURL)
 
 
   });
+
