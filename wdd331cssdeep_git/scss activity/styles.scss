@@ -1,0 +1,24 @@
+/* The variables will follow */
+//colors
+$body-background-color:#1eff00;
+$form-background-color: rgb(221, 208, 26);
+$input-color:rgb(233, 0, 0);
+$headlines-color : rgb(155, 0, 216);
+//css
+body {
+    background-color: $body-background-color;
+    color:  $input-color;
+}
+form{
+background-color:$form-background-color;
+color: $input-color;
+}
+input{
+    color:$input-color;
+
+}
+
+header{
+background-color: $form-background-color;
+color:$headlines-color
+}
