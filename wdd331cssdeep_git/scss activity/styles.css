@@ -1,16 +1,24 @@
 /* The variables will follow */
 body {
-  background-color: #1eff00;
-  color: #e90000;
+  background-color: #b1d3e7;
+  color: #00a7e9;
 }
 
 form {
   background-color: #ddd01a;
-  color: #e90000;
+  color: #00a7e9;
 }
 
 input {
-  color: #e90000;
+  color: #00a7e9;
+}
+
+#contactform {
+  background-color: #ddd01a;
+}
+#contactform input, #contactform textarea {
+  background-color: #00a7e9;
+  flex: 2;
 }
 
 header {
