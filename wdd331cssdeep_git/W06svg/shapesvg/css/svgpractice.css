@@ -1,0 +1,26 @@
+.svgcontainer{
+    background-color: greenyellow;
+    width: 480px;
+    height: 480px;
+    border: 1px solid;
+}
+.yupii{
+    fill: hotpink;
+    stroke: lawngreen;
+    stroke-width: 4;
+}
+.rectangle{
+    fill: maroon;
+    opacity: 30%;
+}
+.icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+  .svgb{
+      background: url("clubs.svg");
+  }

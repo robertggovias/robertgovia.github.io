@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="En-Us">
+    <head>
+        <link rel="stylesheet" href="css/svgpractice.css">
+
+
+    </head>
+    <body>
+       <svg class="svgcontainer">
+            <defs>
+                <symbol id="mySymbol" viewBox="0 0 150 150">
+            <rect x="15" y="25" rx="20" ry="20" width="150" height="150" class="rectangle"/>
+            <circle cx="100" cy="100" r="60px" class="yupii"/>
+        </symbol>
+        </defs>
+        <use xlink:href="#mySymbol"></use>
+        </svg>
+        <svg class="svgcontainer">
+            <use xlink:href="#mySymbol"></use>
+        </svg>
+        <svg class="svgcontainer">
+            <defs>
+                <pattern id="oi" patternUnits="userSpaceOnUse" x="10" y="10" width="40" height="40">
+                    <rect x="0" y="0" width="50" rx="10" ry="10" height="50" class="rectangle" /> 
+        <circle cx="25" cy="25" r="8" fill="white" stroke="darkred" stroke-width="2" />
+                </pattern>
+            </defs>
+            <circle cx="240" cy="240" r="240" fill="url(#oi)" stroke="black"/>
+        </svg>
+        <svg width="200" height="200"> 
+           
+            <defs>
+              <pattern id="mypattern" patternUnits="userSpaceOnUse" x="0" y="0" width="50" height="50">
+                <rect x="0" y="0" width="50" rx="10" ry="10" height="50" class="rectangle" /> 
+                <circle cx="25" cy="25" r="8" fill="white" stroke="darkred" stroke-width="2" />
+              </pattern>
+            </defs>
+        
+            
+            <circle cx="100" cy="100" r="100" fill="url(#mypattern)" stroke-width="1" stroke="black" />
+        </svg>
+        <svg class="svgcontainer">
+        <symbol id="icon-clubs" viewBox="0 0 32 32">
+            <title>clubs</title>
+            <path d="M24.588 12.274c-1.845 0-3.503 0.769-4.683 2.022-0.5 0.531-1.368 1.16-2.306 1.713 0.441-1.683 1.834-3.803 2.801-4.733 1.239-1.193 2-2.87 2-4.734 0-3.59-2.859-6.503-6.4-6.541-3.541 0.038-6.4 2.951-6.4 6.541 0 1.865 0.761 3.542 2 4.734 0.967 0.93 2.36 3.050 2.801 4.733-0.939-0.553-1.806-1.182-2.306-1.713-1.18-1.253-2.838-2.022-4.683-2.022-3.575 0-6.471 2.927-6.471 6.541s2.897 6.542 6.471 6.542c1.845 0 3.503-0.792 4.683-2.045 0.525-0.558 1.451-1.254 2.447-1.832-0.094 4.615-2.298 8.005-4.541 9.341v1.179h12v-1.179c-2.244-1.335-4.448-4.726-4.541-9.341 0.995 0.578 1.922 1.274 2.447 1.832 1.18 1.253 2.838 2.045 4.683 2.045 3.575 0 6.471-2.928 6.471-6.542s-2.897-6.541-6.471-6.541z"></path>
+            </symbol>
+        <svg class="icon icon-clubs">
+            <use xlink:href="#icon-clubs"></use></svg>
+        </svg> 
+        <img src="clubs.svg">
+        <div class="svgb">
+            hola<br>
+            hola
+            <br>
+            hola
+            <br>
+            hola
+            <br>
+            hola
+            
+        
+        </div>
+
+    </body>
+
+
+</html>
