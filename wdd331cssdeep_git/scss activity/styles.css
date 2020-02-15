@@ -20,10 +20,65 @@ input {
   background-color: #00a7e9;
   flex: 2;
 }
+@media (min-width: 600px) {
+  #contactform {
+    width: 90%;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 
 header {
   background-color: #ddd01a;
   color: #9b00d8;
+}
+
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column, nowrap;
+  -ms-flex-flow: column, nowrap;
+  flex-flow: column, nowrap;
+}
+
+form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row, wrap;
+  -ms-flex-flow: row, wrap;
+  flex-flow: row, wrap;
+}
+
+h1 {
+  width: 90%;
+  text-align: center;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  background: #b1d3e7;
+}
+@media (max-width: 60em) {
+  body {
+    background: red;
+  }
+}
+@media (max-width: 31em) {
+  body {
+    background: cyan;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    background: green;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

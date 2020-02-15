@@ -4,7 +4,38 @@ $body-background-color:#b1d3e7;
 $form-background-color: rgb(221, 208, 26);
 $input-color:rgb(0, 167, 233);
 $headlines-color : rgb(155, 0, 216);
-$break-small
+$break-small: 600px;
+$break-medium: 31em;
+$break-large: 60em;
+@mixin breakpoint($break) {
+    @if $break == large {
+        @media (max-width: $break-large){@content;}            
+        }
+    @else if $break == medium {
+        @media (max-width: $break-medium){@content;}
+        }
+    @else if $break == small {
+        @media (max-width: $break-small){@content;}
+    }        
+}   
+
+@mixin flex-container($axis, $wrap: nowrap) {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: $axis, $wrap;
+    -ms-flex-flow: $axis, $wrap;
+    flex-flow: $axis, $wrap;
+}
+@mixin center() {
+    width: 90%;
+    text-align: center;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 //css
 body {
     background-color: $body-background-color;
@@ -37,4 +68,20 @@ input{
 header{
 background-color: $form-background-color;
 color:$headlines-color
+}
+fieldset > div {
+    @include flex-container(column);        
+}
+form {
+    @include flex-container(row, wrap);        
+}
+h1 {
+    @include center;
+}
+body{
+    background: $body-background-color;
+    @include breakpoint(large) {background: red;}
+    @include breakpoint(medium) {background: cyan;}
+    @include breakpoint(small) {background: green;}
+    @include breakpoint("max-width: 480px") {background: yellow;}
 }
