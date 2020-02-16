@@ -6,13 +6,14 @@
 <body>
     <svg class="card" viewBox="0 0 100 140" width="400" height="560">
         <rect class="back" x="5" y="5" rx="5" ry="5" width="90" height="130"></rect>
-        <polygon class="backo" points="100,10 40,198 190,78 10,78 160,198"/>
-        <polygon class="object" points="100,10 40,198 190,78 10,78 160,198"/>
+        
         <g id="moon">
             <circle class="backo" cx="7.5" cy="7.5" r="7.5" />
       <circle class="object" cx="7.5" cy="7.5" r="7.5" />
-        <circle class="back" cx="10.5" cy="8.5" r="6.5" />
-    </g> 
+        <g id="crece"> <circle class="back" cx="10.5" cy="8.5" r="6.5" /></g>
+    </g>
+    <polygon class="backo" points="100,10 40,198 190,78 10,78 160,198"/>
+        <polygon class="object" points="100,10 40,198 190,78 10,78 160,198"/> 
     <defs>
         <symbol id="cloudc"width="10" height="15">
 
@@ -52,13 +53,18 @@
 </symbol>
 </defs>
 
-<pattern id="pattern1" patternUnits="userSpaceOnUse" width="8" height="5">
-    <use xlink:href="#cloudw"></use>
-    <use class="size" xlink:href="#cloudc"  x=1 y=6.5></use>    
-</pattern>
+<g class="pepe"><pattern id="pattern1" patternUnits="userSpaceOnUse" width="8" height="5" x=2 y=3>
+    <animateTransform attributeType="xml"
+                        attributeName="patternTransform"
+                        type="translate" from="35" to="395" begin="0"
+                        dur="60s" repeatCount="indefinite"/>
+    <use xlink:href="#cloudw" x=1 y=1></use>    
+</pattern></g>
 <svg width="100" height="140">
-<rect x="5" y="5" rx="5" ry="5" width="90" height="130" fill="url(#pattern1)"></rect>
+<g id="cloudp">
+    <rect x="5" y="5" rx="5" ry="5" width="90" height="130" fill="url(#pattern1)"></rect></g>
 <use class="size" xlink:href="#cloudc"  x=1 y=6.5></use>
+
 </svg>
     </svg>
 </body>

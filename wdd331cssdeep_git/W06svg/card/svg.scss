@@ -43,3 +43,54 @@ $csize:7;
 .size{
     transform: scale($csize);
 }
+@keyframes pulse{
+    from{
+        transform: scale(1);
+
+    }
+    to{
+        transform: scale(90);
+
+    }
+}
+    
+
+@keyframes amoon{
+    from{
+    transform:scale(1);
+}
+to{
+    transform:scale($bsize);
+}
+}
+@keyframes right{
+    from{
+        transform: translate(0px, 0px);
+        opacity: 1;
+    }
+    to{
+        transform: translate(10px,0px);
+        opacity: 0;
+
+    }
+}
+#crece{    
+    animation: right 5000ms 2;
+    animation-delay: 5000ms;
+    animation-direction: alternate;
+}
+#moon{
+    animation: amoon 5000ms;
+}
+@keyframes rightcloud{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(10px,0px);
+    }
+}
+
+.pepe{
+    animation: right 4000ms infinite;
+}
