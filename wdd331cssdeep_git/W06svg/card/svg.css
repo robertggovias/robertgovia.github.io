@@ -1,0 +1,36 @@
+.card {
+  border: solid 4px #3787ff;
+  fill: white;
+  border-radius: 10px;
+}
+
+.back {
+  fill: #3787ff;
+  fill-rule: nonzero;
+}
+
+.backo {
+  fill: #3787ff;
+  stroke: #3787ff;
+  stroke-width: 4px;
+}
+
+.object {
+  fill: white;
+}
+
+#moon {
+  transform: scale(4);
+}
+
+.w {
+  fill: #3787ff;
+  stroke: #3787ff;
+  stroke-width: 0.7px;
+}
+
+.size {
+  transform: scale(7);
+}
+
+/*# sourceMappingURL=svg.css.map */

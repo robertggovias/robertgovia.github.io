@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="svg.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <svg class="card" viewBox="0 0 100 140" width="400" height="560">
+        <rect class="back" x="5" y="5" rx="5" ry="5" width="90" height="130"></rect>
+        <polygon class="backo" points="100,10 40,198 190,78 10,78 160,198"/>
+        <polygon class="object" points="100,10 40,198 190,78 10,78 160,198"/>
+        <g id="moon">
+            <circle class="backo" cx="7.5" cy="7.5" r="7.5" />
+      <circle class="object" cx="7.5" cy="7.5" r="7.5" />
+        <circle class="back" cx="10.5" cy="8.5" r="6.5" />
+    </g> 
+    <defs>
+        <symbol id="cloudc"width="10" height="15">
+
+    <g id="cloud">
+        <g id="backcloud">
+            <circle class="w" cx="1.625" cy="2.325" r="1.187"></circle>
+            <circle class="w" cx="3.6" cy="2.650" r="1.187"></circle>
+            <circle class="w" cx="5" cy="2.425" r="1.187"></circle>
+            <circle class="w" cx="4" cy="1.5" r="1.187"></circle>
+            <circle class="w" cx="3" cy="1.5" r="0.593"></circle>
+            <circle class="w" cx="2.5" cy="3.4" r="0.593"></circle>        
+
+        </g>
+        <g id="objcloud">
+            <circle class="object" cx="1.625" cy="2.125" r="1.187"></circle>
+            <circle class="object" cx="3.6" cy="2.450" r="1.187"></circle>
+            <circle class="object" cx="5" cy="2.125" r="1.187"></circle>
+            <circle class="object" cx="4" cy="1.3" r="1.187"></circle>
+            <circle class="object" cx="3" cy="1.3" r="0.593"></circle>
+            <circle class="object" cx="2.5" cy="3" r="0.593"></circle>      
+        </g>
+    </g>
+</symbol>
+</defs>
+<defs>
+    <symbol id="cloudw" width="10" height="15">
+    
+    <g id="objcloud">
+        <circle class="object" cx="1.625" cy="2.125" r="1.187"></circle>
+        <circle class="object" cx="3.6" cy="2.450" r="1.187"></circle>
+        <circle class="object" cx="5" cy="2.125" r="1.187"></circle>
+        <circle class="object" cx="4" cy="1.3" r="1.187"></circle>
+        <circle class="object" cx="3" cy="1.3" r="0.593"></circle>
+        <circle class="object" cx="2.5" cy="3" r="0.593"></circle>      
+    </g>
+
+</symbol>
+</defs>
+
+<pattern id="pattern1" patternUnits="userSpaceOnUse" width="8" height="5">
+    <use xlink:href="#cloudw"></use>
+    <use class="size" xlink:href="#cloudc"  x=1 y=6.5></use>    
+</pattern>
+<svg width="100" height="140">
+<rect x="5" y="5" rx="5" ry="5" width="90" height="130" fill="url(#pattern1)"></rect>
+<use class="size" xlink:href="#cloudc"  x=1 y=6.5></use>
+</svg>
+    </svg>
+</body>
+</html>
