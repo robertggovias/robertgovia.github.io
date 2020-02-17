@@ -4,14 +4,31 @@
   border-radius: 10px;
 }
 
+.rcard {
+  border: solid 4px red;
+  fill: white;
+  border-radius: 10px;
+}
+
 .back {
   fill: #3787ff;
   fill-rule: nonzero;
 }
 
-.backo {
+.rback {
+  fill: red;
+  fill-rule: nonzero;
+}
+
+.rbacko {
   fill: #3787ff;
   stroke: #3787ff;
+  stroke-width: 4px;
+}
+
+.rbacko {
+  fill: red;
+  stroke: red;
   stroke-width: 4px;
 }
 
@@ -79,6 +96,19 @@
 }
 .pepe {
   animation: right 4000ms infinite;
+}
+
+@keyframes cright {
+  from {
+    transform: translate(0px, 0px);
+  }
+  to {
+    transform: translate(5px, 0px);
+  }
+}
+#cright {
+  animation: cright 3000ms infinite;
+  animation-direction: alternate;
 }
 
 /*# sourceMappingURL=svg.css.map */

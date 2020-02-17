@@ -1,6 +1,8 @@
 //variables
 $back: #3787ff;
 $object: white;
+$rback: red;
+
 $fillr:nonzero;
 $work:rgba(0, 128, 0, 0.568);
 //$fillr:evenode;
@@ -17,14 +19,28 @@ $csize:7;
     fill: $object;
     border-radius: 10px;
 }
+.rcard{
+    border: solid $bold $rback;
+    fill: $object;
+    border-radius: 10px;
+}
 .back{
     fill: $back;
-    fill-rule:$fillr;
-    
+    fill-rule:$fillr;    
 }
-.backo{
+.rback{
+    fill: $rback;
+    fill-rule:$fillr;    
+}
+.rbacko{
     fill: $back;
     stroke: $back;
+    stroke-width: $bold;
+    
+}
+.rbacko{
+    fill: $rback;
+    stroke: $rback;
     stroke-width: $bold;
     
 }
@@ -93,4 +109,16 @@ to{
 
 .pepe{
     animation: right 4000ms infinite;
+}
+@keyframes cright{
+    from{
+        transform: translate(0px, 0px);       
+    }
+    to{
+        transform: translate(5px,0px);       
+    }
+}
+#cright{
+    animation: cright 3000ms infinite;
+    animation-direction: alternate;
 }
