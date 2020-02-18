@@ -111,4 +111,8 @@
   animation-direction: alternate;
 }
 
+.rotate {
+  transform: rotate(90deg);
+}
+
 /*# sourceMappingURL=svg.css.map */
