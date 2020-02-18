@@ -1,5 +1,5 @@
 //variables
-$back: #37d7ff;
+$back: red;
 $object: white;
 $fillr:nonzero;
 $work:rgba(0, 128, 0, 0.568);
@@ -32,11 +32,17 @@ $csize:7;
     fill:$object;       
     
 }
-#heart{
-    transform: rotate(135deg);
+.work{
+    fill: $work;
+    border: $work;
+    stroke-width: $bold;
 }
-#moon{
+
+#heart{
     transform: scale($bsize);
+    
+    
+    
 }
 .w{
     fill: $back;

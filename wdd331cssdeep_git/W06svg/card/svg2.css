@@ -1,17 +1,17 @@
 .card {
-  border: solid 4px #37d7ff;
+  border: solid 4px red;
   fill: white;
   border-radius: 10px;
 }
 
 .back {
-  fill: #37d7ff;
+  fill: red;
   fill-rule: nonzero;
 }
 
 .backo {
-  fill: #37d7ff;
-  stroke: #37d7ff;
+  fill: red;
+  stroke: red;
   stroke-width: 4px;
 }
 
@@ -19,18 +19,19 @@
   fill: white;
 }
 
-#heart {
-  transform: rotate(135deg);
-  background-color: red;
+.work {
+  fill: rgba(0, 128, 0, 0.568);
+  border: rgba(0, 128, 0, 0.568);
+  stroke-width: 4px;
 }
 
-#moon {
+#heart {
   transform: scale(4);
 }
 
 .w {
-  fill: #37d7ff;
-  stroke: #37d7ff;
+  fill: red;
+  stroke: red;
   stroke-width: 0.7px;
 }
 
@@ -86,4 +87,4 @@
   animation: right 4000ms infinite;
 }
 
-/*# sourceMappingURL=svg.css.map */
+/*# sourceMappingURL=svg2.css.map */
