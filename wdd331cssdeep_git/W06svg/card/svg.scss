@@ -125,3 +125,16 @@ to{
 .rotate{
     transform: rotate(90deg);
 }
+.arcfont{
+    transform: scale(.2,1.4);
+    
+}
+#arc{
+    transform: translate(1px, 14px);
+    
+    fill: blue;
+}
+.bigLeftcorner{
+    transform: scale($csize);
+    
+}

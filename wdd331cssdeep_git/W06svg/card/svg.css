@@ -115,4 +115,17 @@
   transform: rotate(90deg);
 }
 
+.arcfont {
+  transform: scale(0.2, 1.4);
+}
+
+#arc {
+  transform: translate(1px, 14px);
+  fill: blue;
+}
+
+.bigLeftcorner {
+  transform: scale(7);
+}
+
 /*# sourceMappingURL=svg.css.map */

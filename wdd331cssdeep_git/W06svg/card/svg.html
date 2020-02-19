@@ -100,15 +100,14 @@
         </symbol>
     </defs>
     <!--alfin termne la flecha-->
-    <polygon class="rbacko" points="100,10 40,198 190,78 10,78 160,198"/>
-        <polygon class="object" points="100,10 40,198 190,78 10,78 160,198"/> 
+    
     
 
 
 <g class="pepe"><pattern id="pattern2" patternUnits="userSpaceOnUse" width="15" height="6" x=2 y=3>
     <animateTransform attributeType="xml"
                         attributeName="patternTransform"
-                        type="translate" from="395" to="35" begin="0"
+                        type="translate" from="450" to="35" begin="0"
                         dur="20s" repeatCount="indefinite"/>
     <use xlink:href="#sarrow" x=1 y=1 transform="scale (0.25)"></use>    
 </pattern></g>
@@ -116,29 +115,22 @@
 <g id="cloudp">
     <rect x="5" y="5" rx="5" ry="5" width="90" height="130" fill="url(#pattern2)"></rect></g>
     <use class="size" xlink:href="#sheart" x=-7 y=-3></use>
-<g id="cright"> <use xlink:href="#sarrow"  x=25 y=30></use></g>
+<g id="cright"> <use xlink:href="#sarrow"  x=32 y=30></use></g>
+<use class="bigLeftcorner" xlink:href="#arch" x="5" y="8"></use>
 
 </svg>
 
     </svg>
-    <svg class="rcard" viewBox="0 0 100 140" width="400" height="560">
-        <rect class="rback" x="5" y="5" rx="5" ry="5" width="90" height="130"></rect>
+    <svg>
         <defs>
-            <symbol id="sarrow" width="15" height="15">
-                <g id="arrow">
-                    <use xlink:href="#sheart"  x=1 y=1></use>
-                </g>
-            </symbol>
-        </defs>
-        <g id="test">
-            <use xlink:href="#arrowheart" x="4" y="1"></use>
-            <g class="object">
-            <rect x="10" y="10" width="40" height="2"></rect>
-            <rect x="50" y="6" width="10" height="5" transform="skewX(-40)"></rect>
-            <rect x="31" y="12" width="10" height="5" transform="skewX(40)"></rect>
+            <symbol id="arch">
+        <g  id="arc">
+            <text class="object" >{</text>
+            <text class="object arcfont" x="28" y="2.6">I</text>
         </g>
-
-        </g>
+    </symbol>
+    </defs>
+    <use class="bigLeftcorner" xlink:href="#arch"></use>
     </svg>
 </body>
 </html>
