@@ -1,8 +1,32 @@
 //variables to setup basic size and shape of the card and pips
-$card-width: 40vw;
+$card-width: 90vw;
 $card-height: $card-width*1.4;
 $font-size-number: $card-width * 0.1;
 $icon-size: $card-width / 5;
+$num-columns:8;
+$one-column : 100% / $num_columns;
+$loop-start: 1;
+$loop-end: $num-columns + 1;
+
+// mixins
+@mixin col($span-num) {
+    flex: 0 0 $one-column * $span-num;
+}
+@mixin offset($offset-num) {
+    margin-left: $one-column *$offset-num;
+}
+//make column classes
+@for $index from $loop-start to $loop-end {
+    .col-#{$index}{
+        @include col($index);
+    }
+}
+@for $index from $loop-start to $loop-end{
+.offset-#{$index}{
+    @include offset($index);
+}
+}
+
 
 *,
 *:before,
@@ -26,10 +50,6 @@ $icon-size: $card-width / 5;
 .card-front {
     padding: .5em;
 }
-
-
-
-
 //set icon size
 .icon {
     width: $icon-size;
@@ -42,7 +62,7 @@ $icon-size: $card-width / 5;
   //an icon that is part of a number should be half the normal size
     & > .icon {
         width: $icon-size * .5;
-        height: $icon-size *.5;
+        height: $icon-size * .5;
     }
 }
 
@@ -50,3 +70,33 @@ $icon-size: $card-width / 5;
 .rotate {
     transform: rotate(180deg);
 }
+
+// grids show time
+.row{
+    display: flex;
+    flex-flow: row wrap;    
+    height: 100%;
+    align-content: space-between;
+    align-items: center;
+}
+.cell{    
+    text-align: center;
+}
+//collumns
+
+
+/*.col-1{
+    @include col(1);    
+}
+.col-2{
+    @include col(2);
+}
+.col-8{
+    @include col(8);
+}
+.offset-1{
+    @include offset(1);
+}
+.offset-2{
+    @include offset(2);
+}*/
