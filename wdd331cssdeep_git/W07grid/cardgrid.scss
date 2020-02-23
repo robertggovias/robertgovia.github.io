@@ -1,0 +1,95 @@
+//variables to setup basic size and shape of the card and pips
+$card-width: 40vw;
+$card-height: $card-width*1.4;
+$font-size-number: $card-width * 0.1;
+$icon-size: $card-width / 5;
+$collumns: 8;
+@mixin cols ($cols){
+    grid-column: span $cols;
+}
+
+@mixin gcentered {
+    text-align: center;    
+    align-self: center;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+//styles to draw a basic outline of a card
+.card {
+    border: 1px solid grey;
+    height: $card-height;
+    width: $card-width;
+    border-radius: 10px;
+    margin: 20px;
+    box-shadow: 2px 2px 4px grey;
+}
+
+//because it is a card front we want a bit of extra padding
+.card-front {
+    padding: .5em;
+}
+//set icon size
+.icon {
+    width: $icon-size;
+    height: $icon-size;
+    }
+
+.number {
+    text-align: center;
+    font-size: $font-size-number;
+  //an icon that is part of a number should be half the normal size
+    & > .icon {
+        width: $icon-size * .5;
+        height: $icon-size *.5;
+    }
+}
+
+//rotate bottom pips 180deg
+.rotate {
+    transform: rotate(180deg);
+}
+
+//Grids
+.row{
+    display: grid;
+    width: 100%;
+    height: 100%;      
+    grid-template-columns: repeat(8, 12.5%);    
+}
+.cell:nth-child(2){    
+    @include cols(4);
+}
+.cell:nth-child(3){    
+    @include cols(2);
+}
+.cell:nth-child(4){    
+    @include cols(8);
+    text-align: center;    
+}
+.cell:nth-child(5){    
+    grid-column: span 4;
+    @include gcentered();
+}
+.cell:nth-child(6){    
+    grid-column: span 4;
+    @include gcentered();
+}
+.cell:nth-child(7){
+    
+    grid-column: span 4;
+    text-align: center;    
+    align-self:flex-end;
+}
+.cell:nth-child(8){    
+    grid-column: span 3;
+    text-align: right;        
+    align-self:flex-end
+    
+}
