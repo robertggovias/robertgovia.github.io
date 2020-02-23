@@ -1,3 +1,84 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+.card {
+  border: 1px solid grey;
+  height: 56vw;
+  width: 40vw;
+  border-radius: 10px;
+  margin: 20px;
+  box-shadow: 2px 2px 4px grey;
+}
+
+.card-front {
+  padding: 0.5em;
+}
+
+.icon {
+  width: 8vw;
+  height: 8vw;
+}
+
+.number {
+  text-align: center;
+  font-size: 4vw;
+}
+.number > .icon {
+  width: 4vw;
+  height: 4vw;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}
+
+.row {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-columns: repeat(8, 12.5%);
+}
+
+.cell:nth-child(2) {
+  grid-column: span 4;
+}
+
+.cell:nth-child(3) {
+  grid-column: span 2;
+}
+
+.cell:nth-child(4) {
+  grid-column: span 8;
+  text-align: center;
+}
+
+.cell:nth-child(5) {
+  grid-column: span 4;
+  text-align: center;
+  align-self: center;
+}
+
+.cell:nth-child(6) {
+  grid-column: span 4;
+  text-align: center;
+  align-self: center;
+}
+
+.cell:nth-child(7) {
+  grid-column: span 4;
+  text-align: center;
+  align-self: flex-end;
+}
+
+.cell:nth-child(8) {
+  grid-column: span 3;
+  text-align: right;
+  align-self: flex-end;
+}
 
 /*# sourceMappingURL=cardgrid.css.map */
