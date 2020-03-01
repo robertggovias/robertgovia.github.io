@@ -1,33 +1,33 @@
 // color palette - these colors will be the color swatches of the Colors section
 
 $color-1: #4560cb;
-$color-2: #ffc640;
-$color-3: #ffe440;
-$color-4: #91a2e8;
-$color-5: #ffffff;
+$color-2: #91a2e8;
+$color-3: #ffc640;
+$color-4:#ffe440;
+$color-5: #fff4a9;
+$color-6: #ffffff;
+$color-7: #ffffff34;
+
+
 
 //
+p{color: $color-6;}
+body{background-color:$color-1;}
+header {color: $color-4;}
+.summary p {color:$color-3;}
+a:link{color:$color-5;}
+.intro h3, .supporting h3{color: $color-3;}
+.sidebar h3 {color: $color-3;}
+.sidebar li {background-color: $color-7; color: $color-6;}
+.sidebar li a:link {color:$color-6;}
+.sidebar li a:visited {color:$color-5;}
+.extra1 {}
 
-.supporting p, .intro p{     
-}
-.summary {background-color: cyan;}
-.summary p {background-color: darkcyan;}
-
-.preamble {background-color: orange;}
-.supporting {background-color: orangered;}
-
-footer {background-color: darkorange;}
-.design-selection ul{background-color: aliceblue;}
-.design-selection li{background-color: aliceblue;}
-.sidebar .wrapper {background-color: slateblue;}
-.sidebar h3.select {background-color: mediumslateblue;}
-.sidebar h3.archives {background-color: purple;}
-.sidebar h3.resources {background-color: mediumpurple;}
-
-.sidebar ul {background-color: violet;}
-.sidebar li {background-color: palevioletred;
-	list-style-type: none;
-	}
-.sidebar li a:link {		}
-.sidebar li a:visited {		}
-.extra1 {background-color: green;}
+.supporting p, .intro p{}
+.preamble {}
+.supporting {}
+footer {}
+.design-selection ul{}
+.design-selection li{}
+.sidebar .wrapper {}
+.sidebar ul {}
