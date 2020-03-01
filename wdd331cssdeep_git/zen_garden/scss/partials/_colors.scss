@@ -1,0 +1,33 @@
+// color palette - these colors will be the color swatches of the Colors section
+
+$color-1: #4560cb;
+$color-2: #ffc640;
+$color-3: #ffe440;
+$color-4: #91a2e8;
+$color-5: #ffffff;
+
+//
+
+.supporting p, .intro p{     
+}
+.summary {background-color: cyan;}
+.summary p {background-color: darkcyan;}
+
+.preamble {background-color: orange;}
+.supporting {background-color: orangered;}
+
+footer {background-color: darkorange;}
+.design-selection ul{background-color: aliceblue;}
+.design-selection li{background-color: aliceblue;}
+.sidebar .wrapper {background-color: slateblue;}
+.sidebar h3.select {background-color: mediumslateblue;}
+.sidebar h3.archives {background-color: purple;}
+.sidebar h3.resources {background-color: mediumpurple;}
+
+.sidebar ul {background-color: violet;}
+.sidebar li {background-color: palevioletred;
+	list-style-type: none;
+	}
+.sidebar li a:link {		}
+.sidebar li a:visited {		}
+.extra1 {background-color: green;}

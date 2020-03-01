@@ -1,0 +1,71 @@
+// breakpoints
+   
+$S:     768px;   
+$M:     1024px;     
+$L:     1600px;   
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+// super light grid - it works with the .cd-container class inside style.scss
+
+/*@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}*/
+
+/* basic elements */
+@media only screen and (min-width: 600px){
+    body {
+        margin: 0;
+        padding: 0 2em;
+    }
+    .page-wrapper{
+        display: grid;
+        max-width: 900px;
+        margin: 0 auto;        
+        grid-template-columns: 5fr 1fr;
+        grid-gap: 2em;        
+    }
+    .intro{
+        grid-column: 1 / span 2;;
+    }
+    /* widescreen layout */
+    
+    .intro {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        align-items: flex-end;
+        grid-column-gap: 1em;
+        
+    }
+
+    header {
+        grid-column: span 2;
+        margin-top: 4em;
+    }    
+    aside h3{
+        text-align: center;
+        
+        padding-top: 0.7em;
+    }
+    .design-selection ul,
+    .design-archives ul {        
+        grid-template-columns: 1fr;        
+    }
+    header h1, header h2{
+        max-width: 622px;
+        margin: 0 auto;
+    }
+}

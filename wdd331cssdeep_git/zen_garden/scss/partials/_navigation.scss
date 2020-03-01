@@ -1,0 +1,38 @@
+/* Primary navigation *//*
+.cd-primary-nav ul {
+    li {
+        padding: 5px 0;
+        a {
+            padding: 5px;
+            text-decoration: none;
+            color: $color-2;
+        }
+        a:hover {
+            color: white;
+            background-color: $color-3;
+        }
+    }
+}
+*/
+/* Other links *//*
+.cd-box div:not(:first-child){
+    ul {
+        display: flex;
+    }
+    li {
+        margin: 5px 15px;
+        a {
+            color:$color-2;
+            padding: 5px;
+        }
+        a:hover {
+            color: white;
+            background-color: $color-3;
+        }
+    }
+}
+
+.cd-navigation .cd-box {
+    background-color: $color-1;
+    color: $color-2;
+  }*/

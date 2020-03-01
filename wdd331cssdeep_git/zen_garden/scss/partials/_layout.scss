@@ -1,0 +1,130 @@
+// breakpoints
+   
+$S:     768px;   
+$M:     1024px;     
+$L:     1600px;   
+
+// media queries
+
+@mixin MQ($canvas) {
+  @if $canvas == S {
+   @media only screen and (min-width: $S) { @content; } 
+  }
+  @else if $canvas == M {
+   @media only screen and (min-width: $M) { @content; } 
+  }
+  @else if $canvas == L {
+   @media only screen and (min-width: $L) { @content; } 
+  }
+}
+
+// super light grid - it works with the .cd-container class inside style.scss
+
+/*@mixin column($percentage, $float-direction:left) {
+  width: 100% * $percentage;
+  float: $float-direction;
+}*/
+
+/* basic elements */
+
+* {
+	margin: 0;
+    padding: 0;	
+	}
+body { 	
+	margin: 0; 
+	padding: 0 15px 0 14px;
+    background: #4560cb;
+	}
+
+/* Mobile layout */
+.page-wrapper { 	
+    margin: 0; 
+    display: grid;    
+	}
+header{
+    margin-top:1em;    
+}
+
+.intro { 	
+	}
+
+
+header {	
+}
+h3{
+    margin-bottom: .5em;
+    margin-top: .7em;
+}
+.supporting p, .intro p{ 
+    margin-bottom: .5em;    
+}
+.summary {    
+    margin-top: 1em;    	
+	}
+.summary p {	
+	}
+
+.preamble {
+	
+    margin-top: 1em;
+	}
+.supporting {	
+	
+    margin-top: 1em;
+	}
+
+footer { 
+	
+	}
+.design-selection ul,.design-archives ul{    
+    display: grid;    
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;    
+    align-items: center;
+    
+}
+.zen-resources li{
+    margin: 1em;
+    padding: 1em
+}
+.design-selection li, .design-archives li{padding: 1em;   
+    
+}
+/*.design-name{
+    padding: 1em;
+}*/
+.sidebar .wrapper { 	
+    
+	}
+.sidebar h3.select {		
+    
+	}
+.sidebar h3.archives { 
+    
+	}
+.sidebar h3.resources { 	
+    
+	}
+
+.sidebar ul {
+    
+	margin: 0;
+	padding: 0;
+	}
+.sidebar li {			
+    
+	}
+.sidebar li a:link {	
+	}
+.sidebar li a:visited {	
+	}
+
+
+.extra1 {
+    height: 2em;
+	}
+@media only screen and (max-width: 559px) {
+aside{
+        grid-row: 2/span 1;
+    }}
