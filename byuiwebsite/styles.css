@@ -1031,4 +1031,22 @@ img {
   border: 0;
 }
 
+header {
+  background-color: #056cb6;
+}
+
+.site-banner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+a {
+  color: white;
+}
+
 /*# sourceMappingURL=styles.css.map */

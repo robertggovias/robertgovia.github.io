@@ -31,3 +31,17 @@ img {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
+header{
+  background-color: $byui-blue;  
+}
+.site-banner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+}
+.hidden{
+  display: none;
+}
+a{
+color:white;
+}
