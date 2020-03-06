@@ -1032,19 +1032,15 @@ img {
 }
 
 header {
-  background-color: #056cb6;
-    height: 60px;
+  
+height: 60px;
+    background-color: aquamarine;
 }
 
 .site-banner {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   width: 100%;
-}
-.site-banner__left{
-    width: 70px;
-    height: 60px;
-    background-color: black;
 }
 
 .hidden {
@@ -1055,4 +1051,4 @@ a {
   color: white;
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=style.css.map */
