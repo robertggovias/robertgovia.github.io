@@ -1,0 +1,51 @@
+.stage {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+  
+.curtain-container {
+  width: 100%;
+  height: 100%;
+}
+      
+.curtains {
+  background: orange;
+  width: 50%;
+  height: 100vh;
+  float: left;
+  position: relative;
+  z-index: 2;
+    transition: all 1s ease-out;
+}
+
+.curtain-left {
+  transform: translateX(-100%);
+}
+
+.curtain-right {
+  transform: translateX(100%);
+}
+  
+.gift {
+  background: #333;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 0;
+}
+input[type=checkbox]:checked ~ div.curtain-left {
+  transform: translateX(0);
+}
+
+input[type=checkbox]:checked ~ div.curtain-right {
+  transform: translateX(0);
+}
