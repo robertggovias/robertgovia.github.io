@@ -1,0 +1,61 @@
+@charset "UTF-8";
+ul {
+  display: inline;
+}
+
+.section-title {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1em 2em;
+}
+
+.apt-img {
+  margin: 1em;
+}
+
+.apt-desc {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.apt-checks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+ul {
+  display: inline;
+}
+
+.section-title {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1em 2em;
+}
+
+.apt-img {
+  margin: 1em;
+}
+
+.apt-desc {
+  width: 100%;
+  font-size: 1.1em;
+}
+
+.apt-espaço:after {
+  content: " m²";
+}
+
+.apt-quartos:after {
+  content: " Quartos";
+}
+
+.apt-banheiros:after {
+  content: " Banheiros";
+}
+
+.apt-vagas:after {
+  content: " Vaga";
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,30 @@
+ul{
+    display: inline;
+}
+.section-title{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em 2em;
+    ;
+}
+.apt-img{
+    margin: 1em;    
+}
+.apt-title{}
+.apt-enderço{}
+.apt-desc{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;    
+} 
+.apt-espaço{}
+.apt-quartos{}
+.apt-banheiros{}
+.apt-vagas{}
+.apt-checks{display: grid;grid-template-columns: 1fr 1fr 1fr 1fr ;}
+.apt-check{}
+.apt-check{}
+.apt-check{}
+.apt-preço{}
+.apt-final{}
+.apt-condominio{}
+.apt-logo{}
