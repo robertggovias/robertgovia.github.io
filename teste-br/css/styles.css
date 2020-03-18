@@ -1,74 +1,25 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap");
-.section-title {
-  background-color: magenta;
-}
-
-article {
-  background-color: lightblue;
-}
-
-.apt-title {
-  background-color: cyan;
-}
-
-.apt-inf {
-  background-color: greenyellow;
-}
-
-.apt-details {
-  background-color: burlywood;
-}
-
-.apt-enderço {
-  background-color: green;
-}
-
-.apt-desc {
-  background-color: yellow;
-}
-
-.apt-espaço {
-  background-color: yellowgreen;
-}
-
-.apt-quartos {
-  background-color: orange;
-}
-
-.apt-banheiros {
-  background-color: orangered;
-}
-
-.apt-vagas {
-  background-color: red;
-}
-
-.apt-checks {
-  background-color: darkred;
-}
-
 .apt-check {
   background-color: gray;
 }
 
-.apt-custo {
-  background-color: #0000cc;
-  color: white;
-}
-
-.apt-final {
-  background-color: purple;
-}
-
-.apt-condominio {
-  background-color: violet;
-}
-
-.apt-logo {
-  background-color: fuchsia;
-}
-
+/*.section-title{background-color: magenta;}
+article{background-color: lightblue;}
+.apt-title{background-color: cyan;}
+.apt-inf{background-color: greenyellow;}
+.apt-details{background-color: burlywood;}
+.apt-enderço{background-color: green;}
+.apt-desc{background-color: yellow;}
+.apt-espaço{background-color: yellowgreen;}
+.apt-quartos{background-color: orange;}
+.apt-banheiros{background-color: orangered;}
+.apt-vagas{background-color: red;}
+.apt-checks{background-color: darkred;}
+.apt-custo{background-color: darken($color: blue, $amount: 10);color: white;}
+.apt-final{background-color: purple;}
+.apt-condominio{background-color: violet;}
+.apt-logo{background-color: fuchsia;}*/
 header {
   display: none;
 }
@@ -97,7 +48,7 @@ ul {
 
 article {
   margin: 0 auto;
-  height: 220px;
+  height: 110%;
 }
 
 .apt-img img {
@@ -116,9 +67,16 @@ article {
   flex-shrink: 0;
 }
 
-.apt-desc,
-.apt-checks {
-  display: flex;
+.apt-espaço, .apt-quartos, .apt-banheiros, .apt-vagas {
+  display: inline-block;
+}
+
+.apt-check {
+  padding: 0.05em 0.5em;
+  border-radius: 1em;
+  margin: 0.1em 0.2em;
+  display: inline;
+  line-height: 1em;
 }
 
 .apt-espaço {
@@ -135,12 +93,6 @@ article {
 
 .apt-vagas {
   padding: 0.5em;
-}
-
-.apt-check {
-  padding: 0.1em 0.5em;
-  border-radius: 1em;
-  margin: 0 0.2em;
 }
 
 .apt-final {
@@ -225,9 +177,13 @@ ul {
   font-size: 1.5em;
 }
 
-.apt-desc {
+.apt-desc, .apt-check {
   width: 100%;
-  font-size: 1.1em;
+  font-size: 0.8em;
+}
+
+.apt-check {
+  font-size: 0.8em;
 }
 
 .apt-espaço:after {
@@ -256,6 +212,12 @@ ul {
 
 .apt-condominio:before {
   content: "Condominio R$ ";
+}
+
+@media only screen and (min-width: 600px) {
+  .apt-desc, .apt-check {
+    font-size: 1em;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

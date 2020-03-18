@@ -2,6 +2,7 @@
 $big:2em;
 $mid:1.5em;
 $smid:1.1em;
+$small:0.8em;
 p, h1, h2, div{font-family: 'Baloo Chettan 2', cursive;}
 ul{
     display: inline;
@@ -14,9 +15,12 @@ ul{
 
 .apt-title{font-size:$mid;}
 .apt-enderço{}
-.apt-desc{
+.apt-desc, .apt-check{
     width: 100%;
-    font-size: $smid;    
+    font-size: $small;    
+}
+.apt-check{
+    font-size: $small;    
 }
 .apt-espaço:after{content:" m²";}
 .apt-quartos:after{content:" Quartos";}
@@ -31,5 +35,5 @@ ul{
 .apt-condominio:before{content: "Condominio R$ ";}
 .apt-logo{}
 @media only screen and (min-width: 600px) {
-    .apt-desc:.7em;
+    .apt-desc, .apt-check{font-size:1em;}
 }

@@ -26,7 +26,7 @@ ul {
 
 article {
     margin: 0 auto;
-    height: 110%;
+    
     
 }
 
@@ -54,9 +54,16 @@ article {
 {
     display: inline-block;
 }
-.apt-check{display: inline;}
+
+.apt-check {
+    padding: .05em .5em;
+    border-radius: 1em;
+    margin: 0.1em .2em;
+    display: inline;
+    line-height: 1em;
+}
 .apt-espaço {
-    padding: .5em;
+    padding: 0.5em;
 }
 
 .apt-quartos {
