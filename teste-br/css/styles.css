@@ -1,26 +1,214 @@
 @charset "UTF-8";
-ul {
-  display: inline;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap");
 .section-title {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 1em 2em;
+  background-color: magenta;
 }
 
-.apt-img {
-  margin: 1em;
+article {
+  background-color: lightblue;
+}
+
+.apt-title {
+  background-color: cyan;
+}
+
+.apt-inf {
+  background-color: greenyellow;
+}
+
+.apt-details {
+  background-color: burlywood;
+}
+
+.apt-enderço {
+  background-color: green;
 }
 
 .apt-desc {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: yellow;
+}
+
+.apt-espaço {
+  background-color: yellowgreen;
+}
+
+.apt-quartos {
+  background-color: orange;
+}
+
+.apt-banheiros {
+  background-color: orangered;
+}
+
+.apt-vagas {
+  background-color: red;
 }
 
 .apt-checks {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background-color: darkred;
+}
+
+.apt-check {
+  background-color: gray;
+}
+
+.apt-custo {
+  background-color: #0000cc;
+  color: white;
+}
+
+.apt-final {
+  background-color: purple;
+}
+
+.apt-condominio {
+  background-color: violet;
+}
+
+.apt-logo {
+  background-color: fuchsia;
+}
+
+header {
+  display: none;
+}
+
+nav {
+  display: none;
+}
+
+ul {
+  display: inline;
+}
+
+.section-title {
+  display: none;
+}
+
+.apt-inf {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+article {
+  margin: 0 auto;
+  height: 220px;
+}
+
+.apt-img img {
+  height: 100%;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.apt-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.apt-details {
+  flex-shrink: 0;
+}
+
+.apt-desc,
+.apt-checks {
+  display: flex;
+}
+
+.apt-espaço {
+  padding: 0.5em;
+}
+
+.apt-quartos {
+  padding: 0.5em;
+}
+
+.apt-banheiros {
+  padding: 0.5em;
+}
+
+.apt-vagas {
+  padding: 0.5em;
+}
+
+.apt-check {
+  padding: 0.1em 0.5em;
+  border-radius: 1em;
+  margin: 0 0.2em;
+}
+
+.apt-final {
+  display: flexbox;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.apt-custo {
+  float: left;
+}
+
+.apt-logo {
+  float: right;
+}
+
+.agir {
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  article {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    column-gap: 1em;
+    height: 237px;
+    max-width: 1000px;
+  }
+
+  .apt-img {
+    height: 237px;
+    max-width: 100%;
+    height: 100%;
+  }
+
+  .apt-inf {
+    flex-direction: column;
+  }
+
+  .right-corner img {
+    display: none;
+  }
+
+  .right-corner {
+    float: right;
+  }
+
+  .agir {
+    display: inline-flex;
+    align-self: flex-end;
+  }
+
+  .boton {
+    padding: 0.5em;
+    border: solid 1px orange;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .agir {
+    display: none;
+  }
+}
+/*detalhes
+    boton
+    contatar
+    mapa*/
+p, h1, h2, div {
+  font-family: "Baloo Chettan 2", cursive;
 }
 
 ul {
@@ -33,8 +221,8 @@ ul {
   padding: 1em 2em;
 }
 
-.apt-img {
-  margin: 1em;
+.apt-title {
+  font-size: 1.5em;
 }
 
 .apt-desc {
@@ -56,6 +244,18 @@ ul {
 
 .apt-vagas:after {
   content: " Vaga";
+}
+
+.apt-preço {
+  font-size: 2em;
+}
+
+.apt-preço:before {
+  content: "R$ ";
+}
+
+.apt-condominio:before {
+  content: "Condominio R$ ";
 }
 
 /*# sourceMappingURL=styles.css.map */

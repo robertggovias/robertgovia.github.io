@@ -1,0 +1,19 @@
+ul{}
+.section-title{background-color: magenta;}
+article{background-color: lightblue;}
+.apt-title{background-color: cyan;}
+.apt-inf{background-color: greenyellow;}
+.apt-details{background-color: burlywood;}
+.apt-enderço{background-color: green;}
+.apt-desc{background-color: yellow;}
+.apt-espaço{background-color: yellowgreen;}
+.apt-quartos{background-color: orange;}
+.apt-banheiros{background-color: orangered;}
+.apt-vagas{background-color: red;}
+.apt-checks{background-color: darkred;}
+.apt-check{background-color: gray;}
+
+.apt-custo{background-color: darken($color: blue, $amount: 10);color: white;}
+.apt-final{background-color: purple;}
+.apt-condominio{background-color: violet;}
+.apt-logo{background-color: fuchsia;}
