@@ -50,11 +50,11 @@ article {
     flex-shrink: 0;
 }
 
-.apt-desc,
-.apt-checks {
-    display: flex;
+.apt-espaço, .apt-quartos, .apt-banheiros, .apt-vagas,
+{
+    display: inline-block;
 }
-
+.apt-check{display: inline;}
 .apt-espaço {
     padding: .5em;
 }
@@ -69,12 +69,6 @@ article {
 
 .apt-vagas {
     padding: .5em;
-}
-
-.apt-check {
-    padding: .1em .5em;
-    border-radius: 1em;
-    margin: 0 .2em;
 }
 
 .apt-final {
