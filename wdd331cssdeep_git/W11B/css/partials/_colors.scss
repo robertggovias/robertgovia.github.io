@@ -1,0 +1,72 @@
+//variables
+
+$color-menu:white;
+$color-hov-menu:#d8ff00;
+$color-icon:black;
+$color-hov-icon:gray;
+$color-back-body-o:repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+$color-back-body-c:repeating-linear-gradient(
+    -45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+$color-back-m-o:rgba(0, 105, 198, 0.57);
+$color-back-m-c:white;
+$color-back-nav:white;
+$color-back-hover:rgba(0, 255, 255, 0.48);
+
+//css
+body {
+  transition: 2s;
+}
+.body-animate {
+    background:$color-back-body-o;
+    transition: 2s;
+}
+.body-open{
+    background: $color-back-body-c;
+    transition: 2s;
+}
+
+
+.prueba-open{    
+    background-color: $color-back-m-o;
+}
+nav {    
+    background-color: $color-back-nav;    
+    transition: 1s;
+    z-index: 99;
+}
+
+ul a{color: white;}
+.open a span {
+    opacity: 0;
+}
+
+
+span{
+    background-color: black;
+}
+.menu .menu-icon > a:before, .menu .menu-icon > a:after, .menu .menu-icon > a span{
+    background-color: black;
+}
+.menu .menu-icon > a:hover:before, .menu .menu-icon > a:hover:after, .menu .menu-icon > a:hover span{
+    background-color: gray;}
+a{transition: 1s;}
+li,a{
+    transition: 1s;
+}
+a:hover{
+     color: #d8ff00;
+}
+li:hover{
+    background-color: $color-back-hover;
+}

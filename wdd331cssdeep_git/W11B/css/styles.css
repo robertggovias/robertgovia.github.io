@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
+body {
+  transition: 2s;
+}
+
+.body-animate {
+  background: repeating-linear-gradient(45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+  transition: 2s;
+}
+
+.body-open {
+  background: repeating-linear-gradient(-45deg, #606dbc, #606dbc 10px, #465298 10px, #465298 20px);
+  transition: 2s;
+}
+
+.prueba-open {
+  background-color: rgba(0, 105, 198, 0.57);
+}
+
+nav {
+  background-color: white;
+  transition: 1s;
+  z-index: 99;
+}
+
+ul a {
+  color: white;
+}
+
+.open a span {
+  opacity: 0;
+}
+
+span {
+  background-color: black;
+}
+
+.menu .menu-icon > a:before, .menu .menu-icon > a:after, .menu .menu-icon > a span {
+  background-color: black;
+}
+
+.menu .menu-icon > a:hover:before, .menu .menu-icon > a:hover:after, .menu .menu-icon > a:hover span {
+  background-color: gray;
+}
+
+a {
+  transition: 1s;
+}
+
+li, a {
+  transition: 1s;
+}
+
+a:hover {
+  color: #d8ff00;
+}
+
+li:hover {
+  background-color: rgba(0, 255, 255, 0.48);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.menu {
+  transform: translate(-8em, 0em);
+}
+.menu .menu-icon {
+  position: relative;
+  padding-top: 5px;
+}
+.menu .menu-icon > a::after, .menu .menu-icon > a::before,
+.menu .menu-icon > a span {
+  content: "";
+  display: block;
+  height: 3px;
+  width: 30px;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 1s ease-in-out;
+}
+.menu .menu-icon a {
+  position: relative;
+  display: block;
+  padding-left: 10px;
+  z-index: 100;
+}
+
+.right {
+  position: relative;
+  right: -8em;
+  transition: 1s;
+}
+
+.prueba-open {
+  transform: translate(0em, 0em);
+}
+
+.open {
+  right: -6em;
+}
+.open a:before {
+  transform: rotate(-45deg) translate(-6px, 4px);
+}
+.open a:after {
+  transform: rotate(45deg) translate(-7px, -6px);
+}
+
+nav {
+  width: 8em;
+  height: 100vh;
+  display: block;
+}
+
+span {
+  height: 5px;
+  width: 35px;
+}
+
+li {
+  padding: 1em;
+  list-style: none;
+}
+
+body {
+  font-family: "Indie Flower", cursive;
+  font-size: 24px;
+}
+
+a {
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=styles.css.map */
