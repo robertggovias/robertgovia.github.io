@@ -1,24 +1,34 @@
+h1, h2{font-family:sans-serif;}
 .stage {
   width: 100%;
   height: 100vh;
   overflow: hidden;
+  /*If you try to do it without hidden, the curtain will never disapear because all the content need to be visible, at least 12px will be visible*/
 }
-  
+.curtain-left h1{
+  text-align:right;
+}
+.gift h2{
+  text-align:center;
+  color: yellow;  
+}
 .curtain-container {
   width: 100%;
   height: 100%;
 }
       
 .curtains {
-  background: orange;
+  background: lime;
   width: 50%;
   height: 100vh;
   float: left;
   position: relative;
   z-index: 2;
+  /*the intention is to be the second layer, or to be seen before the "gift"*/
     transition: all 1s ease-out;
+  /*the duration of the animation of all the properties which are transformed will be just one second, starting fast and finishing normal*/
 }
-
+/*The post-click position for both curtains: in the most left and the most right*/
 .curtain-left {
   transform: translateX(-100%);
 }
@@ -31,6 +41,7 @@
   background: #333;
   position: absolute;
   z-index: 1;
+  /*now the gift is behind the curtains, because is in the layer 1, meanwhile the curtains are in the layer2*/
   width: 100%;
   height: 100%;
 }
@@ -40,8 +51,11 @@ input[type=checkbox] {
   width: 100%;
   height: 100%;
   z-index: 100;
+  /*the other 99 elements before will be bellow it, and thas of it 100% width and height always will be the first element to be clicked, ther is not options*/
   opacity: 0;
+  /*ebnough important to say it, couldn't be visible if we want to matain the secret*/
 }
+/*knowing that the checked state has been set to be the first default (in the html), we use it to set the intial position for curtains "0"*/
 input[type=checkbox]:checked ~ div.curtain-left {
   transform: translateX(0);
 }
