@@ -1,0 +1,93 @@
+
+
+csslint: There are 18 problems in d:\Documents\programacion\github\robertgovia.github.io\wdd331cssdeep_git\css\main.css.
+
+main.css
+1: warning at line 2, col 1
+@import prevents parallel downloads, use <link> instead.
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
+main.css
+2: warning at line 4, col 1
+The universal selector (*) is known to be slow.
+*{
+
+main.css
+3: warning at line 31, col 8
+Heading (h1) should not be qualified.
+header h1{
+
+main.css
+4: warning at line 31, col 1
+Rule doesn't have all its properties in alphabetical order.
+header h1{
+
+main.css
+5: warning at line 38, col 1
+Rule doesn't have all its properties in alphabetical order.
+li{
+
+main.css
+6: warning at line 51, col 1
+Rule is empty.
+section{
+
+main.css
+7: warning at line 54, col 1
+Rule doesn't have all its properties in alphabetical order.
+article{
+
+main.css
+8: warning at line 59, col 5
+Expected end of value but found 'rgb(0 , 0 , 0 , 0.2)'.
+    box-shadow: 4px 4px 5px rgb(0,0,0,0.2);
+
+main.css
+9: warning at line 62, col 9
+Heading (h2) should not be qualified.
+article h2 a, article h2 a:visited{
+
+main.css
+10: warning at line 62, col 23
+Heading (h2) should not be qualified.
+article h2 a, article h2 a:visited{
+
+main.css
+11: warning at line 66, col 9
+Heading (h2) should not be qualified.
+article h2 a:active{    color:#DEB887; 
+
+main.css
+12: warning at line 68, col 9
+Heading (h2) should not be qualified.
+article h2 a:hover{
+
+main.css
+13: warning at line 75, col 1
+Rule doesn't have all its properties in alphabetical order.
+.post-date{
+
+main.css
+14: warning at line 85, col 1
+Rule doesn't have all its properties in alphabetical order.
+article figure img{
+
+main.css
+15: warning at line 96, col 5
+Rule doesn't have all its properties in alphabetical order.
+    article{
+
+main.css
+16: warning at line 100, col 5
+Rule doesn't have all its properties in alphabetical order.
+    body>div{        
+
+main.css
+17: warning at line 102, col 9
+Expected (flex-start | flex-end | center | space-between | space-around) but found 'stretch'.
+        justify-content: stretch;
+
+main.css
+18: error at line 103, col 38
+Expected RBRACE at line 103, col 38.
+        grid-template-columns: 273px 1fr;
