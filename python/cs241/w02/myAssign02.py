@@ -1,29 +1,54 @@
 def prompt_file():
-    x = input("Please enter the data file: ")
-    return x
-def parse(x):
-    y=open(x,"r")
-    p=y.readlines()
-    return p
-def printLine(x,y):
-    f=print(x[y])
-    return f
+    file_name = input("Please enter the data file: ")
+    return file_name
 
-def splitPrint(x,y,z):    
-    p=x[y].split(",")
-    f=(p[z])
-    for i in f:
-        
-    '''for i in x[y]:
-        z = i.split(",")
-    e=print(z)
-    #f=print("{} ({}, {}) - ${}".format(z[2],z[0],z[3],z[6]))'''
-    return f
+def file_lines(xfile):
+    xfile_r=open(xfile,"r")
+    lines=xfile_r.readlines()
+    return lines
 
+def getComm(file_lines):
+    commList=[]    
+    for items in file_lines:
+        collumns= items.split(",")   
+        commList.append(collumns[6])
+    comm = commList[1:len(commList)]    
+    return comm
+
+def average_item(commList_): 
+    addinator=0
+    for commIter in commList_:
+        commFloat=float(commIter)
+        addinator+=commFloat
+    sumin = addinator/len(commList_)
+    return sumin
+
+def min_index(commList_):
+    minimo=min(commList_)    
+    min_id=commList_.index(minimo)        
+    return min_id
+
+def max_index(commList_):    
+    maximo=max(commList_)    
+    max_id=commList_.index(maximo)    
+    return max_id
+
+def print_result(lines, i_avg, i_maxim, i_minim):
+    i_min=lines[i_minim+1].split(",")
+    i_max=lines[i_maxim+1].split(",")
+    print()
+    print("The average commercial rate is: {}".format(i_avg))
+    print()
+    print("The highest rate is:")
+    print("{} ({}, {}) - ${}".format(i_max[2],i_max[0],i_max[3],i_max[6]))
+    print()
+    print("The lowest rate is:")
+    print("{} ({}, {}) - ${}".format(i_min[2],i_min[0],i_min[3],float(i_min[6])))
+    return 
+   
 def main():
-    x = parse(prompt_file())
-    #y = printLine(x,2,2)
-    y = print(list(range(splitPrint(x,1,6),splitPrint(x,5,6))))
-    return y
+    lines = file_lines(prompt_file())
+    commList_ = getComm(lines)
+    return print_result(lines, average_item(commList_), max_index(commList_), min_index(commList_))
 if __name__ == "__main__":
     main()

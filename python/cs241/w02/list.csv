@@ -1,6 +1,6 @@
 zip,eiaid,utility_name,state,service_type,ownership,comm_rate,ind_rate,res_rate
-99634,654656,Napakiak Ircinraq Power Co,AK,1,1,0.8397790055,1,1
-99635,654657,wafwef,TX,2,2,0.8397790255,2,2
-99636,654658,wgwggwgwg,CO,3,3,0.8397790355,3,3
-99637,654659,tgtgtgtgtg,LU,4,4,0.8397790455,4,4
-99638,654660,dcdcdcdcdcd,NY,5,5,0.8397790555,5,5
+99636,654658,wgwggwgwg,CO,3,3,0.3397790355,3,3
+99637,654659,tgtgtgtgtg,LU,4,4,0,4,4
+99638,654660,dcdcdcdcdcd,NY,5,5,0.2397790555,5,5
+99635,654657,wafwef,TX,2,2,0.1397790255,2,2
+99634,654656,Napakiak Ircinraq Power Co,AK,1,1,0.7397790055,1,1
