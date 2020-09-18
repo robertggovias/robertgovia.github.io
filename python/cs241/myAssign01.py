@@ -15,7 +15,7 @@ def super_again():
 				print("Congratulations. You guessed it")
 				again=input("Would you like to play again (yes/no)?") 
 				if again == ("no"):
-					print ("Thank you. Goodbye.")
+					print ("Thank you. Goodbye.")					
 				else:
 					super_again()
 					
