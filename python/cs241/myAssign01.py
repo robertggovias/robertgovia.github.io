@@ -14,7 +14,7 @@ def super_again():
 			if guess == randNum:
 				print("Congratulations. You guessed it")
 				again=input("Would you like to play again (yes/no)?") 
-				if again == ("no"):
+				if again == ("yes"):
 					print ("Thank you. Goodbye.")
 				else:
 					super_again()

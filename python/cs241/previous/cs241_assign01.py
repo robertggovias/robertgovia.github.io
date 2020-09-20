@@ -16,13 +16,14 @@ def super_again():
 		if ((guess > 0) and (guess < 100)):
 			count += 1
 			if guess == randNum:
-				print("Congratulations. You guessed it")
+				print("Congratulations. You guessed it!\n"
+				"It took you ", count," guesses")
 				again=input("Would you like to play again (yes/no)?") 
 				if again == ("yes"):
 					guess = int(input("Please enter a guess: "))		
 				else:
 					print ("Thank you. Goodbye.")
-				
+				break
 			elif guess < randNum:
 				print("Higher")
 			elif guess > randNum:
