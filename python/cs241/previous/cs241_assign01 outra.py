@@ -29,7 +29,7 @@ def gueessingGame():
 				elif theEnd == ("no"): 
 					print ("Thank you. Goodbye.")				
 				else:
-					print ("Hey pal the answer must be yes or no")
+					print ("Hey pal! the answer must be yes or no")
 					goodBye()
 			goodBye()
 	again()
