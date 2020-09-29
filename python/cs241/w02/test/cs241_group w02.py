@@ -1,8 +1,7 @@
-counting=0
-countings=0
-counts=0
-theFile = input("Enter file: ")
-text = open(theFile,"r")
+def prompt_filename():
+    theFile = input("Enter file: ")
+    return theFile
+
 
 '''for lines in text:
     counting += 1
@@ -13,12 +12,20 @@ print("The file contains {} lines and {} words.".format(counting,countings))'''
 '''for pline in text:
     worthy=pline.split()
     print("super ya aprendí {} que {} puedo {} usar {} en una {} lista".format(worthy[1],worthy[2],worthy[3],worthy[4],worthy[5]))'''
-for pline in text:
+'''for pline in text:
     worthy=pline.split()
     for create in worthy:
         print(create)
 
-    print("super ya aprendí {} que {} puedo {} usar {} en una {} lista".format(worthy[1],worthy[2],worthy[3],worthy[4],worthy[5]))
+    print("super ya aprendí {} que {} puedo {} usar {} en una {} lista".format(worthy[1],worthy[2],worthy[3],worthy[4],worthy[5]))'''
 
     
-text.close()
+
+def main():
+    prompt_filename()
+    print(prompt_filename())
+    '''text = open(name,"r")'''
+    return
+'''text.close()'''
+if __name__ == "__main__":
+    main()
