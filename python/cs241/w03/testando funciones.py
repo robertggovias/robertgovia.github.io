@@ -12,7 +12,7 @@ class Point:
 
 def distance(point1, point2):
     xdiference = p2.gX() - p1.gX()
-    ydiference = 
+    ydiference = p2.gY() - p1.gY()
         
 p = Point(4,5)
 print(p.gX())
