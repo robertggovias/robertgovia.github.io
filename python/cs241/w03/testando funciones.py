@@ -1,16 +1,17 @@
 import math
 
 class Point:
-    def __init__(self, pX,pY):
-        self.x = pX
-        self.y = pY
-    def gX(self):
-        return self.x
+    def __init__(pedo, pX,pY):
+        pedo.x = pX
+        pedo.y = pY
+    def gX(pedo):
+        return pedo.x
     
-    def gY(self):
-        return self.y
-    def distanceFromOrigim(self):
-        return ((self.x ** 2)+(self.y**2))**0.5
+
+    def gY(pedo):
+        return pedo.y
+    def distanceFromOrigim(pedo):
+        return ((pedo.x ** 2)+(pedo.y**2))**0.5
 
 def distance(p1, p2):
     xdiference = p2.gX() - p1.gX()
@@ -19,9 +20,12 @@ def distance(p1, p2):
     distanteee = math.sqrt(xdiference**2 + ydiference**2)
     return distanteee
         
-p = Point(4,5)
-q = Point(7,9)
+
+c = Point(10,10)
 print(p.gX())
 print(p.gY())
+print(q.gX())
+print(q.gY())
+
 
 print(distance(p,q))
