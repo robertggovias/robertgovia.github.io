@@ -10,7 +10,7 @@ class Student:
     def gid (self):
         return self.i_d'''
 
-    def prompt_student(self):
+    '''def prompt_student(self):
         self.f_name = input("Please enter your first name: ")
 
     def display_student(self):
