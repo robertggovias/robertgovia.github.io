@@ -2,25 +2,41 @@ class Person:
     def __init__(self):
         self.name = "anonymous"        
         self.year = "unknown"
+    '''def gname(self):
+        return self.name
+    def gyear(self):
+        return self.year'''
     def display(self):
-        print("{} (b. {})".format(self.name,self.year))
+        print("Author:\n{} (b. {})".format(self.name,self.year))
 class Book:
+    def Person(self,name,year):
+        self.name = name
+        self.year = year
+    def gname(self):
+        return self.name
+    def gyear(self):
+        return self.year
+
     def __init__(self):
         self.title = "untitled"        
-        self.publisher = "unpublished"
-        self.name = Person()
-        self.year = Person()        
+        self.publisher = "unpublished" 
+        self.name =  gname(self)
+        self.year =  gyear(self)
 
     def display(self):        
         print("{}\nPublisher:\n{}".format(self.title,self.publisher))
-        print("{} (b. {})".format(self.name,self.year))
+        Person.display(self)
+        #print("{} (b. {})".format(self.name,self.year))
+newA = Book()
+Book.display(newA)
+newA = Person()
+Person.display(newA)
 
-print()
 newB = Book()
+newB = Person()
+
 newB.title = "The Great Divorce"
 newB.publisher = "Geoffrey Bles"
 newB.name= "C.S. Lewis"
 newB.year = "1898"
-#Person.display(new)
 Book.display(newB)
-
