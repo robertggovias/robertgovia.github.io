@@ -22,4 +22,4 @@ def prompt_student():
     user = Student(input("Please enter your first name: "),input("Please enter your last name: "),input("Please enter your id: "))
     return Student.display_student(user)
 
-print(prompt_student())
+print(prompt_student())'''
