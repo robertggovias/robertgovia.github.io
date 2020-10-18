@@ -1,38 +1,39 @@
 class Person:
-    def __init__(self, name, year):
+    #def __init__(self, name, year):
+    def __init__(self):
         self.name = "anonymous"        
         self.year = "unknown"
-    def gname(self):
-        return self.name
-    def gyear(self):
-        return self.year
+        #self.author = self.name, self.year
+            
     def display(self):
-        print("Author:\n{} (b. {})".format(self.name,self.year))
+        self.author = print("Author:\n{} (b. {})".format(self.name,self.year))
+       # print("Author:\n{} (b. {})".format(self.author(name,year))
+       #print("Author:\n{} (b. {})\n".format(self.name,self.year))
+        
+
 class Book:
     
-    def __init__(self, name,year):
-        self.title = "untitled"        
-        self.publisher = "unpublished" 
-        self.name =  Person(name,year)
-    def gtitle(self):
-        return self.title
-    def gpublisher(self):
-        return self.publisher
-    
+    def __init__(self):
+        self.title = "untitled" 
+        self.publisher = "unpublished"
+        self.author = Person()
+
     def display(self):        
         print("{}\nPublisher:\n{}".format(self.title,self.publisher))
-        Person.display(self)
-        #print("{} (b. {})".format(self.name,self.year))
-newA = Book()
-Book.display(newA)
-newA = Person()
-Person.display(newA)
+        self.author.display()
+        #print("Author:\n{} (b. {})".format(self.author.name,self.author.year))        
 
-newB = Book()
-newB = Person()
+def main():
+    newA = Book()
+    Book.display(newA)
+    print()
+    print("Please enter the following:")
+    newA.author.name= input("Name: ")
+    newA.author.year = input("Year: ")
+    newA.title = input("Title: ")
+    newA.publisher = input("Publisher: ")
+    print()
+    Book.display(newA)
 
-newB.title = "The Great Divorce"
-newB.publisher = "Geoffrey Bles"
-newB.name= "C.S. Lewis"
-newB.year = "1898"
-Book.display(newB)
+if __name__ == "__main__":
+    main()

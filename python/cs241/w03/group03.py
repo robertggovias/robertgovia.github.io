@@ -7,7 +7,7 @@ class Rational_Number():
     
     def __repr__(self):
         result = self.numerator + "/" + self.denominator
-        if result 
+        #if result:
     
     def prompt(self):
 
@@ -18,7 +18,7 @@ class Rational_Number():
         return str(float(self.numerator / ))
         
 else
-    return_string = f"{str(sell.numerator)}/{str(self.denominator)}"
+    return_string = f"{str(self.numerator)}/{str(self.denominator)}"
 return return_string
 
 def main():
