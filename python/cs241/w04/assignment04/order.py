@@ -14,7 +14,7 @@ class Order:
         print("products{}".format(Order.get_products(self)))
 
     def get_subtotal(self):
-        return sum(self.products)
+        return Product.get_total_price(self)
     
     def get_tax(self):
         return 0,65*Order.get_subtotal(self)
@@ -32,6 +32,6 @@ class Order:
 sim = Order()
 sim.order_Id = 3
 sim.products = 6.65
-
-Order.display_receipt(sim)
+Order.get_subtotal(sim)
+#Order.display_receipt(sim)
 #Order.get_subtotal(sim)
