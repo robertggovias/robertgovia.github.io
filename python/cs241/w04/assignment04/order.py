@@ -1,8 +1,11 @@
 from product import Product
+
 class Order:
     def __init__(self):
-        self.order_Id=""        
+        self.order_Id=""
         self.products = []
+        self.price = Product.get_price
+        self.quantity = Product.get_quantity
     
     def get_id(self):
         return self.order_Id
@@ -22,11 +25,17 @@ class Order:
         return Order.get_subtotal(self) + Order.get_tax(self)
         
     def add_product(self,p1):
-        self.products.append(p1)
+        self.products.append(1,"crema e nata",46.234,4)
     
     def display_receipt(self):
-        print("Order: {}\n{}\nSubtotal: ${:,.2f}\nTax: ${}\nTotal: ${:,.2f}".format(self.order_Id,Product.display(self),self.get_subtotal(),self.get_tax(),self.get_total()))
+        print("Order: {}\n{}\nSubtotal: ${:,.2f}\nTax: ${}\nTotal: ${:,.2f}".format(self.get_id(),Product.display(self),self.get_subtotal(),self.get_tax(),self.get_total()))
+def main():
+    print("### Testing Products ###")
+    p1 = Product("1238223", "Sword", 1899.99, 10)
 
+
+if __name__ == "__main__":
+    main()
 
 
 sim = Order()

@@ -25,4 +25,4 @@ class Customer:
         print("Detailed receipts for customer {}:\nName: {}\n\n{}\n\n".format(self.id,self.name,Order.display_receipt(self)))
     
 newCustomer = Customer()
-Customer.display(newCustomer)
+Customer.display_summary(newCustomer)
