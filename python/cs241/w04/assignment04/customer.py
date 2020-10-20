@@ -4,18 +4,24 @@ class Customer:
     '''id=0
     price 
     quantity'''
-    def __init__(self,id,name,price,quantity):
-        self.id = id
-        self.name= name
-        self.price = price
-        self.quantity = quantity
+    def __init__(self):
+        self.id = ""
+        self.name= ""
+        self.orders = []
+    
+    def get_order_count(self):
+        return len(self.orders)
+    
+    def get_total(self):
+        return sum(self.orders)
         
+    def add_order(self,c):
+        self.orders.append(c)
     
+    def display_summary(self):
+        print("Summary for customer {}:\nName: {}\nOrders: {}\nTotal: ${:,.2f}".format(self.id,self.name,self.get_order_count(),self.get_total()))
+    def display_receipts(self):
+        print("Detailed receipts for customer {}:\nName: {}\n\n{}\n\n".format(self.id,self.name,Order.display_receipt(self)))
     
-    def get_total_price(self):
-        return self.price * self.quantity
-
-    def display(self):
-        print("{} ({}) - ".format(self.price))
-newCustomer = Customer(1,"robert",46,4)
+newCustomer = Customer()
 Customer.display(newCustomer)
