@@ -26,3 +26,9 @@ class Customer:
     
 newCustomer = Customer()
 Customer.display_summary(newCustomer)
+newCustomer.add_order(4241)
+newCustomer.add_order(4241)
+newCustomer.add_order(4241)
+newCustomer.add_order(4241)
+print(Customer.get_order_count(newCustomer))
+Customer.display_summary(newCustomer)
