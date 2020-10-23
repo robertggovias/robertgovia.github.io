@@ -15,8 +15,8 @@ class Order:
 #       print("products{}".format(Order.get_products(self)))
 
 
-#    def print_product_list(self):        
-#        print(Order.get_products(self))
+    def print_product_list(self):        
+        print(Order.get_products(self))
 
 #    def product_count(self):
 #        many_products = len(self.products)
@@ -24,6 +24,9 @@ class Order:
 
     def get_subtotal(self):
         return Product.get_total_price(self)
+        for totals in get_total_price:
+            self.total += totals 
+
     
     def get_tax(self):
         return 0,65*Order.get_subtotal(self)
@@ -58,6 +61,8 @@ order1 = Order()
 order1.id = "1138"
 order1.add_product(p1)
 order1.add_product(p2)
+
+order1.print_product_list()
 
 #order1.display_receipt()
 '''
