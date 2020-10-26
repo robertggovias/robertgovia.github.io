@@ -24,13 +24,11 @@ class Customer:
         The last code create a list, but we need to iterate on each element to get from each one de return of the funciton get_total from the class order.
 
         '''
-        counting = 0
-        sum_of_orders = 0
+#        sum_of_orders = 0
         for final_totals in self.orders:
-            final_totals = self.orders[counting].get_total()
-            sum_of_orders += final_totals
-            counting += 1            
-        return sum_of_orders
+            final_totals.get_total()
+            #sum_of_orders += final_totals.get_total()             
+        return final_totals.get_total()
     
     def get_order_count(self):
         '''
@@ -42,13 +40,10 @@ class Customer:
     def print_orders(self):
         '''
         To print each order, we iterate on each element and print each one with its display code.
-        '''
-        counting_orders = 0
-        for orders_display in self.orders:
-            orders_display = self.orders[counting_orders].display_receipt()
-            print(orders_display)
-            print("")
-            counting_orders += 1
+        '''        
+        for order in self.orders:
+            order.display_receipt()
+            
     
     def display_summary(self):
         '''

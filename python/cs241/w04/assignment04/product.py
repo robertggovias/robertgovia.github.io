@@ -14,7 +14,7 @@ class Product:
         
     def get_total_price(self):
         '''
-        multiply price by quanitty to get the total
+        multiply price by quantity to get the total
         '''
         return self.price * self.quantity
         
