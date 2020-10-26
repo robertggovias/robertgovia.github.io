@@ -1,13 +1,14 @@
 class A:
-    def __init__(self):
-        self.first = 1
-        self.second = 2
-        self.price =  00.0
+    def __init__(self,a,b,c=0.00):
+        self.first =  a
+        self.second =  b
+        self.price =  c
 
 class B:
     def __init__(self):
         self.first = "B"
-        self.second = A()
+        self.wse = A(4,4,4)
+        self.second = A(wse())
     
     #def price(self):
     #   print(self.second.price)

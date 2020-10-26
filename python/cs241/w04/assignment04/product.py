@@ -4,7 +4,7 @@ class Product:
     '''id=0
     price 
     quantity'''
-    def __init__(self,id,name,price,quantity):
+    def __init__(self,id="",name="",price=0,quantity=0):
         self.id = id
         self.name= name
         self.price = price

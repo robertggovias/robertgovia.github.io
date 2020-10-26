@@ -1,10 +1,10 @@
-"""
+'''
 File: main.py
 Author: Br. Burton
 
 This file tests the customer, order, and product classes for
 assignment 04. You should not need to change this file.
-"""
+'''
 from customer import Customer
 from order import Order
 from product import Product
@@ -68,6 +68,7 @@ def main():
 
     print()
     c.display_receipts()
+
 
 
 if __name__ == "__main__":
