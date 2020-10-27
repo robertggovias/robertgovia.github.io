@@ -22,4 +22,4 @@ class Product:
         '''
         This function just print all the attributes of the object (Except Id), not just because it will be done by main funciton, aslo because this is a resume.
         '''
-        print("{} ({}) - ${:,.2f}".format(self.name, self.quantity,Product.get_total_price(self)))
+        print("{} ({}) - ${:.2f}".format(self.name, self.quantity,Product.get_total_price(self)))

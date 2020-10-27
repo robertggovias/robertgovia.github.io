@@ -27,13 +27,11 @@ class Order:
         To print all the details of the product we iterate over the list to print each time the quick details of the products
         '''        
         for products_display in self.products:
-            a=products_display.display()
-        return a
+            products_display.display()                    
 
     def get_tax(self):
         '''
         to get the tax from the sum of all the objects from product 
-
         '''
         return Order.get_subtotal(self) * 0.065
     
@@ -47,6 +45,6 @@ class Order:
         '''
         A brief of the orders will be printed here
         '''
-        print("Order: ",self.id)
-        print(Order.print_product(self))       
-        print("Subtotal: ${:,.2f}\nTax: ${:,.2f}\nTotal: ${:,.2f}".format(self.get_subtotal(),self.get_tax(),self.get_total()))
+        print("Order:",self.id)
+        Order.print_product(self)
+        print("Subtotal: ${:.2f}\nTax: ${:.2f}\nTotal: ${:.2f}".format(self.get_subtotal(),self.get_tax(),self.get_total()))

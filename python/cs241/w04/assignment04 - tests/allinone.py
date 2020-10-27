@@ -14,7 +14,7 @@ class Product:
         self.list = [self.id,self.name,self.price,self.quantity,self.get_total_price()]
         return self.list
     def display(self):
-        print("{} ({}) - ${:,.2f}".format(self.name, self.quantity,Product.get_total_price(self)))
+        print("{} ({}) - ${:.2f}".format(self.name, self.quantity,Product.get_total_price(self)))
 class Order:
     def __init__(self):
         self.id=""        
@@ -42,7 +42,7 @@ class Order:
     def display_receipt(self):
         print("Order: ",self.id)
         print(self.print_product())       
-        print("Subtotal: ${:,.2f}\nTax: ${:,.2f}\nTotal: ${:,.2f}".format(self.get_subtotal(),self.get_tax(),self.get_total()))
+        print("Subtotal: ${:.2f}\nTax: ${:.2f}\nTotal: ${:.2f}".format(self.get_subtotal(),self.get_tax(),self.get_total()))
 class Customer:
     '''id=0
     price 
@@ -66,7 +66,7 @@ class Customer:
     def display_summary(self):
         print("Summary for customer '{}':\nName: {}".format(self.id,self.name))
         print("Orders: ",self.get_order_count())
-        print("Total: ${:,.2f}".format(self.get_total()))
+        print("Total: ${:.2f}".format(self.get_total()))
     def display_receipts(self):
         print("Detailed receipts for customer '{}':\nName: {}\n".format(self.id,self.name))
         print(self.print_orders())

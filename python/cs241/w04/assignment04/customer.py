@@ -24,11 +24,10 @@ class Customer:
         The last code create a list, but we need to iterate on each element to get from each one de return of the funciton get_total from the class order.
 
         '''
-#        sum_of_orders = 0
-        for final_totals in self.orders:
-            final_totals.get_total()
-            #sum_of_orders += final_totals.get_total()             
-        return final_totals.get_total()
+        sum_of_orders = 0
+        for final_totals in self.orders:            
+            sum_of_orders += final_totals.get_total()             
+        return sum_of_orders
     
     def get_order_count(self):
         '''
@@ -42,7 +41,11 @@ class Customer:
         To print each order, we iterate on each element and print each one with its display code.
         '''        
         for order in self.orders:
+            if self.get_order_count() > 1:
+                print()
             order.display_receipt()
+            
+
             
     
     def display_summary(self):
@@ -50,12 +53,15 @@ class Customer:
         Print each customer, and its orders (with products)
         '''
         print("Summary for customer '{}':\nName: {}".format(self.id,self.name))
-        print("Orders: ",self.get_order_count())
-        print("Total: ${:,.2f}".format(self.get_total()))
+        print("Orders:",self.get_order_count())
+        print("Total: ${:.2f}".format(self.get_total()))
 
     def display_receipts(self):
         '''
         getting advance from all the other display functions, this one will print in detail all the details of the sale
         '''
-        print("Detailed receipts for customer '{}':\nName: {}\n".format(self.id,self.name))
-        print(self.print_orders())
+        print("Detailed receipts for customer '{}':\nName: {}".format(self.id,self.name))
+        if self.get_order_count() < 2:
+            print()
+
+        self.print_orders()
