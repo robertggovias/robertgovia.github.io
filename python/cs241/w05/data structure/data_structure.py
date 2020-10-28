@@ -1,9 +1,13 @@
+import os
 """
 This file contains psuedocode developed by together by the class one semester...
 """
-
+os.listdir()
 # Open the file
-
+#lr = open("\\stacks01.txt","r")
+#print(lr.read())
+os.chdir("C:\Users\Robert\Documents\Robert\Host\GitHub\novo backup\robertgovia.github.io\python\cs241\w05")
+'''
 # Read through it character by character
 # One way to do this for this program, is to read line by line
 # and then call line.strip() to get rid of any whitespace
@@ -24,4 +28,4 @@ for (line in ...)
     
 # after reading the complete file
 
-# If there is anything on the stack, the braces didn't match
+# If there is anything on the stack, the braces didn't match'''
