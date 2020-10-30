@@ -4,13 +4,13 @@ my_file = os.path.join(THIS_FOLDER, 'file.txt') # Generates the absolute path to
 os.chdir(THIS_FOLDER)
 # Open the file
 
-lr=open("stacks03.txt","r")
+lr=open("stacks01.txt","r")
 print(lr.read())
 
 
 
 
-pepe = [line.strip(" \n") for line in open("stacks03.txt")]
+pepe = [line.strip(" \n") for line in open("stacks06.txt")]
 print(pepe)
 #print("pepe",pepe)
 
@@ -22,6 +22,7 @@ print(pepe)
 
 new_list = []
 count = 0
+#colocar un def (funcion aquí para (despues de haber verificado stisfactoriamente si hay el de cierre correspondiente, verifique si hay uno de apertura)
 for active in pepe:
     if "(" in active:
         hello = True
@@ -49,29 +50,34 @@ def opose(x,y):
         else:
             comparr = False
         return comparr
-        
-    if y == oponent(x):
-        print("same")
-    else:
-        print("errorm")
-
-
-x=new_list[count-1]
-print(x)
-
-new_list.pop()
-print("list without 1")
-print(new_list)
-y=pepe[count]
-print(y)
-
-if opose("[","]") == True:
-    new_list.append("great")
-else:
-    new_list.append("not so great")
-
-print(new_list)
+    print(oponent(x))
     
+    if y == oponent(x):
+        return ("match")
+    else:
+        return ("don't match")
+#opose("{","}")
+if  len(pepe)!=1:    
+    while len(new_list) > 0:
+        x=new_list[len(new_list)-1]
+        print(x)
+        y=pepe[count]    
+        print(y)
+
+        if opose(x,y) == ("match"):
+            new_list.pop()
+        else:
+            print("Not balanced")
+            break
+        count+=1
+        print(new_list)
+
+    if pepe[count-1] == pepe[len(pepe)-1]:
+        print("you did it men")
+else:
+    print("Not Banlanced")    
+    
+'''
 
     # If current character is any type of opening brace: (, {, [
         # push it (the current character) on to a stack
