@@ -23,6 +23,7 @@ print(pepe)
 new_list = []
 count = 0
 #colocar un def (funcion aquí para (despues de haber verificado stisfactoriamente si hay el de cierre correspondiente, verifique si hay uno de apertura)
+
 for active in pepe:
     if "(" in active:
         hello = True
