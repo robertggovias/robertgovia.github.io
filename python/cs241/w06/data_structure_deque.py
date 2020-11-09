@@ -8,8 +8,7 @@ class Student:
     def prompt(self):
         self.name = str(input("Enter name: "))
         self.course = str(input("Enter course: "))
-        return self.name, self.course
-    
+        return self.name, self.course    
 
     def display(self):
         return "Now helping {} with {}".format(self.name, self.course)
@@ -17,9 +16,7 @@ class Student:
 class HelpSystem(Student):
     def __init__(self):
         super().__init__()
-        self.waiting_list = deque([])        
-
-
+        self.waiting_list = deque([])
     
     def is_student_waiting(self):
         if len(self.waiting_list) > 0:
@@ -43,30 +40,31 @@ def question():
     second = "2. Help next student"
     third = "3. Quit"
     print("Options:\n{}\n{}\n{}".format(first,second,third))    
-    
 
 def main():
     he=HelpSystem()
     question()
-    option = input("Enter selection: ")
+    option = int(input("Enter selection: "))
+    
     while option != 3:
         if option == 1:
+            print()          
+            he.add_to_waiting_list(Student)
             print()        
-            he.add_to_waiting_list(Student)            
             question()
-            option = input("Enter selection: ")
-            print()
-        elif option == 2:
-            print()
+            option = int(input("Enter selection: "))
+            
+        elif option == 2:            
             he.help_next_student()
+            print()
             question()
-            option = input("Enter selection: ")
+            option = int(input("Enter selection: "))
             print()
         else:
             print("answer must be 1, 2 or 3")
             question()
-            option = input("Enter selection: ")
-            print()    
+            option = int(input("Enter selection: "))
+            print()
     #he.display()
     
 if __name__ == "__main__":
