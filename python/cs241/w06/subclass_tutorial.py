@@ -57,7 +57,7 @@ class Anemone:
 class CoralReef(Coral, Anemone):
     pass
 
-'''
+
 
 terry = Trout("Terry")
 print(terry.first_name + " " + terry.last_name)
@@ -97,8 +97,8 @@ print(terry.eyelids)
 
 # Use parent swim() method
 terry.swim()
-'''
-...
+
+
 great_barrier = CoralReef()
 great_barrier.community()
 great_barrier.protect_clownfish()
