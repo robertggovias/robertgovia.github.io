@@ -8,9 +8,8 @@ class NomOreAnimasError(Exception):
     def __init__(self):
         super().__init__("Enough animals identified.")
 
-
 def get_some_animals():
-    animal = input('please entenr an animalto acquire (Q to quit): ')
+    animal = input('please enter an animalito to acquire (Q to quit): ')
     
     if animal.lower()  == "cat" or animal.lower() == "cats":
         raise NoCatsError(animal)
@@ -31,7 +30,7 @@ def example_main():
         my_value = float(input("Please enter a number: "))
         print(1/my_value)
     except ZeroDivisionError:
-        print("Don't divide by zero")
+        print("Don't divide by zero, the universe will explode")
     except ValueError:
         print("Just float numbers")
 
@@ -45,8 +44,11 @@ def main():
             print (get_some_animals())
 
         except ValueError:
-            print("Invalid entry received")
+            print("Invalid entry received.")
         except NoCatsError as e:
             print(e.args[0])
+        except NomOreAnimasError:
+            break
+    #
 if __name__ == "__main__":
     main()
