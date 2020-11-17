@@ -12,8 +12,7 @@ class Point:
         return s.y
     def distanceFromOrigin(s):
         return((s.x ** 2) + (s.y ** 2)) ** 0.5
-    
-    
+
 def distance(point1, point2):
     xdiff = point2.x - point1.x
     ydiff = point2.y - point1.y
