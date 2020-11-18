@@ -10,6 +10,6 @@ def selectionSort(alist):
        alist[positionOfMax] = temp
        print(alist)
 
-alist = [54,26,93,17,77,31,44,55,20]
+alist = [11, 7, 12, 14, 19, 1, 6, 18, 8, 20]
 selectionSort(alist)
 print(alist)
