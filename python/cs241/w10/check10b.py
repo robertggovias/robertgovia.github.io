@@ -6,13 +6,12 @@ Sorts a list of numbers.
 
 def sort(numbers):
     for f_order in range(1,len(numbers)):        
-        new_bigger = 0
-        for competidor in range(1,f_order+1):            
-            if numbers[competidor] > numbers[new_bigger]:             
-                new_bigger = competidor
-            temp = numbers[f_order]
-            numbers[f_order] = numbers[new_bigger]
-            numbers[new_bigger] = temp
+        temp = numbers[f_order]        
+        new_bigger = f_order
+        while new_bigger > 0 and numbers[new_bigger - 1] > temp:
+            numbers[new_bigger] = numbers[new_bigger-1]
+            new_bigger = new_bigger - 1
+        numbers[new_bigger] = temp
 
 def prompt_for_numbers():
     """

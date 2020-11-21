@@ -26,9 +26,50 @@ TARGET_COLOR = arcade.color.CARROT_ORANGE
 TARGET_SAFE_COLOR = arcade.color.AIR_FORCE_BLUE
 TARGET_SAFE_RADIUS = 15
 
+class Point:
+    def __init__(self):
+        self.x=0.00
+        self.y=0.00
+
+class Velocity:
+    def __init__(self):
+        self.dx = 0.00 
+        self.dy = 0.00
+class FlyingObject_Base:
+    def __init__(self):
+        self.center = Point()
+        self.center.x=0
+        self.center.y=0
+        self.alive=True
+        
+class Bullet:
+    def __init__(self):
+        self.angle=""
+        self.center = Point()
+        self.center.x=0
+        self.center.y=0
+        self.alive=True
+    def draw(self):
+        arcade.draw_circle_filled(self.center.x,self.center.y,BULLET_RADIUS,BULLET_COLOR,BULLET_SPEED)
+    def fire(self,angle):
+        self.angle = angle
+        return self.angle
+    def is_off_screen(self, SCREEN_WIDTH, SCREEN_HEIGHT):
+        self.SCREEN_WIDTH = SCREEN_HEIGHT
+        self.SCREEN_HEIGHT = SCREEN_HEIGHT
+    def advance(self):
+        Bullet.fire(angle)
+        self.center.x += 1
+        self.center.y += 1
 
 
-
+class Target:
+    def __init__(self):
+        self.targets=0
+    def is_off_screen(self, SCREEN_WIDTH, SCREEN_HEIGHT):
+        self.SCREEN_WIDTH = SCREEN_HEIGHT
+        self.SCREEN_HEIGHT = SCREEN_HEIGHT
+        pass
 class Rifle:
     """
     The rifle is a rectangle that tracks the mouse.
@@ -74,6 +115,8 @@ class Game(arcade.Window):
         self.score = 0
 
         self.bullets = []
+
+        self.targets = []
 
         # TODO: Create a list for your targets (similar to the above bullets)
 
