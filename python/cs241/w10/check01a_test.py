@@ -5,14 +5,25 @@ Sorts a list of numbers.
 """
 
 def sort(numbers):
-    for f_order in range(len(numbers)-1,0,-1):        
+    for f_order in range(len(numbers)-1,0,-1):
+        print("quantity of competidors {}:".format(numbers[f_order]))
         new_bigger = 0
-        for competidor in range(1,f_order+1):            
-            if numbers[competidor] > numbers[new_bigger]:             
+        for competidor in range(1,f_order+1):
+            print("competidor: {}".format(competidor))
+            if numbers[competidor] > numbers[new_bigger]:
+                print("{} is biger than {} (the last number)".format(numbers[competidor], numbers[new_bigger]))
                 new_bigger = competidor
             temp = numbers[f_order]
             numbers[f_order] = numbers[new_bigger]
             numbers[new_bigger] = temp
+            
+            print("the new list is: {}".format(numbers))
+            
+            
+
+
+
+    
 
 def prompt_for_numbers():
     """

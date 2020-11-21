@@ -5,7 +5,7 @@ Sorts a list of numbers.
 """
 
 def sort(numbers):
-    for f_order in range(len(numbers)-1,0,-1):        
+    for f_order in range(1,len(numbers)):        
         new_bigger = 0
         for competidor in range(1,f_order+1):            
             if numbers[competidor] > numbers[new_bigger]:             
