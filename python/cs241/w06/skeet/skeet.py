@@ -53,15 +53,17 @@ class Bullet:
         arcade.draw_circle_filled(self.center.x,self.center.y,BULLET_RADIUS,BULLET_COLOR,BULLET_SPEED)
     def fire(self,angle):
         self.angle = angle
+        print (self.angle)
         return self.angle
     def is_off_screen(self, SCREEN_WIDTH, SCREEN_HEIGHT):
         self.SCREEN_WIDTH = SCREEN_HEIGHT
         self.SCREEN_HEIGHT = SCREEN_HEIGHT
     def advance(self):
-        Bullet.fire(angle)
-        self.center.x += 1
-        self.center.y += 1
+        
+        self.center.x += math.cos(math.radians(self.angle)) * BULLET_SPEED
 
+        self.center.y += math.sin(math.radians(self.angle)) * BULLET_SPEED
+        
 
 class Target:
     def __init__(self):
