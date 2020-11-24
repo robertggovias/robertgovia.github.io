@@ -25,6 +25,7 @@ TARGET_RADIUS = 20
 TARGET_COLOR = arcade.color.CARROT_ORANGE
 TARGET_SAFE_COLOR = arcade.color.AIR_FORCE_BLUE
 TARGET_SAFE_RADIUS = 15
+TARGET_SAFE_SPEED = 6
 
 class Point:
     def __init__(self):
@@ -41,6 +42,8 @@ class FlyingObject_Base:
         self.center.x=0
         self.center.y=0
         self.alive=True
+    def draw(self):
+        arcade.draw_circle_filled(self.center.x,self.center.y,TARGET_RADIUS, TARGET_COLOR,TARGET_SAFE_SPEED)
         
 class Bullet:
     def __init__(self):
@@ -59,7 +62,7 @@ class Bullet:
         self.SCREEN_WIDTH = SCREEN_HEIGHT
         self.SCREEN_HEIGHT = SCREEN_HEIGHT
     def advance(self):
-        
+        #The amount of pixels that will move to the right += x and up += y will be defined using trigonometry to find the new x point, and y point as finding how long are the sides of the triangle.        
         self.center.x += math.cos(math.radians(self.angle)) * BULLET_SPEED
 
         self.center.y += math.sin(math.radians(self.angle)) * BULLET_SPEED
@@ -68,10 +71,16 @@ class Bullet:
 class Target:
     def __init__(self):
         self.targets=0
+        self.center = Point()
+        self.center.x=0
+        self.center.y=0
+        self.alive=True
+    def draw(self):
+        arcade.draw_circle_filled(self.center.x,self.center.y,TARGET_RADIUS, TARGET_COLOR,TARGET_SAFE_SPEED)
     def is_off_screen(self, SCREEN_WIDTH, SCREEN_HEIGHT):
         self.SCREEN_WIDTH = SCREEN_HEIGHT
         self.SCREEN_HEIGHT = SCREEN_HEIGHT
-        pass
+        
 class Rifle:
     """
     The rifle is a rectangle that tracks the mouse.
