@@ -20,14 +20,26 @@ TARGET_RADIUS = 20
 TARGET_COLOR = arcade.color.CARROT_ORANGE
 TARGET_SAFE_COLOR = arcade.color.AIR_FORCE_BLUE
 TARGET_SAFE_RADIUS = 15
+TARGET_SAFE_SPEED = random.randint(1,3)
+TARGET_SPEED = random.randint(1,3)
+TARGET_STRONG_SPEED = random.randint(1,3)
+TARGET_STRONG_COLOR = arcade.color.RED
+INITIAL_POSITION = random.uniform(SCREEN_HEIGHT/2, SCREEN_HEIGHT)
+
 class Point:
     def __init__(self):
-        self.x=0.00
-        self.y=0.00
+        self.x= 0.00
+        self.y= 0.00
+class ExtraVelocity:
+    def __init__(self):
+        self.magic_number = 1
+        self.edx = self.magic_number 
+        self.edy = self.magic_number
 class Velocity:
     def __init__(self):
-        self.dx = 0.00 
-        self.dy = 0.00
+        self.dy = 1.00
+        self.dx = 1.00
+
 class FlyingObject_Base:
     def __init__(self):
         self.center = Point()
@@ -56,19 +68,56 @@ class Target(FlyingObject_Base):
     def __init__(self):
         super().__init__()
         self.targets=0
+        self.center.x=0
+        self.center.y = random.randint(SCREEN_HEIGHT/2, SCREEN_HEIGHT)
+
+
 
     def is_off_screen(self, SCREEN_WIDTH, SCREEN_HEIGHT):
         self.SCREEN_WIDTH = SCREEN_WIDTH
         self.SCREEN_HEIGHT = SCREEN_HEIGHT
         pass
     def hit(self):
-        return 0
+        return 1
     def draw(self):
         arcade.draw_circle_filled(self.center.x,self.center.y,self.radius,TARGET_COLOR)
     def advance(self):
-        self.center.x += self.velocity.dx
-        self.center.y += self.velocity.dy
+        self.ExtraVelocity = ExtraVelocity()
+        self.center.x += self.ExtraVelocity.edx * TARGET_SPEED
+        self.center.y += self.ExtraVelocity.edy * TARGET_SPEED
+class TargetStrong(Target):
+    def __init__(self):
+        super(). __init__()
+        self.targets = 0
+        self.lives = 3
+        self.velocity = Velocity()
+                
+    def draw(self):
+        arcade.draw_circle_outline(self.center.x, self.center.y, self.radius, TARGET_STRONG_COLOR)
+        text_x = self.center.x - (self.radius / 2)
+        text_y = self.center.y - (self.radius / 2)
+        arcade.draw_text(repr(self.lives), text_x, text_y, TARGET_COLOR, font_size=20)
+    def advance(self):
+        self.ExtraVelocity = ExtraVelocity()
+        self.xspeed = random.randint(-2,3)
+        self.yspeed = random.randint(1,3)
+        self.angle = random.randint(5,40)
+        self.velocity.dy = math.cos(math.radians(self.angle)) * self.yspeed
+        self.center.x += self.ExtraVelocity.edx * self.xspeed
+        self.center.y += self.ExtraVelocity.edy * TARGET_STRONG_SPEED
 
+class TargetSafe(Target):
+    def __init__(self):
+        super(). __init__()
+        self.targets=0
+        self.center.y = random.randint(SCREEN_HEIGHT/2, SCREEN_HEIGHT)
+
+    def draw(self):
+        arcade.draw_circle_filled(self.center.x,self.center.y,self.radius,TARGET_SAFE_COLOR)
+    def advance(self):
+        self.ExtraVelocity = ExtraVelocity()
+        self.center.x += self.ExtraVelocity.edx * TARGET_SAFE_SPEED
+        self.center.y += self.ExtraVelocity.edy * TARGET_SAFE_SPEED
 class Rifle:
     """
     The rifle is a rectangle that tracks the mouse.
@@ -121,7 +170,7 @@ class Game(arcade.Window):
             bullet.draw()
         # TODO: iterate through your targets and draw them...
         for target in self.targets:
-            target.draw()
+            target.draw()            
         self.draw_score()
     
     def draw_score(self):
@@ -143,6 +192,8 @@ class Game(arcade.Window):
         # decide if we should start a target
         if random.randint(1, 50) == 1:
             self.create_target()
+        for target in self.targets:
+            target.advance()
         for bullet in self.bullets:
             bullet.advance()
         # TODO: Iterate through your targets and tell them to advance
