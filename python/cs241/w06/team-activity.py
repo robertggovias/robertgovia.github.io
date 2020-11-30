@@ -7,11 +7,8 @@ class Point:
         self.x=float(input(("Enter x:")))
         self.y=float(input(("Enter y:")))
         
-
     def display(self):
         print("Center: ({}, {})".format(self.x,self.y))        
-
-    
 
 class Circle(Point):
     def __init__(self):
@@ -25,8 +22,7 @@ class Circle(Point):
     def display(self):
         super(Circle,self).display()
         print("\nRadius: {}".format(self.radius))
-        
-
+ 
 def main():
     
     new_circle=Circle()
@@ -35,6 +31,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-

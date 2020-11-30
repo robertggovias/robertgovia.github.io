@@ -18,10 +18,7 @@ class Circle():
 
     def prompt_for_circle(self):
         self.center.prompt_for_point()
-        self.radius=input("Enter radius:")
-
-        self.center.x=5345
-        self.center.y=5345
+        self.radius=input("Enter radius:")       
 
         
     def display(self):

@@ -10,27 +10,33 @@ import random
 # These are Global constants to use throughout the game
 SCREEN_WIDTH = 600
 SCREEN_HEIGHT = 500
+
 RIFLE_WIDTH = 100
 RIFLE_HEIGHT = 20
 RIFLE_COLOR = arcade.color.DARK_RED
+
 BULLET_RADIUS = 3
 BULLET_COLOR = arcade.color.BLACK_OLIVE
 BULLET_SPEED = 10
+
 TARGET_RADIUS = 20
 TARGET_COLOR = arcade.color.CARROT_ORANGE
+
 TARGET_SAFE_COLOR = arcade.color.AIR_FORCE_BLUE
-TARGET_SAFE_RADIUS = 15
 TARGET_SAFE_SPEED = random.randint(1,3)
-TARGET_SPEED = random.randint(1,3)
-TARGET_STRONG_SPEED = random.randint(1,3)
+TARGET_SAFE_WIDTH = 40
+
 TARGET_STRONG_COLOR = arcade.color.RED
+TARGET_STRONG_COLOR_2 = arcade.color.YELLOW
+TARGET_STRONG_COLOR_1 = arcade.color.ORANGE
+
 INITIAL_POSITION = random.uniform(SCREEN_HEIGHT/2, SCREEN_HEIGHT)
 
 class Point:
     def __init__(self):
         self.x= 0.00
         self.y= 0.00
-class ExtraVelocity:
+class Dificulty:
     def __init__(self):
         self.magic_number = 1
         self.edx = self.magic_number 
@@ -41,26 +47,35 @@ class Velocity:
         self.dx = 1.00
 
 class FlyingObject_Base:
+    """
+    All the functions that apply to bullets and targets will receive the default values and objects from here.
+    """
     def __init__(self):
         self.center = Point()
         self.center.x=0
         self.center.y=0
         self.alive = True
         self.radius = TARGET_RADIUS
+    def is_off_screen(self, SCREEN_WIDTH,SCREEN_HEIGHT):
+        self.SCREEN_HEIGHT = SCREEN_HEIGHT
+        self.SCREEN_WIDTH = SCREEN_WIDTH
+        if self.center.x > self.SCREEN_WIDTH:
+            return True
+        if self.center.y < 0 or self.center.y > self.SCREEN_HEIGHT:
+            return True
 class Bullet(FlyingObject_Base):
     def __init__(self):
         super().__init__()
         self.angle=0.
         self.radius = BULLET_RADIUS
+    
     def draw(self):
         arcade.draw_circle_filled(self.center.x,self.center.y,self.radius,BULLET_COLOR)
     def fire(self,angle):
         self.angle = angle
-        print (self.angle)
+        print ("New bullet at this angle {0:.2f}°".format(self.angle))
         return self.angle
-    def is_off_screen(self, SCREEN_WIDTH, SCREEN_HEIGHT):
-        self.SCREEN_WIDTH = SCREEN_HEIGHT
-        self.SCREEN_HEIGHT = SCREEN_HEIGHT
+    
     def advance(self):
         self.center.x += math.cos(math.radians(self.angle)) * BULLET_SPEED
         self.center.y += math.sin(math.radians(self.angle)) * BULLET_SPEED
@@ -69,55 +84,74 @@ class Target(FlyingObject_Base):
         super().__init__()
         self.targets=0
         self.center.x=0
-        self.center.y = random.randint(SCREEN_HEIGHT/2, SCREEN_HEIGHT)
+        self.center.y = random.randint(SCREEN_HEIGHT/2, SCREEN_HEIGHT)        
+        self.velocity = Velocity()
+        self.velocity.dx = random.randint(1,5)
+        self.velocity.dy = random.randint(-2,5)
+        
 
-
-
-    def is_off_screen(self, SCREEN_WIDTH, SCREEN_HEIGHT):
-        self.SCREEN_WIDTH = SCREEN_WIDTH
-        self.SCREEN_HEIGHT = SCREEN_HEIGHT
-        pass
     def hit(self):
         return 1
     def draw(self):
         arcade.draw_circle_filled(self.center.x,self.center.y,self.radius,TARGET_COLOR)
     def advance(self):
-        self.ExtraVelocity = ExtraVelocity()
-        self.center.x += self.ExtraVelocity.edx * TARGET_SPEED
-        self.center.y += self.ExtraVelocity.edy * TARGET_SPEED
+        self.Dificulty = Dificulty()            
+        self.center.x += self.Dificulty.edx * self.velocity.dx        
+        self.center.y += self.Dificulty.edy * self.velocity.dy        
+
 class TargetStrong(Target):
     def __init__(self):
         super(). __init__()
         self.targets = 0
         self.lives = 3
         self.velocity = Velocity()
+        self.velocity.dx = random.randint(1,3)
+        self.velocity.dy = random.randint(-2,3)
+        self.counter = 0
+        self.outline = 0
+        self.color = 191
+    
+    def hit(self):
+        self.counter += 10
+        if self.lives > 1:
+            self.lives -= 1
+            self.color -= 70
+            self.outline += 3
+            self.alive = True
+            return 1
+        else:
+            self.alive = False
+            return 5
+            
+        print (self.lives)
+
+
                 
     def draw(self):
-        arcade.draw_circle_outline(self.center.x, self.center.y, self.radius, TARGET_STRONG_COLOR)
+        arcade.draw_circle_outline(self.center.x, self.center.y, self.radius + self.counter, arcade.color.RED,1+self.outline)
         text_x = self.center.x - (self.radius / 2)
         text_y = self.center.y - (self.radius / 2)
         arcade.draw_text(repr(self.lives), text_x, text_y, TARGET_COLOR, font_size=20)
+    
     def advance(self):
-        self.ExtraVelocity = ExtraVelocity()
-        self.xspeed = random.randint(-2,3)
-        self.yspeed = random.randint(1,3)
-        self.angle = random.randint(5,40)
-        self.velocity.dy = math.cos(math.radians(self.angle)) * self.yspeed
-        self.center.x += self.ExtraVelocity.edx * self.xspeed
-        self.center.y += self.ExtraVelocity.edy * TARGET_STRONG_SPEED
+        self.Dificulty = Dificulty()            
+        self.center.x += self.Dificulty.edx * self.velocity.dx        
+        self.center.y += self.Dificulty.edy * self.velocity.dy
+        
 
 class TargetSafe(Target):
     def __init__(self):
         super(). __init__()
         self.targets=0
-        self.center.y = random.randint(SCREEN_HEIGHT/2, SCREEN_HEIGHT)
+        self.center.y = random.randint(SCREEN_HEIGHT/2, SCREEN_HEIGHT) 
+    
+    def hit(self):
+        return -10
+
 
     def draw(self):
-        arcade.draw_circle_filled(self.center.x,self.center.y,self.radius,TARGET_SAFE_COLOR)
-    def advance(self):
-        self.ExtraVelocity = ExtraVelocity()
-        self.center.x += self.ExtraVelocity.edx * TARGET_SAFE_SPEED
-        self.center.y += self.ExtraVelocity.edy * TARGET_SAFE_SPEED
+        arcade.draw_rectangle_filled(self.center.x,self.center.y,TARGET_SAFE_WIDTH,TARGET_SAFE_WIDTH,TARGET_SAFE_COLOR)
+    
 class Rifle:
     """
     The rifle is a rectangle that tracks the mouse.
@@ -226,14 +260,15 @@ class Game(arcade.Window):
                 # Make sure they are both alive before checking for a collision
                 if bullet.alive and target.alive:
                     too_close = bullet.radius + target.radius
-                    #if (abs(bullet.center.x - target.center.x) < too_close and
-                    #            abs(bullet.center.y - target.center.y) < too_close):
+                    if (abs(bullet.center.x - target.center.x) < too_close and abs(bullet.center.y - target.center.y) < too_close):
                         # its a hit!
-                    #    bullet.alive = False
-                    #    self.score += target.hit()
+                        bullet.alive = False
+                        target.alive = False
+                        self.score += target.hit()
                         # We will wait to remove the dead objects until after we
                         # finish going through the list
         # Now, check for anything that is dead, and remove it
+        
         self.cleanup_zombies()
     def cleanup_zombies(self):
         """
@@ -246,6 +281,7 @@ class Game(arcade.Window):
         for target in self.targets:
             if not target.alive:
                 self.targets.remove(target)
+                print("Target")
     def check_off_screen(self):
         """
         Checks to see if bullets or targets have left the screen
@@ -255,9 +291,11 @@ class Game(arcade.Window):
         for bullet in self.bullets:
             if bullet.is_off_screen(SCREEN_WIDTH, SCREEN_HEIGHT):
                 self.bullets.remove(bullet)
+                print("a bullet has dissapeared")
         for target in self.targets:
             if target.is_off_screen(SCREEN_WIDTH, SCREEN_HEIGHT):
                 self.targets.remove(target)
+                print("a target has left the game")
     def on_mouse_motion(self, x: float, y: float, dx: float, dy: float):
         # set the rifle angle in degrees
         self.rifle.angle = self._get_angle_degrees(x, y)
