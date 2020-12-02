@@ -102,10 +102,6 @@ class Paddle:
         if self.center.y > 0 + PADDLE_HEIGHT/2:
             self.center.y -= MOVE_AMOUNT
 
-
-
-
-
 class Pong(arcade.Window):
     """
     This class handles all the game callbacks and interaction
