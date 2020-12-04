@@ -9,17 +9,18 @@ from abc import ABC, abstractclassmethod
 class Shape(ABC):
     def __init__(self):
         self.name = ""
-        self.get_area = 0.00
+        
         
     
     def display(self):
-        print("{} - {:.2f}".format(self.name, self.get_area(.+)))
+        #print("{} - {:.2f}".format(self.name, self.get_area()))
+        print("{} - {}".format(self.name, self.get_area()))
 
     #TODO: Add an abstractmethod here called get_area
 
     @abstractclassmethod
-    def get_area(self):
-        return self.get_area
+    def get_area(self):        
+        pass
         
 
 #TODO: Create a Circle class here that derives from Shape
@@ -44,7 +45,7 @@ class Rectangle(Shape):
         self.width = 0.00
 
     def get_area(self):
-        return self.length * self.width
+        return float(self.length * self.width)
 
 def main():
 
@@ -60,7 +61,7 @@ def main():
             # add it to the list
             circle = Circle()
             circle.radius =radius
-            shapes.append(circle.get_area())
+            shapes.append(circle.name, circle.get_area())
 
     
 
@@ -72,14 +73,14 @@ def main():
             rectangle = Rectangle()
             rectangle.length = length
             rectangle.width = width
-            shapes.append(rectangle.get_area())
+            shapes.append(rectangle.name, rectangle.get_area())
 
         # Done entering shapes, now lets print them all out:        
 
         #TODO: Loop through each shape in the list, and call its display function
 
-    for print_shapes in shapes:
-        Shape.display(print_shapes)
+    for shape in shapes:
+        shape.display(25)
     
 if __name__ == "__main__":
     main()
