@@ -26,13 +26,14 @@ class SalaryEmployee(Employee):
     def get_paycheck(self):
         print("Paycheck amount: {0:.2f}".format(int(self.salary)/24))
 
-def display_employee_data(employee):
+    def display_employee_data(self,employee):
+        pass
 
     
 def main():
     employees = []
     usr_input= ""
-    while usr_input != q:
+    while usr_input != "q":
         print("For salary employee pres s\n For an hourly employee pres")
         usr_input = input("Enter your option: ")
         if usr_input == "s":

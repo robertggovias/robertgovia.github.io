@@ -5,21 +5,32 @@ Starting template for your checkpoint assignment.
 # TODO: Create a base car class here
 class Car:
     def __init__(self):
-        self.name = ""
+        self.name = "Unknown model"
     
-    def get_door_specs(self,name):
-        return self.name
-
-
-
+    def get_door_specs(self):
+        return "Unknown doors"
+    
 # TODO: Create a civic class here
-
+class Civic(Car):
+    def __init__(self):
+        self.name = "Civic"
+    def get_door_specs(self):
+        return "4 doors"
 
 # TODO: Create an odyssey class here
 
+class Odyssey(Car):
+    def __init__(self):
+        self.name = "Odyssey"
+    def get_door_specs(self):
+        return "2 front doors, 2 sliding doors, 1 tail gate"
 
 # TODO: Create a Ferrari class here
-
+class Ferrari(Car):
+    def __init__(self):
+        self.name = "Ferrari"
+    def get_door_specs(self):
+        return "2 butterfly doors"
 
 # TODO: Create your attach_doors function here
 # It should accept any type of car and use its
@@ -27,6 +38,10 @@ class Car:
 # the necessary data.
 # It should not be a member function of any class,
 # but rather just a "regular" function.
+
+def attach_doors(model):    
+    model.name = model.name   
+    print("Attaching doors to {} - {}".format(model.name, model.get_door_specs()))
 
 
 def main():
