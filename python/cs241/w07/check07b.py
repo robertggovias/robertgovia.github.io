@@ -8,13 +8,10 @@ from abc import ABC, abstractclassmethod
 
 class Shape(ABC):
     def __init__(self):
-        self.name = ""
-        
-        
+        self.name = ""    
     
     def display(self):
-        #print("{} - {:.2f}".format(self.name, self.get_area()))
-        print("{} - {}".format(self.name, self.get_area()))
+        print("{} - {:.2f}".format(self.name, self.get_area()))        
 
     #TODO: Add an abstractmethod here called get_area
 
@@ -60,8 +57,8 @@ def main():
             #TODO: Declare your Circle here, set its radius, and
             # add it to the list
             circle = Circle()
-            circle.radius =radius
-            shapes.append(circle.name, circle.get_area())
+            circle.radius =radius            
+            shapes.append(circle)
 
     
 
@@ -72,15 +69,15 @@ def main():
             # and width, and add it to the list
             rectangle = Rectangle()
             rectangle.length = length
-            rectangle.width = width
-            shapes.append(rectangle.name, rectangle.get_area())
+            rectangle.width = width            
+            shapes.append(rectangle)
 
         # Done entering shapes, now lets print them all out:        
 
         #TODO: Loop through each shape in the list, and call its display function
 
     for shape in shapes:
-        shape.display(25)
+        shape.display()
     
 if __name__ == "__main__":
     main()
