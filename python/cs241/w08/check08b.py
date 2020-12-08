@@ -48,7 +48,7 @@ class GPA:
             return self._gpa
     
     gpa = property(_get_gpa, _set_gpa)
-    letter = property(letter, letter)
+    #letter = property(letter, letter)
 
 def main():
     student = GPA()
