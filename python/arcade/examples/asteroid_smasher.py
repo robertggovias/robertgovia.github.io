@@ -210,7 +210,7 @@ class MyGame(arcade.Window):
             image_no = random.randrange(4)
             enemy_sprite = AsteroidSprite(image_list[image_no], SCALE)
             enemy_sprite.guid = "Asteroid"
-
+    
             enemy_sprite.center_y = random.randrange(BOTTOM_LIMIT, TOP_LIMIT)
             enemy_sprite.center_x = random.randrange(LEFT_LIMIT, RIGHT_LIMIT)
 
