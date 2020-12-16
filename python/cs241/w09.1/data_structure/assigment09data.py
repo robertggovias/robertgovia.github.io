@@ -49,16 +49,19 @@ def getComm(file_lines):
     v_Prof_school = " Prof-school"
     v_Masters = " Masters"
     v_Doctorate = " Doctorate"
-
-   
- 
+    count = 1
+  
     for items in file_lines:
         collumns= items.split(",")        
-        commList[collumns[3]] = 1
-        """
+        
+        commList[collumns[3]] = count       
+       
         if commList[collumns[3]] == Preschool:
             count_Preschool+=1
+            count = count_Preschool
+            
             commList[collumns[3]] = count_Preschool
+            print(commList)
         elif commList[collumns[3]] == v1_4:
             count_1st_4th +=1
             commList[collumns[3]] = count_1st_4th
@@ -117,8 +120,9 @@ def getComm(file_lines):
         elif commList[collumns[3]] == v_Doctorate:
             count_Doctorate +=1
             commList[collumns[3]] = count_Doctorate  
-        print(commList)
-        """
+        
+
+       
     return commList
 
 def average_item(commList_): 
