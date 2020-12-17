@@ -1,0 +1,48 @@
+1
+00:00:00,000 --> 00:00:03,070
+Mais um ciclo se encerra em nossas vidas.
+
+2
+00:00:03,070 --> 00:00:06,060
+É tempo de refletir e agradecer.
+
+3
+00:00:06,060 --> 00:00:08,660
+Sim! Agradecer por estarmos bem
+
+4
+00:00:08,660 --> 00:00:10,470
+e pela nossa família,
+
+5
+00:00:10,470 --> 00:00:11,440
+amigos
+
+6
+00:00:11,440 --> 00:00:12,640
+e parceiros.
+
+7
+00:00:12,640 --> 00:00:16,640
+2020 foi um ano atípico em nossas vidas,
+
+8
+00:00:16,640 --> 00:00:21,700
+mas temos certeza de que em 2021, tudo irá melhorar.
+
+9
+00:00:21,700 --> 00:00:24,100
+Foi um prazer estar ao seu lado,
+
+10
+00:00:24,100 --> 00:00:28,870
+que no próximo ano novas histórias de sucesso sejam contadas.
+
+11
+00:00:28,870 --> 00:00:33,550
+Para todos um excelente Natal e um próspero Ano Novo!
+
+['11', '00:00:28,870 --> 00:00:33,550', 'Para todos um excelente Natal e um próspero Ano Novo!\n']
+11
+00:00:28,870 --> 00:00:33,550
+Para todos um excelente Natal e um próspero Ano Novo!
