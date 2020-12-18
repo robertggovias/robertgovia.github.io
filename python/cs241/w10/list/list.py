@@ -54,9 +54,8 @@ sliced_last = ss[7:]
 
 print("Taking everything from the end, {}\n and everything from the begining {}".format(sliced_first,sliced_last))
 print("\nAlso with negative numbers")
-sliced_negative = ss[-4:-1]
-
-print("Also with negative numbers", sliced_negative)
+sliced_negative = ss[-6:-1]
+print("but takes from the last word, like from the right", sliced_negative)
 
 print("\nSpecifying Stride while Slicing Strings")
 
@@ -65,5 +64,28 @@ print("Now, each pair indexed letter: ", each_second)
 inversed = ss[::-1]
 print("An interesting way to print backward with each negative number (in that order)",inversed)
 
-
 how_many_items = len(ss)
+print('\nHow long or how many letters the word "{}" has?\n {}'.format(ss,how_many_items))
+
+print("\nYes, we have str.count para contar cuantas veces aparece una palabra")
+
+likes = "Sammy likes to swim in the ocean, likes to spin up servers, and likes to smile."
+print("how many likes the frase :{}".format(likes))
+
+print(likes.count("likes"))
+
+print("\nReturn the index of a word, finding it")
+print("which number is the 'm' on Sammy",ss.find("m"))
+
+print('\nYes, again str. returns, now with finds')
+print("which number is the first 'likes' on the frase\n",likes.find("likes"))
+
+print("\nStarting to find at a especifinc index")
+secondLike = likes.find("likes",likes.find("likes")+len("likes")+1)
+print("which number is the second 'likes' on the frase\n",secondLike)
+
+print("find also works with rage (the third parameter( , ,x)) from backward if the parameter is negative")
+print(likes.find("likes", 40, -6))
+
+
+
