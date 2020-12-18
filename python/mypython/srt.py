@@ -25,9 +25,6 @@ def getComm(file_lines):
         #commList.append(collumns[2])        
     return collumns
 
-
-
-
 def main():
     t = prompt_file()
     lines = file_lines(t)
