@@ -36,7 +36,7 @@ print(sum_multiple_list)
 testing_multiple_operations = list(map(lambda x,y,z: x/y*z+45**1%45,a,b,c))
 print(testing_multiple_operations)
 
-The map function of the previous chapter was used to apply one function to one or more iterables. We will now write a function which applies a bunch of functions, which may be an iterable such as a list or a tuple, for example, to one Python object.
+#The map function of the previous chapter was used to apply one function to one or more iterables. We will now write a function which applies a bunch of functions, which may be an iterable such as a list or a tuple, for example, to one Python object.
 
 from math import sin, cos, tan, pi
 
@@ -48,4 +48,38 @@ def map_functions(x, functions):
      return res
 
 family_of_functions = (sin, cos, tan)
-print(map_functions(pi, family_of_functions))
+print("sin, cos, tan", map_functions(pi, family_of_functions))
+
+print("fibonacci: 0,1,1,2,3,5,8,13,21,34,55\n")
+fibonacci= 0,1,1,2,3,5,8,13,21,34,55
+odd_numbers = list(filter(lambda x: x%2, fibonacci))
+print ("Odd numbers: ",odd_numbers)
+
+eve_number = list(filter(lambda x: x%2 == 0, fibonacci))
+print("even numbers: ",eve_number)
+
+print("Now it's time for reduce function")
+print("this is the list: 314,1,423,42,4,234,234,12,41,24,12,234,21,41,2")
+import functools
+hello = list()
+print("sum")
+print(functools.reduce(lambda x,y:x+y, [314,1,423,42,4,234,234,12,41,24,12,234,21,41,2]))
+
+print("divide")
+print(functools.reduce(lambda x,y:x/y, [314,1,423,42,4,234,234,12,41,24,12,234,21,41,2]))
+
+print("multiplication")
+print(functools.reduce(lambda x,y:x*y, [314,1,423,42,4,234,234,12,41,24,12,234,21,41,2]))
+
+from functools import reduce
+print("conditions")
+print("the bigger form 47,11,42,102,13 comparing in pairs")
+f = lambda a,b: a if (a > b) else b
+
+print(reduce(f, [47,11,42,102,13]))
+print("Al number from 1 to 100 divided")
+print(reduce(lambda x, y: x/y, range(1,101)))
+
+print("If you are into lottery, here are the chances to win a 6 out of 49 drawing")
+print(reduce(lambda x, y: x*y, range(44,50))/reduce(lambda x, y: x*y, range(1,7)))
+
