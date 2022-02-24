@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<body>
+    <input id="aqui_encontra">
+    <button onclick="recibir_retornar()">E ai Guri</button>
+    <script>        
+
+        function recibir_retornar(){
+            var distancia = parseInt(document.getElementById("aqui_encontra").value);
+            var kilometros_hora = distancia/40;
+            var minutos = kilometros_hora * 60;
+            return(document.write(minutos))
+
+        }
+    </script>
+    
+</body>
+</html>
