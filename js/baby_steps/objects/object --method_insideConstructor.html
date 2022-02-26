@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        function carrito (nombre, marca, color, valor){
+            this.nombre = nombre;
+            this.marca = marca;
+            this.color = color;
+            this.valor = valor;
+            this.colorChanger = function (color){
+                this.color = color;}
+            this.valorChanger = function (valor){
+                this.valor = valor;            }}
+        
+        var gold45 = new carrito ("gold45","chevrolet", "azul", 50);
+        var hotWheels89 = new carrito ("hotWheels89","mazda", "rojo", 34);
+        function imprimir(objeto){
+            var nombre = objeto.nombre;
+            document.write("el "+ nombre + "<br> es de la marca " + objeto.marca + "<br> de color "+ objeto.color+ "<br> cuesta "+  objeto.valor+ "<br><br>");
+        }
+        imprimir(gold45);
+        gold45.colorChanger("verde");     
+        gold45.valorChanger(10);     
+        imprimir(gold45);
+    </script>
+</body>
+</html>

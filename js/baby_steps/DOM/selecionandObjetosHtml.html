@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<body>
+    <h2 id="perro">hey</h2>
+    <button id="jaja" onclick="change()">ahora</button>
+    <button id="juju" onclick="changeList()"> aqui cambias la lista</button>
+    <button id="jeje" onclick="setText()"> me rendí</button>
+
+    <ol id="vamos">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li></ol>
+    <div id ="demo">
+        <p>some text</p>
+        <p>some other text</p>
+    </div>
+
+    <script>
+        function change(){
+        var dommOBJECTid = document.getElementById("perro");
+        dommOBJECTid.innerHTML="viralata";}
+        function changeList(){
+        var b = document.getElementsByTagName("vamos");
+        var arr = b.childNodes;
+            for(var x=0;arr.length;x++){
+            arr[x].innerHTML="new";
+            }}
+    function setText() {
+    var a = document.getElementById("demo");
+     var arr = a.childNodes;
+     for(var x=0;x<arr.length;x++) {
+       arr[x].innerHTML = "new text";
+     }
+}
+    </script>
+</body>
+<footer>
+
+</footer>
+
+</html>

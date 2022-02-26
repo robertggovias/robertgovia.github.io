@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+    <input id="jaja" placeholder="número a">
+    <input id="jojo" placeholder="nombre a">
+    <input id="jeje" placeholder="número b">
+    <input id="juju" placeholder="nombre b">
+    <button onclick="usa_a_funcion()">E ai meus crocantes</button>
+<script>
+    
+    function usa_a_funcion(){
+        var x = parseInt(document.getElementById("jaja").value);
+        var f = document.getElementById("jojo").value;
+        var z = parseInt(document.getElementById("jeje").value);
+        var j = document.getElementById("juju").value; 
+        var y = 0;               
+        do{
+           x = x * z;
+           y = x * z;
+           document.write( x + " " + f + "s x " + z + " " + j + "s = " + y + "<br />");
+
+        }
+        while(x<1000);
+    }
+
+</script>
+</body>
+</html>

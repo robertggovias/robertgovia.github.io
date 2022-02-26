@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        function carrito (nombre, marca, color, valor, oferta){
+            this.nombre = nombre;
+            this.marca = marca;
+            this.color = color;
+            this.oferta = oferta;
+            this.valor = valor;            
+            this.valorMenosOferta = ofertando;
+            this.colorChanger = function (color){
+                this.color = color;}
+            this.valorChanger = function (valor){
+                this.valor = valor;}            
+            this.ofertaChanger = function (oferta){
+                this.oferta = oferta;}            
+        }
+        function ofertando(){
+            return this.valor * (this.oferta/100);
+        }
+
+
+        
+        var gold45 = new carrito ("gold45","chevrolet", "azul", 50, 50);
+        var hotWheels89 = new carrito ("hotWheels89","mazda", "rojo", 34, 25);
+        
+        function imprimir(objeto){
+            var nombre = objeto.nombre;
+            document.write("el "+ nombre + "<br> es de la marca " + objeto.marca + "<br> de color "+ objeto.color+ "<br> cuesta "+  objeto.valor+ "<br>con un " + objeto.oferta +" de descuento <br>"+"El precio queda en  " + objeto.valorMenosOferta() +"<br><br>");
+        }
+
+        imprimir(gold45);
+        gold45.colorChanger("verde");     
+        gold45.valorChanger(10);     
+        imprimir(gold45);
+        
+    </script>
+</body>
+</html>

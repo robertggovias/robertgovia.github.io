@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        var hojeDia = new Date();        
+        var nuevoDia = new Date(86400000*5);        
+        document.write("O dia de hoje <br>" + hojeDia + "<br><br> O quinto dia <br>" + nuevoDia);
+        // new Date (year, month, day, hours, minutes, seconds, milliseconds)
+        var tempoNumerico = new Date(88,5,11,11,42,0,0);
+        document.write("<br><br> Dia definido con numeros <br>" + tempoNumerico);
+
+        var tempoFormato = new Date("October 16, 1982 10:42:00");
+        document.write("<br><br> Dia definido con formato <br>" + tempoFormato);
+// Methods para el tiempo
+        var metodos = new Date();
+        document.write("<br><br> Dia <br>" + metodos.getDate());
+        document.write("<br><br> mes <br>" + metodos.getMonth());
+        document.write("<br><br> Año <br>" + metodos.getYear());
+        document.write("<br><br> Hora <br>" + metodos.getHours());
+// Print time inside HTML with Function
+        function mostrarTiempo(){
+        var elTiempo = new Date();
+        var dias = elTiempo.getDate();
+        var mes = elTiempo.getMonth();
+        var ano = elTiempo.getFullYear();
+        var hora = elTiempo.getHours();
+        var minutos = elTiempo.getMinutes();
+        var segundos = elTiempo.getSeconds();
+        sdocument.body.innerHTML = "Hoy es el dia " + dias + ", del mes número " + mes +", y del año "+ ano + "<br>Mira que hora es: las " +hora + " horas con " + minutos + " minutos y " +segundos + " segundos.";
+    }
+
+        setInterval(mostrarTiempo, 1000)
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<body>
+    <script>
+        var objeto = {
+            nombre : "agua",
+            color: "azul",
+            cantidad: 3,
+            altura: 6,
+            anchura: 8,
+            profundidad: 7,
+            masa: 5
+        };
+        var volumen = objeto.altura * objeto.anchura * objeto.profundidad;
+        var densidad = objeto.masa / volumen;        
+        document.write("La palabra " + objeto.nombre + " tiene " + objeto.nombre.length + " letras y es de color " + objeto.color+"<br>");
+        document.write("El " + objeto.nombre + " tiene una densidad de " + densidad);
+    </script>
+</body>
+</html>
