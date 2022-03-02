@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <title>animación</title>
+    <link rel="stylesheet" href="css/box_to_animate.css">
+</head>
+<body>
+    <div id="container">
+        <div id="box">
+
+        </div>
+    </div>
+
+    <script>
+        //posición de inicio
+
+        var posicion = 0;
+
+        // crear el elmento de la caja
+        var caja = document.getElementById("box");
+
+        // ahora si la animacion
+        function moviendolo(){
+            if(posicion>=500){
+                clearInterval(tiempo);
+            }
+            posicion += 1;
+            box.style.left = posicion+"px" // asi se crea un estilo que dice la cantidad a la izquierda de pixeles absolutos en los que se encuentra
+        }
+
+        //Para llamar a la función cada 1/60 de segundo
+        framePoSegundo = 60
+        intervalos = 1000/framePoSegundo;
+        var tiempo = setInterval(moviendolo,intervalos);
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<body>
+    <div id="peso">
+        bastante contenido <br>
+        <li id="texto">para el siguiente contenido <br></li>
+    </div>
+    <script>
+        //calling the function in window.onload to make sure the HTML is loaded
+        window.onload = function(){
+        // para crear el documento
+        var crear = document.createElement("crear");
+        var un_nodo = document.createTextNode("loremipsum");
+        //segundo
+        var crearDos = document.createElement("crearDos");
+        var otro_nodo = document.createTextNode("Segundo texto");
+        //tercero jundo a otro
+        var crearTres = document.createElement("crearTres");
+        var tercer_nodo = document.createTextNode("tercer texto");
+
+        //anclando el texto a la variable del elmento creado (crear)
+        crear.appendChild(un_nodo);
+        var parrafo = document.getElementById("texto");
+
+        crearDos.appendChild(otro_nodo);
+        // terecer texto en el primer elemento
+        crear.appendChild(tercer_nodo);
+        
+        var segundoParrafo = document.getElementById("peso");
+
+        //Añadiendo el parrafo en el div del html
+        parrafo.appendChild(crear);
+        segundoParrafo.appendChild(crearDos);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<body>
+    selecciona una opción <br>
+    <select id="escoge" onchange="concatena()">        
+        <option value="rojo">Rojo</option>
+        <option value="verde">Verde</option>
+        <option value="azul">Azul</option>
+        <option value="amarelho">Amarelho</option>
+    </select>
+    <p>E ai</p>
+    <p id="concatenado"></p>
+    <script>
+        function concatena(){
+            var color = document.getElementById("escoge").value;
+            document.getElementById("concatenado").innerHTML = "Entonces te gusta el color " + color;
+        }
+    </script>
+</body>
+
+</html>

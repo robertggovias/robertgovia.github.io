@@ -25,7 +25,7 @@
         var hora = elTiempo.getHours();
         var minutos = elTiempo.getMinutes();
         var segundos = elTiempo.getSeconds();
-        sdocument.body.innerHTML = "Hoy es el dia " + dias + ", del mes número " + mes +", y del año "+ ano + "<br>Mira que hora es: las " +hora + " horas con " + minutos + " minutos y " +segundos + " segundos.";
+        document.body.innerHTML = "Hoy es el dia " + dias + ", del mes número " + mes +", y del año "+ ano + "<br>Mira que hora es: las " +hora + " horas con " + minutos + " minutos y " +segundos + " segundos.";
     }
 
         setInterval(mostrarTiempo, 1000)

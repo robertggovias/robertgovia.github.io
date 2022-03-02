@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="image_slider.css">
+</head>
+<body>
+    <button onclick="para_traz()">Prev</button>
+    <img id="slider" src="https://wallpaperaccess.com/full/491952.jpg" width="200" height="300">
+
+    <button onclick="para_lante()">next</button>
+    <script>
+        var imagenes = ["https://wallpaperaccess.com/full/491952.jpg",
+        "https://wallpaperaccess.com/full/4155973.png",
+        "https://wallpaperaccess.com/full/15055.jpg",
+        "https://wallpaperaccess.com/full/2664660.jpg",
+        "https://wallpaperaccess.com/full/3228697.jpg",
+        "https://wallpaperaccess.com/full/491792.jpg",
+        ];
+        var numero = 0;
+        function para_traz(){
+            var slider = document.getElementById("slider");
+            numero--
+            if(numero<0){
+                numero = 0;
+            }
+            slider.src = imagenes[numero];
+
+        }
+
+        function para_lante(){
+            var slider = document.getElementById("slider");
+            numero++
+            if(numero>=imagenes.length){
+                numero = imagenes.length-1;
+            }
+            slider.src = imagenes[numero];
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <body>
+        <input id="po" placeholder="coloca tu nombre">
+        <button onclick="ye()">entrada</button><br>
+
+    </body>
+    <script>
+        // fancy way
+        function antiguo(que,pasa){
+            let y=que*pasa;
+            return y
+        }        
+
+        document.write(antiguo(32786,12894) + "<br>");
+        // EC6
+        //varios argumentos
+        var yo = (e,ai)=>{
+            var y=e*ai;
+            return y
+        }
+        
+        document.write(yo(32786,12894) + "<br>")
+
+        // un argumento      
+        var nombre = document.getElementById("po").value;        
+        var forma_simple = nombre => "Welcome "+ nombre + "<br>";
+        document.write(forma_simple("pepe"))
+
+        // sin argumentos
+        var ye = () => alert(forma_simple("pepe"));      
+
+    </script>
+</html>

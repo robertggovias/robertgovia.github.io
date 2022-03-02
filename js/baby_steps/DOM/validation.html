@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+    Contraseña<br>
+    <form onsubmit=" return iguales()" method="post">
+    <input id="original"><br>
+    Escriba la Contraseña nuevamente<br>
+    <input id="comparar"><br>
+     <input type="submit" value="Submit"></button>
+    </form>
+</body>
+<script>
+    
+    function iguales(){
+        var primeraR = document.getElementById("original").value;
+        var ultimaR = document.getElementById("comparar").value;
+        if (primeraR != "" && ultimaR != ""){
+            if(primeraR == ultimaR){
+                return true;
+            }
+        }       
+            alert("mirá mijito, tu no sabeis que significa repetir la Contraseña?");
+            return false
+    }
+
+</script>
+
+</html>

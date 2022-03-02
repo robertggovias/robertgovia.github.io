@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<body>
+    <button id="agora" >mira en vivo y directo</button>
+    <script>
+               
+
+// Print time inside HTML with Function
+ window.onload = function(){            
+                    var tiempo = document.getElementById("agora");
+tiempo.onclick = function(){
+    document.body.innerHTML = tempoReal();    
+}
+
+        function tempoReal(){
+        function mostrarTiempo(){
+        var elTiempo = new Date();
+        var dias = elTiempo.getDate();
+        var mes = elTiempo.getMonth();
+        var ano = elTiempo.getFullYear();
+        var hora = elTiempo.getHours();
+        var minutos = elTiempo.getMinutes();
+        var segundos = elTiempo.getSeconds();
+        var milliseconds = elTiempo.getMilliseconds();
+        document.body.innerHTML = "Hoy es el dia " + dias + ", del mes número " + mes +", y del año "+ ano + "<br>Mira que hora es: las " +hora + " horas con " + minutos + " minutos , " +segundos + " segundos y " + milliseconds + " milisegundos";
+        
+    }
+    setInterval(mostrarTiempo,1);
+}
+// Methods para el tiempo
+      /*  var metodos = new Date();
+        document.write("<br><br> Dia <br>" + metodos.getDate());
+        document.write("<br><br> mes <br>" + metodos.getMonth());
+        document.write("<br><br> Año <br>" + metodos.getYear());
+        document.write("<br><br> Hora <br>" + metodos.getHours());
+        */
+
+                }
+                
+
+
+
+    </script>
+</body>
+</html>

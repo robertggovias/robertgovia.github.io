@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<style>
+    a:focus, a:active{
+        background-color: yellow;
+        color: blueviolet;
+    }
+    
+</style>
+<body>
+    <a id="focusando" href="https://www.w3schools.com">voy a ser focusado</a>
+
+    <input type="button" onclick="focusador()" value="estoy focusandote">
+    <input type="button" onclick="quitarFocus()" value="suficiente, te desfocuso">
+    <script>
+        function focusador(){
+            document.getElementById("focusando").focus();
+        }
+        function quitarFocus(){
+            document.getElementById("focusando").blur();
+        }      
+    </script>
+</body>
+</html>

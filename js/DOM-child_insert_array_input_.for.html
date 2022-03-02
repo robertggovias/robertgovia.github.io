@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<body>
+    a: <input id="a"><br>
+    b: <input id="b"><br>
+    c: <input id="c"><br>
+    cuantas filas: <input id="asFilhas"><br>
+    <button onclick="abc()">a+c y a+b</button>
+    <!--<div id="resultados"><ol>
+        <li></li>
+    </ol></div>-->
+    <br><br>
+    numero : <input id="fila"><br>
+    letra: <input id="columna"><br>
+    <div id="respuesta"></div>
+    <h1>triste</h1>
+    <button onclick="pegarDaLista()">es</button><br>
+    <script>
+        const h1 = document.createElement("H1");
+        var lista = [];
+        var lista_fantasma = [];
+        var numerador = 1;
+        function forr(a,b,c,filhas){
+            for(x = 0;x<filhas;x++){
+                b = a+c;
+                c = a+b;                
+                lista.push(new Array (a,b,c));
+                
+               
+                lista_fantasma.push(new Array (numerador + ".-  a = " + a + " // b = " + b + " // c = " + c + "  :(  "));
+                numerador++;  
+            } 
+            for(var t = 0;t<x;t++){
+                var nodoDeTexto = document.createTextNode(lista_fantasma[t]);
+            h1.appendChild(nodoDeTexto);
+            document.body.appendChild(h1);
+            
+
+            }
+            
+            //document.write(todo[0]);
+                /*       
+            for(;contador<=todo.length;contador++){
+            todo[contador].innerHTML(todo)}*/
+                    
+        }
+        
+        function abc(){
+        var rA = parseInt(document.getElementById("a").value);
+        var rB = parseInt(document.getElementById("b").value);
+        var rC = parseInt(document.getElementById("c").value);
+        var filhas = parseInt(document.getElementById("asFilhas").value);
+        forr(rA,rB,rC,filhas);
+        
+        }
+        
+        var numero = parseInt(document.getElementById("fila").value);
+        var letra = document.getElementById("columna").value;
+        
+        
+
+        function pegarDaLista(){
+            var numero = parseInt(document.getElementById("fila").value)-1;
+                       
+        var letra = document.getElementById("columna").value;
+        var l_a = "a";
+        var l_b = "b";
+        var l_c = "c";   
+         
+        switch(true){
+            case (letra == l_a):
+            letra = 0;
+            break;
+            case (letra == l_b):
+            letra = 1;
+            break;
+            case(letra == l_c):
+            letra = 2;
+            break;
+        }
+// donde va aparecer la respuesta
+        var dOOM = document.getElementById("respuesta");
+            dOOM.innerHTML=lista[numero][letra];
+            
+            
+            //document.write("Un elemento de la lista<br>" + lista[numero][2]+"<br><br>");
+        //document.write("Grupo de la lista <br>" + lista[1]);
+
+        }
+        
+    </script>
+</body>
+
+</html>
