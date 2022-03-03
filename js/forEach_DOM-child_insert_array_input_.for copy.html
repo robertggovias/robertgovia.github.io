@@ -20,10 +20,16 @@
         var numerador = 1;
         function forr(a,b,c,filhas){
             for(x = 0;x<filhas;x++){
+               
+                var fb = b;
+                var fc = c;                                
+                a = b +c;
+                var fa = a;
                 b = a+c;
+                var ffb = b;
                 c = a+b;
-                a = b +c;                
-                lista.push(new Array (a,b,c));
+                
+                lista.push(new Array (a,b,c,fa,fb,fc,ffb));
             } 
            let tudoPronto = "";
            const giveMeEverything = lista;
@@ -31,7 +37,7 @@
             giveMeEverything.forEach(imprimirTudo);
             document.getElementById("resultados").innerHTML = tudoPronto;
             function imprimirTudo(filinha,index){
-                tudoPronto += index + 1 + " >> A > " + filinha[0] + " // B > " + filinha[1] + " // C > " + filinha[2] + "<br>";
+                tudoPronto += index + 1 + " >> a = b (" + filinha[4] + ") + c (" + filinha[5] + ") = " + filinha[0] + " || b = a (" + filinha[3] + ") + c (" + filinha[5] + ") = " + filinha[1] + " || c = a (" + filinha[3] + ") + b (" + filinha[6] + ") = " + filinha [2] + "<br>";
             }
 
              var estou = document.getElementsById("comoEstou");

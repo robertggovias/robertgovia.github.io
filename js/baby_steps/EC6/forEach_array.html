@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <title>
+            forEach Array
+        </title>
+    </head>
+    <body>
+        <script>
+            var i = 0;
+document.write("Lista Antigua<br><br>")
+            var listaAntigua = [2,3,4,5,65,6,7,7,8,8];
+            listaAntigua.forEach(function(memo){
+                
+                document.write(i + 1+ ".- " + memo + i++ + "<br>")
+            });
+            document.write("<br><br>Lista EC6 <br><br>")
+
+            var listando = [2,3,4,5,65,6,7,7,8,8];
+            var x = 0;
+            listando.forEach(pepe => {                
+                  document.write(x  + 1 + ".- " + pepe + x++ + "<br>");
+            });
+
+            document.write("<br><br>Imprimiendo numeros pares<br><br>")
+            var numerosPares = (pares) => {
+                pares.forEach(par=>{
+                    if (par % 2 == 0){
+                        document.write(par + "<br>" );
+                    }
+                })
+            }
+            numerosPares(listaAntigua);
+        </script>
+    </body>
+
+
+</html>
