@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <script>
+        const a = "a1";
+        const b = "b1";        
+        const c = "c1";
+        let letras = {
+        };
+        // crear
+        letras[a] = a;
+
+        // intercambio
+        letras[b] = c;
+        
+        document.write("<b>A la antiguita</b><br>objeto creado y solicitado a si mismo:<br>")
+        document.write(letras.a1);
+        document.write("<br> objeto creado desde b para ser c:<br>")
+        document.write(letras.b1);
+
+        document.write("<br><br> <b>Agora com EC6</b>")
+
+        const x = "x1";
+        const y = "y1";
+        const z = "z1";
+        const cpf = "708";
+        const nombre = "robert";
+
+        let cordenadas = {
+            
+            //crear con mismo nombre x1
+            [x]:x,
+
+            //crear asignando un nuevo valor
+            [x]:"Que legal",
+
+            // intercambio
+            [y]:z,            
+            //concatenando para cambiar el nombre de la propiedad
+            [z + "concatenar"] : x,
+            [z + "tatata"] : y,
+            // concatenando texto y variable
+            [`texto_${y}`]:`${x}`,
+            // concatenando texto escogiendo letras pasando para mayuscula y variable
+            [cpf]: 2342,
+            [`z_${cpf}`]:`mi nombre es ${nombre}`            
+        };
+
+        var caracteristica = "tamaño";
+        var celular = {
+            [caracteristica] : 14,
+            ['iPhoneS' + caracteristica.charAt(0).toUpperCase() + caracteristica.slice(1)]:46
+        }
+        document.write("<br><br>objeto creado y solicitado a si mismo:<br>");
+        document.write(cordenadas.x1);
+        document.write("<br><br> objeto creado desde y para ser z: <br>");
+        document.write(cordenadas.y1);
+        document.write("<br><br> objeto concatenado desde su creador y para ser x: <br>");
+        document.write(cordenadas.z1concatenar);
+        document.write("<br><br> objeto concatenado desde su creador y para ser y: <br>");
+        document.write(cordenadas.z1tatata);
+        document.write("<br><br> objeto concatenado desde su creador y para ser y: <br> solo se ve en el console log");
+        console.log(cordenadas.texto_y1);
+        console.log(cordenadas.z_708);
+        // modelos de celular segun su tamaño
+        document.write("<br><br>concatenando texto escogiendo letras pasando para mayuscula y variable");
+        
+
+        
+
+        document.write("<br><br>concatenando texto escogiendo letras pasando para mayuscula y variable");
+        console.log(celular.iPhoneSTamaño);
+
+
+
+
+
+
+
+        
+        
+
+    </script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        document.write("<b>De lista a Variables</b>"+"<br>");
+        var unaLista = ["pt_BR","pt-PT","es_ES","es-VE","es-CO"];
+        var [Brazil,Portugal,España,Venezuela]= unaLista;
+        document.write(Brazil+"<br>");
+        document.write(Portugal+"<br>");
+        document.write(España+"<br>");
+        document.write(Venezuela+"<br>");
+
+        document.write("<br><b>De función a Variables</b>"+"<br>");
+
+        var a = () => {
+            return[1,2,3,4,5,6,7,8]            
+        }
+        document.write(a);
+        var [a,b,c,d,e,f,g,h] = a();
+        document.write("<br> a =" + a + " || b = " +b+ " || c = " + c );
+        document.write("<br>")
+        document.write(a+b+c+"<br>");
+        
+        var a, b, c, d, f, g = 18, h = 8;
+        document.write(a,b,c,d,e,f,g,h);
+        document.write("<br>");
+
+        [a,g = 6] = [2222222221];
+        [d,c = 5] = [3333333331];
+
+        document.write("a = "+a," g = "+g);
+        document.write("<br>");
+        document.write("c = "+c," d = "+d);
+        document.write("<br>");
+
+        [c,d] = [d,c]
+        document.write("<br> troca         [c,d] = [d,c]<br> ");
+
+        document.write("c = "+c," d = "+d);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</html>

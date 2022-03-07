@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+    <head>
+        <title>drop down para escoger carros</title>
+    </head>    
+    <script>
+        function escoge_colores(){
+            var color_escogido = document.getElementById("colores");
+            document.getElementById("color").value = color_escogido.options[color_escogido.selectedIndex].text;
+        }
+    </script>
+    <body>
+        <form>
+<select id="colores" onchange = "escoge_colores()">
+    <option >Escoge un color</option>
+    <option>Azul</option>
+    <option>Verde</option>
+    <option>Amarillo</option>
+    <option>Morado</option>
+    <option>Rojo</option>
+
+</select>
+<br><p>Escogiste el color:
+<input type="text" id="color"></p>
+</form>
+
+
+    </body>
+    
+
+
+</html>

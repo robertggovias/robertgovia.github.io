@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <body>
+        Objetos, fancy way <br>
+        Un arbol tiene 10 cm y en un mes crece otros 10, cuantos cm va a tener en total?<br>
+        <div id="resultado_fancy"></div>
+        <br>Objetos nueva forma<br>
+        <div id="resultado_ec6"></div>
+        <div id="resultado_ec6_2"></div>
+        <script>
+            let arbol = {
+                altura: 10,
+                color: 'verde',
+                crecer(){
+                    this.altura += 10; 
+                }
+            };
+            arbol.crecer()            
+            
+            var resultado_viejo = document.getElementById("resultado_fancy");
+            var midiendo = arbol.altura;
+            
+            // EC6
+
+            let peso = 3;
+            let velocidad = 4;
+
+            let carro = {
+                peso, velocidad
+            };
+
+            //segun las reglas EC6 va a tomar la ultima velocidad
+            let avion = {
+                peso:10, velocidad:45, velocidad: 78
+            }
+            
+            var segundo_resultado_ec6 = 45;                        
+            var crear_primero = document.createElement("creado_el_primero");
+            var crear_segundo = document.createElement("creado_el_segundo");
+            var segundo_nodo = document.createTextNode(carro.velocidad);
+            var primer_nodo =  document.createTextNode(arbol.altura);
+            crear_primero.appendChild(primer_nodo);
+            crear_segundo.appendChild(segundo_nodo);
+            var parrafo = document.getElementById("resultado_fancy");
+            parrafo.appendChild(crear_primero);
+            var segundoParrafo = document.getElementById("resultado_ec6");
+            segundoParrafo.appendChild(crear_segundo);
+            // INvestigar porque no funciona.
+
+            document.getElementById("resultado_EC6_2").innerHTML = avion.velocidad;
+
+            
+
+        
+            
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>
+        Object assign
+    </title>
+</head>
+<script>
+
+    let comida = {
+       tipo : "fruta",
+       nombre : "platano",
+       vencimiento : "may 2022"
+    }
+    let transporte = {
+        medio : "agua",
+        codigo : "yate do velho",
+        salida : "abr 2022"
+    }
+
+    let logistica = Object.assign({}, comida, transporte );
+    var pepe = logistica.codigo;    
+    document.write(pepe +"<br>");
+    logistica.codigo = 13412;
+    document.write(logistica.codigo);
+
+    // antes se mesclaba el original con el nuevo
+
+    var misturado = transporte;
+    misturado.medio = "aire";
+    document.write("<b><br><br>Original<br></b>" + transporte.medio);
+    document.write("<b><br>Nuevo<br></b>" + misturado.medio + "<br>");
+
+    let maria = logistica;
+    document.write("<br>Llego por "+ maria.medio + " a maria");
+    maria.medio = "tierra";
+    document.write("<br>Llego por "+ maria.medio + " a maria");
+
+    // También se pueden asignar nuevos nombres
+
+     let asignarValor = {
+         hora:4,
+         dia:5
+     }
+
+     var nuevoValor = Object.assign({},asignarValor,{hora:7});
+
+     document.write("<br><br> Cambiando valor desde Object.Assign:<br>"+ nuevoValor.hora);
+
+
+
+
+
+
+
+
+
+</script>
+</html>
