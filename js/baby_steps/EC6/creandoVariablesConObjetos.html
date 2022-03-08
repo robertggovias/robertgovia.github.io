@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <script>
+        var objeto = {
+            primer: 'soy el primer',
+            segundo: 'soy el segundo'
+        }
+        document.write(objeto.primer);
+        var nuevoObjeto = objeto;
+        nuevoObjeto.segundo = 3;
+        nuevoObjeto.primer = 2;
+        var resultado = nuevoObjeto.segundo + nuevoObjeto.primer;
+                
+        document.write(resultado)
+        document.write(objeto.primer);
+// convirtiendo propiedades de un objeto en variables
+        let objetando = {a:1,b:2};
+        let {a,b} = objetando;
+        document.write("<br>",a,b);
+// Asignar objeto a variables preexistentes dentro de parentesis
+        let c,d;
+        ({c,d} = {c:3,d:4});
+        document.write("<br>",c,d);
+// Asignar objeto a nuevas variables sin parentesis
+        let {e,f} = {e:5,f:6};
+        document.write("<br>",e,f);
+// Asignar objeto a nuevas variables con sus respectivos valores
+        let objetivo = {h:7,i:8};
+        let {h:var1,i:var2} = objetivo;
+        document.write("<br>",var1,var2);
+
+
+    </script>
+
+</html>
