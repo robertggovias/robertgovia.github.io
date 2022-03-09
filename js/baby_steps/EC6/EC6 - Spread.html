@@ -14,5 +14,75 @@
     }
     var mimi = [1,2,3];
     pepe(...mimi,4);
-</script>
-</html>
+
+    //example
+    var dateFields = [1970, 0, 1];  // 1 Jan 1970
+var date = new Date(...dateFields);
+console.log(date);
+
+//Spread in array literals
+
+//Before ES6, we used the following syntax to add an item at middle of an array:
+
+var arr = ["One", "Two", "Five"];
+
+arr.splice(2, 0, "Three");
+arr.splice(3, 0, "Four");
+console.log(arr);
+
+//You can use methods such as push, splice, and concat, for example, to achieve this in different positions of the array. However, in ES6 the spread operator lets us do this more easily:
+
+let newArr = ['Three', 'Four']; 
+let arr = ['One', 'Two', ...newArr, 'Five'];
+console.log(arr);
+
+//Spread in object literals
+
+//In objects it copies the own enumerable properties from the provided object onto a new object.
+
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'baz', y: 5 };
+
+const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
+const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
+
+//However, if you try to merge them you will not get the result you expected:
+
+//Exemplo 1: Spread em chamadas de função
+//Considere dois valores que precisam ser somados por uma função simples: utilizando o operador spread podemos fazer esta tarefa sem que seja necessário atribuir os valores deste Array a uma variável. No exemplo abaixo podemos ver melhor como este processo pode ser feito:
+
+const soma = (a, b) => a + b
+
+  const valores = [ 10, 50 ]
+
+  console.log(soma(...valores)) // saída: 60
+
+//  Exemplo 2
+//Podemos utilizar o operador spread para concatenar dois Arrays como no exemplo abaixo:
+
+const primeirosItens = [ 1, 2 , 3 ]
+
+  const outrosItens = [ ...primeirosItens, 4, 5, 6 ]
+
+  console.log(outrosItens) // [ 1, 2 , 3, 4, 5, 6 ]
+
+  //Exemplo 3
+//No exemplo abaixo utilizamos o operador spread para recuperar um número de argumentos indefinidos e defini-los ao valorB ao utilizar reticências antecedendo o nome do argumento:
+
+function logger (valorA, ...valorB) {
+    console.log(valorA, valorB)
+  }
+
+  logger('DevMedia', 'S2', 'Javascript')
+  // 'DevMedia', [ 'S2', 'Javascript' ]
+
+//  Exemplo 4: Spread em uma função
+//No exemplo abaixo utilizamos o spread em uma função que efetua a soma de todos os argumentos que receber.
+
+function soma () {
+    return Object.values(arguments).reduce((a, b) => a + b, 0)
+  }
+
+  const itens = [ 1, 3, 6, 8 ]
+
+  console.log(soma(...itens)) // 18
