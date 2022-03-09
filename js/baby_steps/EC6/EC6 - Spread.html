@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<script>
+    document.write("A la antigüita:  ")
+    function funcionando(a,b,c,d){
+        document.write(a+b+c+d);
+    }
+    var argumentos = [1,2,3];
+    funcionando(null,argumentos.concat(4));
+
+    document.write("<br><br> New fashion way: <br>")
+
+    var pepe = (a,b,c,d) =>{
+        document.write(a+b+c+d);
+    }
+    var mimi = [1,2,3];
+    pepe(...mimi,4);
+</script>
+</html>

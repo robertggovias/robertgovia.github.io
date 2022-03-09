@@ -6,6 +6,13 @@
         </title>
     </head>
     <body>
+        <input id="cuantos" placeholder="cuantos números"><br>
+        <button onclick="ignite()">numeros</button><br>
+
+            <div id="listaImpares"><br>
+                
+
+        </div>
         <script>
             var i = 0;
 document.write("Lista Antigua<br><br>")
@@ -31,6 +38,37 @@ document.write("Lista Antigua<br><br>")
                 })
             }
             numerosPares(listaAntigua);
+
+            // Creando una lista de impares y tomando el limite de un input
+
+            var cem = [];
+            
+            
+            function creadorNumeros(limite){
+               
+               for(let o=0;o <=limite;o++){
+                   if((o%2)!=0){
+                    cem.push(o);
+                }                
+                }
+                let escribirNuevaLinea = "3";
+                const tudosImpares = cem;
+                tudosImpares.forEach(lasLineas);
+                document.getElementById('listaImpares').innerHTML = escribirNuevaLinea;
+                function lasLineas(nuevaFila,index){
+                    escribirNuevaLinea += index + 1 + ".- El número " + nuevaFila + " es impar.<br>";
+                }
+            }
+            
+            var ignite=(fantastico)=>{
+                var limitador = parseInt(document.getElementById("cuantos").value);
+                creadorNumeros(limitador);
+            }
+
+            var novaLista = [];
+            var impares = [3,4,5,6,3]
+            document.getElementById('listaPrueba').innerHTML = (impares);
+
         </script>
     </body>
 
