@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+    <script>
+        a =[1,2,3,4,5,6,7,8,9];
+        b = [...a,20,30,40]
+        c ="rr";
+        f = "dd";
+        document.write(b);
+        var sumando = (...numeros) =>{
+            sumaTotal = 0;
+            let cadaNumero =0;
+            for (cadaNumero of numeros){
+                sumaTotal += cadaNumero;
+            }
+            return sumaTotal;
+        }
+        document.write("<br>"+sumando(1,2,3,4,4,5,6,6,7));
+        document.write("<br>"+sumando(2,34,5,42,54,6,4,4,3,4,2,52,52,45,423));
+        // ...i se convierte en una lista
+        var criaLista = (g,h,...i) => {
+            return i.length}        
+        
+        document.write("<br>"+criaLista(1,2,3,4,5,6));
+        
+        //Considere que temos uma lista de produtos e seja necessário efetuar a soma de todos os itens passados como argumento da função.
+        const produtos = [
+    { descricao: 'Papel Ofício', quantidade: 10, valor: 10.50 },
+    { descricao: 'Lapis preto', quantidade: 20, valor: 0.50 }
+  ]
+
+  function total (...produtos) {
+    return produtos
+      .map(produto => produto.quantidade * produto.valor)
+      .reduce((a, b) => a + b, 0)
+  }
+
+  console.log(total(...produtos))
+//Perceba que o map foi utilizado para percorrer os itens do Array de produtos convertendo cada item em um numero a partir da soma da quantidade e valor dos produtos.
+
+
+
+        
+
+        
+    </script>
+</html>
