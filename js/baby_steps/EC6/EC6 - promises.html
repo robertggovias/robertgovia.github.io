@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en_US">
+    <head>
+        <title>
+            EC6 - promises
+        </title>
+    </head>
+    <body>
+        <h1>EC6 - promises</h1>
+    </body>
+    <script>
+        setTimeout(function() {
+    document.write("Work 1");
+    setTimeout(function() {
+        document.write("Work 2");
+    }, 1000);
+}, 1000);
+document.write("End");
+
+// Promises are
+function asyncFunc(work) {
+    return new Promise(function(resolve, reject) {
+        if (work === "")
+            reject(Error("Nothing"));
+        setTimeout(function() {
+            resolve(work);
+        }, 1000);
+    });
+}
+
+asyncFunc("Work 1") // Task 1
+.then(function(result) {
+    document.write(result);
+    return asyncFunc("Work 2"); // Task 2
+}, function(error) {
+    document.write(error);
+})
+.then(function(result) {
+    document.write(result);
+}, function(error) {
+    document.write(error);
+});
+document.write("End");
+    </script>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+    <head>
+        <title>
+            Map and set
+        </title>
+    </head>
+    <body>
+        <h1>Map and set<br></h1>
+        
+    </body>
+    <script>      
+// map
+document.write("<h2> Map</h2>");
+        var mapeando = new Map();        
+    mapeando.set("a",1).set(1,2).set(2,3).set(3,4).set(4,5).set(5,6).set(6,7).set(7,8);
+        var tamaño = mapeando.size;
+        document.write(tamaño);
+    document.write("<br>",mapeando.get("a"));
+    document.write("<br>",mapeando.has("a"));
+    let great = "";
+    for (great of mapeando.entries())
+    document.write("<br>",great[0]+" : " + great[1]);
+    
+    ///set
+    document.write("<h2>Set</h2>");
+    let set = new Set();
+set.add(5).add(9).add(59).add(9);
+
+document.write(set.has(9));
+
+for (let v of set.values())
+    document.write(v);
+
+        
+    </script>
+    
+
+</html>

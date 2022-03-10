@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en-US">
+    <head>
+        <title>
+            EC6 Class
+        </title>
+    </head>
+    <body>
+        <script>
+            class Cuadrada {
+                constructor (altura,anchura){
+                    this.altura = altura;
+                    this.anchura = anchura;
+                    this.area = altura*anchura;
+                }
+            }
+            pepe = new Cuadrada(4,5);
+            pepe2 = new Cuadrada(30,50);
+            doisAreas = pepe.area + pepe2.area;
+            document.write(doisAreas);
+            document.write("<br>");
+
+            //También se pueden asignar a una variable
+
+            var Cubo = class Pepito {
+                constructor (altura,anchura,profundidad){
+                    this.altura = altura;
+                    this.anchura = anchura;
+                    this.profundidad = profundidad;
+                    this.volumen = altura * anchura * profundidad;
+                }
+            }
+            pepe3 = new Cubo(1,2,3);
+            pepe4 = new Cubo(4,5,6);
+            pe5 = new Cubo(5,6,7);
+            pe6 = new Cubo(6,7,8);
+            pe7 = new Cubo(7,8,9);
+            pe8 = new Cubo(8,9,10);
+            pe9 = new Cubo(9,10,11);
+            pe10 = new Cubo(10,11,12);
+            pe11 = new Cubo(11,12,13);
+            var sumaTotal = (...sumandos) => {document.write(...sumandos.join('<br>'));};
+            sumaTotal (pepe3.volumen,pepe4.volumen,pe5.volumen,pe6.volumen,pe7.volumen,pe8.volumen,pe9.volumen,pe10.volumen,pe11.volumen);
+            //volumenPepe10 = pe10.volumen;
+            //document.write(volumenPepe10);
+           
+            var nombreDeClassAutomatico = class {
+                constructor(fuerza,velocidad){
+                    this.fuerza = fuerza;
+                    this.velocidad = velocidad;}
+
+                    get impacto() {
+                        return this.calcularImpacto();
+                    } 
+                    calcularImpacto (){
+                        return this.fuerza * this.velocidad;
+                    }
+                
+            }
+            var nuevaClase = new nombreDeClassAutomatico(5,30);
+            document.write("<br>impacto: " + nuevaClase.impacto);
+            document.write("<br><br>");
+
+            class Puntito {
+                constructor(x,y){
+                    this.x = x;
+                    this.y = y;
+                }
+                static distancia(a,b){
+                    const dx = a.x - b.x;
+                    const dy = a.y - b.y;
+                    return Math.hypot(dx, dy);                    
+                }
+            }
+            var puntito1 = new Puntito(5,5);
+            var puntito2 = new Puntito(5,6);
+//distancia es llamado directamente desde la la clase Puntito sin el objeto
+            document.write("distancia " + Puntito.distancia(puntito1, puntito2));
+
+            // extendiendo la clase Puntito
+            class Estrella extends Puntito {
+                static distancia(a){
+                const dx = a.x - 0;
+                const dy = a.y - 0;
+                return Math.hypot(dx, dy);}
+            }
+            var estrella3 = new Estrella(2,0);
+        document.write("<br>La estrella esta a " + Estrella.distancia(estrella3) +  " años luz del sol");
+
+                    </script>
+    </body>
+
+</html>  
