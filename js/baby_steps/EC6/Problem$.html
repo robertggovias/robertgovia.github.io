@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <TITLE>
+            Words
+        </TITLE>
+    </head>
+    <body>
+        <h1>Words</h1>
+    </body>
+    <script>
+        class Add {
+  constructor(...words) {
+      this.words = words;
+  }
+  print(){
+  let text = this.words.join("$");
+  document.write("$"+text+"<br>"
+  );
+  }
+  
+  //your code goes here
+}
+
+var x = new Add("hehe", "hoho", "haha", "hihi", "huhu");
+var y = new Add("this", "is", "awesome");
+var z = new Add("lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit");
+x.print();
+y.print();
+z.print();
+    </script>
+
+</html>
