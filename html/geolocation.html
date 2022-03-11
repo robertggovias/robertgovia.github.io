@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/solinkear.css">
+        <title>
+
+            Geo localización
+        </title>
+    
+    </head>
+    <body>
+        <h1 align="center">Geo localización</h1>
+        <h3>Dónde estoy:</h3>
+        
+        <button onclick="rightNow()" >Quiero saberlo</button>
+        <p id="show-localization"></p>
+    </body>
+    <script>
+        var insertar_textoAqui = document.getElementById("show-localization");
+        
+        function rightNow(){
+            if (navigator.geolocation){
+                navigator.geolocation.getCurrentPosition(muestrameDondeEstoy);
+            }
+            else{
+                insertar_textoAqui.innerHTML = "Que verguenza tu navegador es de la era de los dinosaurios";                
+            }
+        }
+        function muestrameDondeEstoy(position){
+            insertar_textoAqui.innerHTML = "La latitud es " + position.coords.latitude + " " + position.coords.longitude + "<br/> Y la longitud es "+ position.coords.longitude;
+        }
+    </script>
+
+</html>
