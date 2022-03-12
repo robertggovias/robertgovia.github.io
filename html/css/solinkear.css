@@ -2,3 +2,15 @@ h1{
     color: cyan !important;
     background-color:darkgreen;
 }
+#aterrizaje1, #aterrizaje2, #aterrizaje3{
+    background-color:yellowgreen;
+    float: left;
+    width: 40%;
+    height: 45px;
+    margin:5%;
+    padding:10px;
+    border:1px solid;
+}
+img{
+    margin:0 auto;
+}

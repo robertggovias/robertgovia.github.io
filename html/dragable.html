@@ -7,12 +7,29 @@
 
             Drag and drop
         </title>
+        <script>
+            function permitirSoltar(evento) {
+                evento.preventDefault();
+            }
+            function agarrar(evento) {
+                evento.dataTransfer.setData('text',evento.target.id);
+            }
+    function soltar(evento) {
+                evento.preventDefault();
+                var informacion = evento.dataTransfer.getData('text');
+                evento.target.appendChild(document.getElementById(informacion))
+            }
+            
+        </script>
     </head>
     <body>
         <h1 align="center">Drag and drop</h1>
-        <img draggable="true" style="width: 30%;" src="https://sd.keepcalms.com/i-w600/hahaha-so-funny.jpg">
+        <div id="aterrizaje1" ondrop="soltar(event)" ondragover="permitirSoltar(event)">
+            <img   src="https://sd.keepcalms.com/i-w600/hahaha-so-funny.jpg" draggable="true" ondragstart="agarrar(event)" id="agarrar1" style="width: 30%; float:right">
+        </div>
+        <div id="aterrizaje2" ondrop="soltar(event)" ondragover="permitirSoltar(event)"><img   src="https://c.tenor.com/Sk9gjGqIVEkAAAAC/good-morning.gif" draggable="true" ondragstart="agarrar(event)" id="agarrar2" style="width: 30%; float: left;"></div> 
+           
+        
         </body>
-        <script>
-
-        </script>
+        
 </html>
