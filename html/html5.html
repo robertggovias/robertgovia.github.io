@@ -10,6 +10,29 @@
     </body>
     <audio src="http://" controls autoplay loop ></audio>
     <video src="http://" controls autoplay loop ></video>
+    <canvas id="canvas1" 
+    width="400" height="300"></canvas> 
+ 
+    <script>
+       var can = document.getElementById("canvas1"); 
+       var ctx = can.getContext("2d");
+       ctx.fillStyle = "rgba(255, 0, 0, 0.)";
+       ctx.fillRect(20, 20, 100, 100);
+       
+    </script>
+    <svg width="1000px" height="1000px">
+<!--M: moveto
+L: lineto
+H: horizontal lineto
+V: vertical lineto
+C: curveto
+S: smooth curveto
+Q: quadratic Bézier curve
+T: smooth quadratic Bézier curveto
+A: elliptical Arc
+Z: closepath-->
+        <path d="M 0 0 L 345 450 H 35 S 35 L   " style="stroke: darkcyan; fill: cornflowerblue;"dur="344"></path>
+    </svg>
     <svg width="1080px" height="1080px">
         <rect height="500%" width="40" style="fill: green;">soy un rectangulo bien chulo</rect>
         <ellipse cy="355px" cx="55px" rx="79px" ry="57px" stroke="40 white" style="fill: rgb(50, 161, 205)">
