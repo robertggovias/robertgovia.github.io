@@ -1,0 +1,54 @@
+
+div{
+    background: green;
+    transition: background 0.5s ease-in-out;
+    transform: translate 45px  rotate(32deg);
+    padding: 50px;
+    background-clip: content-box;
+    border: 1px solid;
+    border-radius: 20%;
+    display: flex;
+    align-items;
+    
+}
+div:hover {
+    background: yellow;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    animation-name: colorchange;
+    animation-duration: 1s;
+    -webkit-animation-name: colorchange;
+    -webkit-animation-duration: 1s;
+}
+@keyframes colorchange {
+    0% {background-color: red; }
+    50% {background-color: green; }
+    100% {background-color: blue; }
+}
+@-webkit-keyframes colorchange {
+    0% {background-color: red; }
+    50% {background-color: green; }
+    100% {background-color: blue; }
+}
+.animated{
+    color: black;
+    animation-name: change;
+    animation-duration: 5s;
+    -webkit-animation-name: change;
+    
+    -webkit-animation-duration: 5s;
+}
+@keyframes change{
+    0% {color: black};
+    20% {color: red};
+    54% {color: purple};
+    75% {color:yellow};
+    100% {color: green};
+}
+@-webkit-keyframes change{
+    0% {color: black};
+    100% {color: green};
+}
