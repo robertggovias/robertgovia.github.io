@@ -1,0 +1,15 @@
+p{
+    color: red;
+    
+}   
+h1{
+    color: blue;
+    background-color: red;
+}
+.rem {
+    margin-left: 5px;
+    background-color: white;
+    color: red;
+    border: none;
+    cursor: pointer;
+}
