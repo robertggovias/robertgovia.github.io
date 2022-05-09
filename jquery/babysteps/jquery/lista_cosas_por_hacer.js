@@ -7,6 +7,9 @@ $(function(){
             $(elemento).append("<button class='rem'>X</button>");
             $("#lista").append(elemento);
             $("input").val("");//borrar el input
-        }
-    });
+            $(".rem").on("click", function() {
+                $(this).parent().remove();
+        });
+    }
+});
 });
