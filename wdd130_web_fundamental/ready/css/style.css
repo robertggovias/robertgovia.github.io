@@ -1,0 +1,128 @@
+ /* CSS files add styling rules to your content */
+ @import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+ nav{
+   background-color: CornflowerBlue; 
+   font-weight:bold;
+   font-size:1.2em;
+   line-height:2;
+   text-align: right;
+   padding-right: 20px;
+ }
+ nav a {
+   color: LightCyan;
+   text-decoration:none;
+ }
+ nav a:hover{
+     color: white;
+     Background: #09A4E4;
+     border-radius: 3px;
+     box-shadow: 2px 4px 1px 1px rgba(47, 43, 43, 0.24);  
+ }
+ nav li{
+   display: inline-block;
+   padding-left:30px;
+ }
+ #logo{
+     position: absolute;
+     top: 0px;
+     width: 100px;
+     margin: 3px;
+     margin-left: 20px;
+     background-color:rgba(100, 149, 237, 0.05);
+     padding: 2px;
+     border: solid thick rgba(100, 204, 250, 0.1);
+     border-radius:30px;
+   
+   
+ }
+ .left-column, .right-column {
+   flex: 1 0 15em;
+   width: 48%;    
+ }
+ #row1{
+   background-color:white;
+   padding:15px;
+ }
+ #row2{
+   background-color:SteelBlue;
+   padding:15px;
+ }
+ #row2, #row1{
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+ }
+ #row3{
+   padding:15px
+ }
+ 
+ .light-color{
+   color:white;
+ }
+ .endtext{ 
+   text-align: center;    
+ }
+ 
+ #content{
+   width:75%;
+   margin: 0 auto;
+ }
+ 
+ p{
+   margin: 10px;  
+   color:#03142D;
+ }
+ 
+ h1, h2, h3, h4, h5, h6 {
+   font-style: italic;
+   color: #FC8801;
+   margin: 7px;
+   font-family: 'Ubuntu', 'Verdana', Sans-Serif;
+   margin-bottom:-7px;
+ }
+ body{
+   font-family: 'Ubuntu', 'Verdana', Sans-Serif;
+ }
+ .fullwidth{
+   width:100%;  
+ }
+ div > img{
+   width:100%;
+ }
+ footer {
+   display: flex;
+   justify-content: space-between;
+ }
+ 
+ footer section{
+     display:flex;
+     width: 210px;
+     justify-content: space-between;    
+ }
+ #social-media{  
+   width: 115px;
+   display:flex;
+   justify-content: space-between;  
+ }
+ #social-media img{
+   height: 35px;
+ }
+ .peacefull{
+   background: radial-gradient(circle, rgba(230,251,255,1) 0%, rgba(227,242,254,1) 35%, rgba(220,249,255,1) 100%);  
+ }
+ #form p{
+   max-width: 300px;
+   min-width: 48%;
+   display:flex;
+   justify-content: space-between;
+   flex-flow: row wrap;  
+ }
+ 
+ #submitstyle{
+   margin-left: 150px;
+ }
+ textarea{
+   width:167px;
+   height:100px;
+ }
