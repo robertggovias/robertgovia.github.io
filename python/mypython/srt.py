@@ -18,7 +18,7 @@ def file_lines(xfile):
 def getComm(file_lines):
     commList=[]    
     for items in file_lines:
-        collumns= items.split(";")   
+        collumns= items.split(",")   
         print("{}\n{}\n{}".format(collumns[0],collumns[1],collumns[2]))
         #commList.append(collumns[0])
         #commList.append(collumns[1])

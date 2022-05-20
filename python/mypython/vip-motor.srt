@@ -1,0 +1,23 @@
+1
+00:00:00.000 --> 00:00:03.310
+O Super FeirÃ£o Seminovos foi um sucesso!
+
+2
+00:00:03.310 --> 00:00:06.102
+"VeÃ­culos novos
+
+3
+00:00:06.102 --> 00:00:08.014
+Muitas negociaÃ§Ãµes
+
+4
+00:00:08.014 --> 00:00:10.246
+Qualidade em automÃ³veis
+
+5
+00:00:10.246 --> 00:00:12.902
+Sonhos realizados
+['5', '00:00:10.246 --> 00:00:12.902', 'Sonhos realizados']
+5
+00:00:10.246 --> 00:00:12.902
+Sonhos realizados

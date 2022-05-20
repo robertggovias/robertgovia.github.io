@@ -25,12 +25,12 @@ nav, a, hero-msg h1, #hero-msg h4, .button-box, main section{
   --nav-hover-link-color: white;
   --nav-hover-background-color: #09A4E4;
 }
-
+nav a, .book, .join, footer a{
+  text-decoration: none;
+}
 nav a, .join{
   background-color: var(--secondary-color);
   color: var(--accent1-color);
-  decoration: none;
-
 }
 
 nav a:hover , .join:hover{
@@ -46,11 +46,7 @@ body{
   background-color: var(--background-color);
 
 }
-header{
-
-}
-#background{
-
-}
+header{}
 .msg{background-color: var(--paragraph-background-color);}
 footer{background-color: var(--accent1-color)}
+.ico
