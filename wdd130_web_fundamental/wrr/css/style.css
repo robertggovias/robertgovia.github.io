@@ -44,8 +44,8 @@ nav a:hover, .join:hover{
   color: white;
 }
 nav a:link{
-  background-color: var(--nav-background-color);
-  color: var(--nav-link-color);
+  /*background-color: var(--nav-hover-background-color);
+  color: var(--nav-link-color);*/
 }
 footer, footer a{
   color: white;
