@@ -1,12 +1,16 @@
+*{
+  margin: 0;
+}
 #content{
   max-width: 1600px;    
   margin: 0 auto;
 }
-nav, a, hero-msg h1, #hero-msg h4, .button-box, main section{
+nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
   text-align: center;
 }
 #background{
-  height: 725 px;
+  height: 725px;
+  background-color: #FC8801;
 }
 
 :root {  
@@ -19,34 +23,51 @@ nav, a, hero-msg h1, #hero-msg h4, .button-box, main section{
   --headline-color-on-color: #123365;
   --paragraph-color-on-white: #162546;
   --paragraph-color-on-color: #162546;
-  --paragraph-background-color: #d9f4ff  ;
+  --paragraph-background-color: white  ;
   --nav-link-color: #162546;
-  --nav-background-color: #FC8801;
+  --nav-background-color: #09A4E4;
   --nav-hover-link-color: white;
-  --nav-hover-background-color: #09A4E4;
+  --nav-hover-background-color: #FC8801;
 }
-nav a, .book, .join, footer a{
+.book, footer a{
   text-decoration: none;
 }
 nav a, .join{
-  background-color: var(--secondary-color);
+  background-color: var(--nav-background-color);
   color: var(--accent1-color);
+  text-decoration: none;
+  
 }
 
-nav a:hover , .join:hover{
-  background-color: var(--primary-color);
+nav a:hover, .join:hover{
+  background-color: var(--nav-hover-background-color);
   color: white;
 }
 nav a:link{
-  background-color: var(--primary-color);
+  background-color: var(--nav-background-color);
   color: var(--nav-link-color);
+}
+footer, footer a{
+  color: white;
 }
 
 body{
   background-color: var(--background-color);
 
 }
-header{}
-.msg{background-color: var(--paragraph-background-color);}
+header{background-color: var(--nav-background-color);}
+.msg{background-color: var(--paragraph-background-color);
+  margin: 10px 0px;}
 footer{background-color: var(--accent1-color)}
-.ico
+.logo{
+  width: 130px;
+}
+.icon{
+  width: 80px;
+}
+.social a img{
+  width: 30px;
+}
+#hero-img{
+  width:100%;
+}
