@@ -1,12 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
 *{
   margin: 0;
 }
 #content{
   max-width: 1600px;    
   margin: 0 auto;
+  font-family: var(--fontParagraph);
 }
 nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
-  text-align: center;
+  text-align: center;  
+}
+#hero-msg h1{
+  font-family:var(--fontHeading);
+  color: var(--accent1-color);
 }
 #background{
   height: 725px;
@@ -28,6 +35,8 @@ nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
   --nav-background-color: #09A4E4;
   --nav-hover-link-color: white;
   --nav-hover-background-color: #FC8801;
+  --fontHeading: 'Caveat Brush','Brush Script MT';
+  --fontParagraph: Ubuntu, lato, sans serif;
 }
 .book, footer a{
   text-decoration: none;
@@ -36,6 +45,7 @@ nav a, .join{
   background-color: var(--nav-background-color);
   color: var(--accent1-color);
   text-decoration: none;
+  font-family:var(--fontParagraph);
   
 }
 
