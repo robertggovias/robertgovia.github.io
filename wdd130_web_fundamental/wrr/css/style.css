@@ -12,10 +12,13 @@ h2{
   margin: 0 auto;
   font-family: var(--fontParagraph);
 }
+#hero-msg h4{
+  margin: 24px 0;
+}
 nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
   text-align: center;  
 }
-.home-tittle {
+.home-title {
   font-family:var(--fontHeading);
   color: var(--accent1-color);
   font-size:2em;
@@ -23,11 +26,16 @@ nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
 }
 .msg h2{
   font-size: 1.4em;
+  font-family:var(--fontHeading);
+  color: var(--accent2-color);
+  margin-bottom: 20px;
 }
 .msg p{
  font-size: 0.8em; 
- line-height:1.5em;
  padding-bottom: 15px;
+}
+.msg{
+  line-height:1.5em;
 }
 #background{
   height: 725px;
@@ -57,7 +65,11 @@ nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
 }
 .book, .join{
   font-size: 18px;
-  margin-top:50px;
+  margin-top:50px;  
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  background-color: var(--nav-background-color);
 }
 nav a, .join{
   background-color: var(--nav-background-color);
@@ -75,9 +87,7 @@ nav a:link{
   /*background-color: var(--nav-hover-background-color);
   color: var(--nav-link-color);*/
 }
-footer, footer a{
-  color: white;
-}
+
 
 body{
   background-color: var(--background-color);
@@ -90,7 +100,20 @@ header{background-color: var(--nav-background-color);}
   padding: 35px
 }
 footer{background-color: var(--accent1-color);
-padding: 25px 50px;}
+padding: 25px 50px;
+margin-top: 200px;
+font-size: 16px}
+footer, footer a{
+  color: white;  
+}
+footer a:hover{
+  color: var(--nav-hover-background-color);
+}
+.rights{
+  font-size: 10px;
+  font-weight: 100;
+  margin-bottom: 10px;
+}
 .logo{
   width: 130px;
 }
@@ -109,10 +132,7 @@ padding: 25px 50px;}
 nav a{
   padding: 35px;
 }
-.book, .join{
-  padding: 15px 30px;
-  border-radius: 5px;
-}
+
 .icon{
   padding-top: 10px;
 }
@@ -122,9 +142,7 @@ footer .social img{
 .rivers-card, .camping-card, .rapids-card{
   margin: 200px 0;
 }
-footer{
-  margin-top: 200px;
-}
+
 .card-img{
   border: 10px solid var(--accent1-color )  
 }
