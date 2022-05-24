@@ -79,7 +79,7 @@ nav a, .join{
   
 }
 
-nav a:hover, .join:hover{
+.book:hover, nav a:hover, .join:hover{
   background-color: var(--nav-hover-background-color);
   color: white;
 }
