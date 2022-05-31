@@ -1,4 +1,7 @@
 import os
+# encoding: utf-8
+# encoding: iso-8859-1
+# encoding: win-1252
 
 os.getcwd()
 THIS_FOLDER = os.path.dirname(os.path.abspath(__file__)) # Gets the folder to the current file
@@ -18,7 +21,7 @@ def file_lines(xfile):
 def getComm(file_lines):
     commList=[]    
     for items in file_lines:
-        collumns= items.split(",")   
+        collumns= items.split(";")   
         print("{}\n{}\n{}".format(collumns[0],collumns[1],collumns[2]))
         #commList.append(collumns[0])
         #commList.append(collumns[1])
