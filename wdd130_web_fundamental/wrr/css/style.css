@@ -29,7 +29,8 @@ nav{
 #hero-msg {
   grid-column: 2/3;
   grid-row:1/2;
-  margin-top: 100px;  
+  margin-top: 100px;
+  margin-bottom: 30px;  
 }
 nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
   text-align: center;  
@@ -192,8 +193,9 @@ footer .social img{
 }
 
 .card-img{
-  border: 10px solid var(--accent1-color );    
+  border: 7px solid var(--accent1-color );    
   box-shadow:5px 5px 10px #6f7364;
+  border-radius:7px;
 
   transition: transform 1s;
 
@@ -243,6 +245,46 @@ main section img{
   #hero-msg{
     margin-top: 0;
   }
+  #hero-msg h4{
+    display: none;
+  }
+  .home-title{
+    font-size: 25px;
+    color: var(--accent2-color);
+    text-shadow: none;
+    margin-bottom: 25px;
+  }
+  .rivers-card, .camping-card, .rapids-card{
+    margin: 50px auto;
+    width: 60%;
+  }
+  .home-grid h2{
+    font-size: 5vh;
+    font-size: 5vw;
+  }
+  .icon{
+    max-height: 80px;
+}
+  #background{
+    display: none;
+  }
+  .mountains, .msg{
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
+  .mountains {
+    margin-bottom: 25px;
+  }
+  footer{
+    margin-top: 25px;
+  }
+  footer h3{
+    font-size: 12px;
+    font-weight: 70;
+  }
+
+
   
 
 }
