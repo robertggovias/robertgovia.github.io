@@ -32,6 +32,41 @@ nav{
   margin-top: 100px;
   margin-bottom: 30px;  
 }
+.river-main{
+  max-width: 1080px;
+  margin: 0 10%;
+}
+.river-right .card-img{
+  background-color: #123365;
+  width: 40%;
+  max-width: 310px;
+  float:right;
+  margin: 0px 10px;
+}
+.content-grid .card-img{
+  width: 90%;  
+  margin-bottom: 10px;
+}
+.space h4{
+  margin-bottom: 10px;    
+  color: var(--headline-color-on-color);
+}
+.space{
+  margin: 50px 0px;
+}
+.river-left .card-img{
+  width: 40%;
+  max-width: 310px;
+  float:left;
+  margin: 0px 10px;
+}
+.river-right{
+  text-align: left;
+}
+.river-left{
+  text-align: right;
+}
+
 nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section{
   text-align: center;  
 }
@@ -156,10 +191,18 @@ footer, footer a{
 footer a:hover{
   color: var(--nav-hover-background-color);
 }
-.rights{
-  font-size: 10px;
-  font-weight: 100;
+.content-grid .card-img{
+  width: 90%;
+  max-width: 1280px;
+  
   margin-bottom: 10px;
+}
+.space h4{
+  margin-bottom: 10px;    
+  color: var(--headline-color-on-color);
+}
+.space{
+  margin: 50px 0px;
 }
 .logo{
   width: 130px;
@@ -227,11 +270,14 @@ footer .social img{
 main section img{
   box-sizing: border-box;
 }
+
 @media screen and (max-width: 900px){
   #hero, .home-grid{
     display: block;
     height: auto;
   }
+  
+ 
   nav, footer {
     flex-direction: column;
   }
@@ -283,8 +329,20 @@ main section img{
     font-size: 12px;
     font-weight: 70;
   }
+}
 
-
-  
+@media screen and (max-width: 500px){
+  .content-grid .card-img{
+    width: 90%;
+    float: none;
+    margin-bottom: 10px;
+  }
+  .space h4{
+    margin-bottom: 10px;    
+    color: var(--headline-color-on-color);
+  }
+ .space{
+    margin: 50px 0px;
+  }
 
 }
