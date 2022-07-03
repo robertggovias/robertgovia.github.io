@@ -4,8 +4,7 @@
   .river-left  .card-img{
     width: 90%!important;
     max-width: none!important;
-    float: none!important;    
-    
+    float: none!important;
     margin-bottom: 25px!important;
   }
   .river-right .card-img{
@@ -14,8 +13,7 @@
     float: none!important;      
     
     margin-bottom: 25px!important;
-  }
- 
+  } 
 }
 *,body{
   margin: 0;
