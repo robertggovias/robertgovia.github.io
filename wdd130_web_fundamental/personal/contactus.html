@@ -1,63 +1,163 @@
-<!DOCTYPE html><html lang="en-US">
-<head>
-    <title>Avisa!</title>    
-</head>
-<body>
-    <header>        
-        <nav>
-            <a href="index.html">home</a>
-            <a href="services.html">services</a>
-            <a href="contactus.html">contact us</a>
-            <img src="./images/01-face.png">
-            <img src="./images/02-insta.png">
-            <img src="./images/03-whats.png">      
-            <img src="./images/Avisa negativo - sobre oscuro.png">
-        </nav>
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Avisa!</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <link rel="stylesheet" href="./styles/contact.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">home</a>
+        <a href="services.html">services</a>
+        <a href="contactus">contact us</a>
+      </nav>
+      <div></div>
+      <div class="social">
+        <img src="./images/01-face.png" />
+        <img src="./images/02-insta.png" />
+        <img src="./images/03-whats.png" />
+      </div>
+      <img class="logo" src="./images/Avisa negativo - sobre oscuro.png" />
     </header>
-        <h1>Contact us</h1>
-        <P>Let’s Get In Touch We’d love to hear about the project you have in mind. Drop us a note here and we’ll get back to you within 24 hours. </P>
-    <article>                
+    <br />
+    <div class="centered"><h1>Let’s Get In Touch</h1></div>
+    <br />
+    <h2></h2>
+    <article>
+      <div class="onTop formGrid">
         <form action="/my-handling-form-page" method="post">
-            <ul>
-                <li>
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="user_name" />        
-                </li>
-                <li>
-                    <label for="company">Company:</label>
-                    <input type="text" id="company" name="user_company" placeholder="you can leave this in blank"/>        
-                </li>
-                <li>
-                    <label for="mail">E-mail:</label>
-                    <input type="email" id="mail" name="user_mail"/>        
-                </li>
-                <li>
-                    <label for="phone">Phone:</label>
-                    <input type="number" id="phone" name="user_phone" placeholder="you can leave this in blank"/>        
-                </li>
-                <li>
-                    <label for="msg">Message:</label>
-                    <textarea id="msg" name="user_message"></textarea>
-                </li>    
-                <li class="button">
-                    <button type="submit">Send your message</button>        
-                </li>    
-            </ul>
-     </article>  
-     <img src="./images/contact/photo-cheerful-delighted-african-american-woman-types-sms-modern-cell-phone-device-enjoys-good-internet-connection.jpg">
-</body>
-<hr>
-<footer>
-    <p>Rushing Rapids &copy; 2022 - Robert Govia<br>
-        call +55 51 99 1727081<br>
-        mail videosavisa@gmail.com<br>
-        visit us 538 Rua Osvaldo Cruz, Canoas, RS, Brazil <br></p>
-    <img src="./images/01-face.png">
-    <img src="./images/02-insta.png">
-    <img src="./images/03-whats.png">      
-    <img src="./images/Avisa negativo - sobre oscuro.png">
+          <p>
+            We’d love to hear about <b>the project you have in mind.</b> Drop us
+            a note here and we’ll get back to you within <b>24 hours.</b>
+          </p>
+          <ul>
+            <li>
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="user_name" />
+            </li>
+            <li>
+              <label for="company">Company:</label>
+              <input
+                type="text"
+                id="company"
+                name="user_company"
+                placeholder="you can leave this in blank"
+              />
+            </li>
+            <li>
+              <label for="mail">E-mail:</label>
+              <input type="email" id="mail" name="user_mail" />
+            </li>
+            <li>
+              <label for="phone">Phone:</label>
+              <input
+                type="number"
+                id="phone"
+                name="user_phone"
+                placeholder="you can leave this in blank"
+              />
+            </li>
+            <br />
+            <h4>What kind of videos do you want</h4>
 
+            <li>
+              2D Motion Graphics:
+              <input
+                type="checkbox"
+                id="my2DMotionCheck"
+                onclick="my2dMotionCheck()"
+              />
+              <p id="text" style="display: none">2D animations Rocks!<br> Just let me know if includes character animations.</p>
+            </li>
+            <li>
+              3D Motion Graphics:
+              <input
+                type="checkbox"
+                id="myMotionCheck"
+                onclick="my3dMotionCheck()"
+              />
+              <p id="text" style="display: none">Checkbox is CHECKED!</p>
+            </li>
+            <li>
+              Visual Effects:
+              <input
+                type="checkbox"
+                id="myMotionCheck"
+                onclick="myVfxMotionCheck()"
+              />
+              <p id="text" style="display: none">2D animations Rocks! just let me know if that includes character animations. </p>
+            </li>
 
-</footer>
+            <li>
+              <label for="msg">More details:</label>
+              <textarea id="msg" name="user_message"></textarea>
+            </li>
+            <li class="button">
+              <button type="submit">Send your message</button>
+            </li>
+          </ul>
+        </form>
+        <div>grid</div>
+      </div>
+    </article>
+    <img
+      class="formPhoto"
+      src="./images/contact/photo-cheerful-delighted-african-american-woman-types-sms-modern-cell-phone-device-enjoys-good-internet-connection.jpg"
+    />
+  </body>
+  <hr/>
+  <footer>
+    <header>
+      <p>
+        Avisa Publicidade &copy; 2022 - Robert Govia<br />
+        call +55 51 99 1727081<br />
+        mail videosavisa@gmail.com<br />
+        visit us 538 Rua Osvaldo Cruz, Canoas, RS, Brazil <br />
+        <a
+          href="https://robertggovias.github.io/robertgovia.github.io/wdd130_web_fundamental/personal/site-plan-personal.html"
+          >Site Plan</a
+        >
+      </p>
+      <div class="social">
+        <img src="./images/01-face.png" />
+        <img src="./images/02-insta.png" />
+        <img src="./images/03-whats.png" />
+      </div>
+      <img class="logo" src="./images/Avisa negativo - sobre oscuro.png" />
+    </header>
+  </footer>
+  <script>
+    function my2dMotionCheck() {
+      // Get the checkbox
+      var checkBox = document.getElementById("my2DMotionCheck");
+      // Get the output text
+      var text = document.getElementById("text");
 
+      // If the checkbox is checked, display the output text
+      if (checkBox.checked == true) {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    }
+    // get the feedback div element so we can do something with it.
+    const feedbackElement = document.getElementById("feedback");
+    // get the form so we can read what was entered in it.
+    const formElement = document.forms[0];
+    // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+    formElement.addEventListener("submit", function (e) {
+      // stop the form from doing the default action.
+      e.preventDefault();
+      // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+      feedbackElement.innerHTML =
+        "Hello " +
+        formElement.user_name.value +
+        "! Thank you for your message. We will get back with you as soon as possible!";
+      // make the feedback element visible.
+      feedbackElement.style.display = "block";
+      // add a class to move everything down so our message doesn't cover it.
+      document.body.classList.toggle("moveDown");
+    });
+  </script>
 </html>
