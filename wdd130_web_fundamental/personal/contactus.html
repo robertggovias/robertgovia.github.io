@@ -68,25 +68,25 @@
                 id="my2DMotionCheck"
                 onclick="my2dMotionCheck()"
               />
-              <p id="text" style="display: none">2D animations Rocks!<br> Just let me know if includes character animations.</p>
+              <p id="my2dtext" style="display: none">2D animations Rocks!<br> Just let me know if includes character animations.</p>
             </li>
             <li>
               3D Motion Graphics:
               <input
                 type="checkbox"
-                id="myMotionCheck"
+                id="my3DMotionCheck"
                 onclick="my3dMotionCheck()"
               />
-              <p id="text" style="display: none">Checkbox is CHECKED!</p>
+              <p id="my3dtext" style="display: none">There is a bunch of marvelous posibilities. <br>Lets write in more details if will be realistic, with personages, physics simulations, etc</p>
             </li>
             <li>
               Visual Effects:
               <input
                 type="checkbox"
-                id="myMotionCheck"
+                id="myVFXMotionCheck"
                 onclick="myVfxMotionCheck()"
               />
-              <p id="text" style="display: none">2D animations Rocks! just let me know if that includes character animations. </p>
+              <p id="myVfxtext" style="display: none">The magic touch... <br>Do you want magical particles around your product? <br>Please help see what you have in mind, write bellow in more details.  </p>
             </li>
 
             <li>
@@ -132,7 +132,32 @@
       // Get the checkbox
       var checkBox = document.getElementById("my2DMotionCheck");
       // Get the output text
-      var text = document.getElementById("text");
+      var text = document.getElementById("my2dtext");
+
+      // If the checkbox is checked, display the output text
+      if (checkBox.checked == true) {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    }
+    function my3dMotionCheck() {
+      // Get the checkbox
+      var checkBox = document.getElementById("my3DMotionCheck");
+      // Get the output text
+      var text = document.getElementById("my3dtext");
+
+      // If the checkbox is checked, display the output text
+      if (checkBox.checked == true) {
+        text.style.display = "block";
+      } else {
+        text.style.display = "none";
+      }
+    }function myVfxMotionCheck() {
+      // Get the checkbox
+      var checkBox = document.getElementById("myVFXMotionCheck");
+      // Get the output text
+      var text = document.getElementById("myVfxtext");
 
       // If the checkbox is checked, display the output text
       if (checkBox.checked == true) {
