@@ -12,6 +12,7 @@ form li {
 form h4{
     color: rgb(20, 20, 90);
     text-shadow: none;
+    text-align: right;
 }
 form h4:hover{
     color: rgb(20, 20, 90);
@@ -23,7 +24,7 @@ form p{
 .onTop{
     z-index: 2;
     position: absolute;
-    left: 10px;
+    left: 5%;
 }
 .formPhoto{
     z-index: 1;
