@@ -2,27 +2,35 @@
 Any spaces in your font name should be replaced with a +. 
 Fonts are separated by a | */
 
-@import url('https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sarabun:ital,wght@0,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap");
 
 :root {
   /* change the values below to your colors from your palette
   Deep Lemon (#F7C91F), Dark Liver (#52514E), Metallic Bronze (#AA7942), Saffron (#F7B434), Tenné or Tawny (#D36300) and Dark Charcoal (#2F2F2F) */
-  --primary-color: #FFC700   ;
-  --secondary-color: #ffda56 ;
+  --primary-color: #ffc700;
+  --secondary-color: #ffffff;
   --accent1-color: #27120a;
-  --accent2-color: #452E19;
-  --background:#1a1e20;
+  --accent2-color: #452e19;
+  --background: #1a1e20;
 
   /* change the values below to your chosen font(s) */
-  --heading-font: 'Josefin Sans', sans-serif;;
-  --paragraph-font: 'Sarabun', sans-serif;
+  --heading-font: "Josefin Sans", sans-serif;
+  --paragraph-font: "Sarabun", sans-serif;
 
   /* these colors below should be chosen from among your palette colors above */
-  --headline-color-on-white: var(--accent2-color);  /* headlines on a white background */ 
-  --headline-color-on-color: var(--primary-color); /* headlines on a colored background */ 
-  --paragraph-color-on-white:var(--accent2-color); /* paragraph text on a white background */ 
-  --paragraph-color-on-color:var(--secondary-color); /* paragraph text on a colored background */ 
+  --headline-color-on-white: var(
+    --accent2-color
+  ); /* headlines on a white background */
+  --headline-color-on-color: var(
+    --primary-color
+  ); /* headlines on a colored background */
+  --paragraph-color-on-white: var(
+    --accent2-color
+  ); /* paragraph text on a white background */
+  --paragraph-color-on-color: var(
+    --secondary-color
+  ); /* paragraph text on a colored background */
   --paragraph-background-color: var(--accent2-color);
   --headline-background-color: var(--accent1-color);
   --nav-link-color: var(--accent1-color);
@@ -31,9 +39,8 @@ Fonts are separated by a | */
   --nav-hover-background-color: var(--accent2-color);
 }
 
-
 /*  Look around below...but DON'T CHANGE ANYTHING! */
-*{
+* {
   margin: 0;
 }
 body {
@@ -41,66 +48,74 @@ body {
   text-align: center;
   background-color: var(--background);
   color: var(--paragraph-color-on-color);
-  
 }
-p{
+p {
   color: var(--paragraph-color-on-color);
   font-family: var(--paragraph-font);
-
 }
-header{
-  display: grid;    
+header {
+  display: grid;
   background: var(--accent1-color);
-  grid-template-columns: 2fr 1fr 1fr 1fr ;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   align-content: center;
   text-align: center;
   color: var(--paragraph-color-on-color);
   background-color: var(--headline-background-color);
 }
-section{
+section {
   padding: 30px 0;
   max-width: 1080px;
   margin: 0 auto;
 }
-.totalwidth{
+.totalwidth {
   width: 100%;
 }
-.mitadwidth{
+.mitadwidth {
   width: 50%;
   padding-left: 20px;
 }
-.right{
+.right {
   float: right;
   max-width: 400px;
 }
-.social{
-  display: grid; 
+.social {
+  display: grid;
   align-content: center;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.social img{
+.social img {
   height: 30px;
   width: 30px;
 }
-.logo{
+.logo {
   height: 60px;
   width: 120px;
   max-width: 100%;
   justify-content: flex-end;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-color);
-  text-shadow:rgb(255,218,86,0.4) 0px 0px 30px,#2F0D00 0px 0px 6px, black 0px 0px 3px;   
+  text-shadow: rgb(255, 218, 86, 0.4) 0px 0px 30px, #2f0d00 0px 0px 6px,
+    black 0px 0px 3px;
   transition: 0.4s;
-
 }
 
-h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover{
-  text-shadow:rgb(255,218,86,1) 0px 0px 30px,#2F0D00 0px 0px 6px, black 0px 0px 3px;   
-
+h1:hover,
+h2:hover,
+h3:hover,
+h4:hover,
+h5:hover,
+h6:hover {
+  text-shadow: rgb(255, 218, 86, 1) 0px 0px 30px, #2f0d00 0px 0px 6px,
+    black 0px 0px 3px;
 }
 
 h2 {
@@ -110,10 +125,11 @@ hr {
   height: 3px;
   margin: 35px 0;
   background: var(--accent1-color);
-  border: solid var(--accent2-color)1px;
+  border: solid var(--accent2-color) 1px;
 }
 
-header > h1, header > h2 {
+header > h1,
+header > h2 {
   color: var(--headline-color-on-color);
 }
 
@@ -132,7 +148,7 @@ p {
   background-color: var(--accent1-color);
   font-family: var(--paragraph-font);
 }
-.colors td{
+.colors td {
   width: 25%;
   height: 3em;
   font-family: var(--paragraph-font);
@@ -147,10 +163,10 @@ p {
 .accent1 {
   background-color: var(--accent1-color);
 }
-.accent2{
+.accent2 {
   background-color: var(--accent2-color);
 }
-.background{
+.background {
   background-color: var(--background);
 }
 p.colored {
@@ -159,26 +175,24 @@ p.colored {
 }
 
 nav {
-  background-color: var(--nav-background-color);  
-  text-align: center;  
+  background-color: var(--nav-background-color);
+  text-align: center;
   list-style-type: none;
   display: flex;
   font-family: var(--paragraph-font);
   justify-content: space-around;
   align-content: center;
-
 }
-nav a {    
-  text-decoration: none;  
+nav a {
+  text-decoration: none;
   font-size: 1em;
-  
 }
-a{
+a {
   text-decoration: none;
   color: var(--accent2-color);
-
 }
-nav a:link, nav a:visited {
+nav a:link,
+nav a:visited {
   color: var(--nav-link-color);
 }
 nav a:hover {
@@ -192,15 +206,14 @@ nav a:hover {
 
   grid-template-columns: repeat(6, 15%);
   grid-template-rows: 3em 1.5em 1.5em 3em;
-  grid-template-areas: ". . home home . ."
+  grid-template-areas:
+    ". . home home . ."
     ". . . top . ."
     ". left left right right ."
     "page2 page2 . . page3 page3";
 }
 .sitemap > div {
-
   text-align: center;
-
 }
 .sm-home {
   grid-area: home;
@@ -221,29 +234,42 @@ nav a:hover {
   line-height: 3em;
   font-family: var(--paragraph-font);
 }
-.centered{
+.centered {
   display: flex;
   justify-content: center;
 }
 .top_fixo {
   position: absolute;
-  top: 75px;  
+  top: 75px;
   text-align: center;
   margin: 0 auto;
 }
-.summary{
+.summary {
   font-family: var(--heading-font);
   font-weight: bolder;
   color: var(--accent1-color);
   background-color: var(--secondary-color);
   padding: 5px;
 }
-.space{
+.space {
   height: 65px;
 }
-.lefted{
-  position:absolute;
+.lefted {
+  position: absolute;
   top: 150px;
   text-align: left;
   z-index: 2;
+}
+
+.imgderecha {
+  display: grid;
+  grid-template-columns: 4fr minmax(200px, 2fr);
+}
+.imgderecha img {
+  width: 100%;
+}
+@media only screen and (max-width: 400px) {
+  .imgderecha {
+    grid-template-columns: 1fr;
+  }
 }
