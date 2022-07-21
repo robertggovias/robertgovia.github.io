@@ -89,8 +89,8 @@ section {
   width: 30px;
 }
 .logo {
-  height: 60px;
-  width: 120px;
+  
+  width: 80px;
   max-width: 100%;
   justify-content: flex-end;
 }
