@@ -82,7 +82,10 @@
         
             // Our built-in 'ground' shape.
             var ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 6, height: 6}, scene);
-        
+            SceneLoader.ImportMesh( "",  "./models/",  "tesora-patent.glb",  this.scene,  (meshes) => {console.log("meshes", meshes);});
+            const { meshes } = await SceneLoader.ImportMeshAsync("","./models/", "tesora-patent.glb" );
+
+    console.log("meshes", meshes);
             /*var button = document.createElement("button");
             button.style.top = "100px";
             button.style.right = "30px";
