@@ -8,14 +8,14 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { StandarMaterials } from '@/BabylonExamples/StandarMaterials'; 
+import { StandardMaterials } from '@/BabylonExamples/StandardMaterials'; 
 
 
 export default defineComponent({
   name: 'BabylonExamples',
   mounted(){
     const canvas = document.querySelector("canvas")!;
-    new StandarMaterials(canvas);
+    new StandardMaterials(canvas);
   }
 });
 </script>

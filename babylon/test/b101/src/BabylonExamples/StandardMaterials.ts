@@ -1,5 +1,5 @@
-import { Scene, Engine, ThinEngine, Camera, FreeCamera, Vector3, HemisphericLight, MeshBuilder, StandardMaterial } from "@babylonjs/core";
-export class StandarMaterials {
+import { Scene, Engine, ThinEngine, Camera, FreeCamera, Vector3, HemisphericLight, MeshBuilder, StandardMaterial, Texture } from "@babylonjs/core";
+export class StandardMaterials {
     scene: Scene;
     engine: Engine;
     constructor(private canvas:HTMLCanvasElement){
@@ -26,18 +26,19 @@ export class StandarMaterials {
         ball.position = new Vector3(0,1,0);
         
         ground.material = this.CreateGroundMaterial();
-        ball.material = this.CreateBallMaterial();
+        //ball.material = this.CreateBallMaterial();
         return scene;
     }
 
     CreateGroundMaterial(): StandardMaterial{
         const groundMat = new StandardMaterial("groundMat", this.scene);
+        const diffuseTex = new Texture("./textures/stone/stone_diffuse.jpg",this.scene);
+        groundMat.diffuseTexture = diffuseTex;
+
         return groundMat;
     }
 
-    CreateBallMaterial(): StandardMaterial{
-        
-    }
+    //CreateBallMaterial(): StandardMaterial{    }
 
 
 

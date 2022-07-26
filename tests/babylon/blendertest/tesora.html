@@ -37,27 +37,27 @@
     <canvas id="renderCanvas"></canvas>
  
  <script>
-    if (BABYLON.Engine.isSupported()) {
+    BABYLON.SceneLoader.ShowLoadingScreen = false;
+    
         var canvas = document.getElementById("renderCanvas");
         var engine = new BABYLON.Engine(canvas, true);
-
-        BABYLON.SceneLoader.Load("", "mono.babylon", engine, function (newScene) {
-            // Wait for textures and shaders to be ready
+        BABYLON.SceneLoader.Load("", "tesora-patent.babylon", engine, function (newScene){
             var Scene = newScene;
             Scene.executeWhenReady(function () {
-                // Attach camera to canvas inputs
-                Scene.activeCamera.attachControl(canvas);
-
-
                 // Once the scene is loaded, just register a render loop to render it
                 engine.runRenderLoop(function() {
                     Scene.render();
                 });
             });
-        }, function (progress) {
-            // To do: give progress feedback to user
+
         });
-    }
+
+        window.addEventListener("resize",function(){
+            engine.resize();
+        } );
+
+        
+    
 </script>
 </body>
 </html>
