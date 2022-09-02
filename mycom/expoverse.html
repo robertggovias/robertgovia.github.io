@@ -1,1 +1,224 @@
-hello
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="../../../three.png">
+    <title>Use environment maps to create fake reflections</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Overflow hiding */
+        }
+
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            color: #FFFFFF;
+            font-size: 20px;
+            margin-top: -30px;
+            margin-left: -40px;
+        }
+    </style>
+    <script src="../../libs/build/three-r93.js"></script>
+    <script src="../../libs/examples/js/Detector.js"></script>
+    <script src="../../libs/examples/js/libs/dat.gui.min.js"></script>
+    <script src="../../libs/examples/js/libs/stats.min.js"></script>
+    <script src="../../libs/examples/js/controls/OrbitControls.js"></script>
+    <script src="../../libs/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+<p id="loading">loading......</p>
+<script>
+
+    let scene, camera, renderer, controls, guiControls;
+    let stats = initStats();
+
+    /* scene */
+    function initScene() {
+
+        scene = new THREE.Scene();
+        scene.background = new THREE.CubeTextureLoader().setPath('../../textures/cube/Park2/')
+            .load( [
+                'posx.jpg',
+                'negx.jpg',
+                'posy.jpg',
+                'negy.jpg',
+                'posz.jpg',
+                'negz.jpg'
+            ] );
+
+    }
+
+    /* camera */
+    function initCamera() {
+
+        camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 10000);
+        camera.position.set(0, 10, 100);
+        camera.lookAt(new THREE.Vector3(0, 0, 0));
+
+    }
+
+    /* Renderer */
+    function initRender() {
+
+        renderer = new THREE.WebGLRenderer({antialias: true});
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        document.body.appendChild(renderer.domElement);
+
+    }
+
+    /* lighting */
+    function initLight() {
+
+        scene.add(new THREE.AmbientLight(0xffffff, 0.6));
+
+        let spotLight1 = new THREE.SpotLight(0xffffff);
+        spotLight1.position.set(-400, -400, -400);
+
+        let spotLight2 = new THREE.SpotLight(0xffffff);
+        spotLight2.position.set(400, 400, 400);
+
+        scene.add(spotLight1);
+        scene.add(spotLight2);
+
+    }
+
+    /* Controller */
+    function initControls() {
+
+        /* Map control */
+        controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        /* attribute parameter */
+
+    }
+
+    /* Debug plug-in */
+    function initGui() {
+
+        guiControls = new function () {
+
+
+        };
+
+        let gui = new dat.GUI();
+
+    }
+
+    /* Content in the scene */
+    function initContent() {
+
+        let material = new THREE.MeshPhongMaterial();
+        material.envMap = scene.background;
+
+        let sphereGeometry = new THREE.SphereGeometry(20, 60, 60);
+
+
+        let boxGeometry = new THREE.BoxGeometry(30, 30, 30);
+        let box = new THREE.Mesh(boxGeometry, material);
+
+        let sphere = new THREE.Mesh(sphereGeometry, material);
+        sphere.translateX(-45);
+        box.translateX(45);
+
+        let loader = new THREE.GLTFLoader();
+        loader.load('../../models/gltf/DamagedHelmet/glTF/DamagedHelmet.gltf', function (gltf) {
+
+            gltf.scene.traverse(function (child) {
+
+                if (child.isMesh) {
+                    child.scale.set(25, 25, 25);
+                    child.material.envMap = scene.background;
+                }
+
+            });
+
+            scene.add(gltf.scene);
+            scene.add(box);
+            scene.add(sphere);
+
+            removeLoading();
+
+        });
+
+    }
+
+    /* Remove load element */
+    function removeLoading() {
+
+        document.getElementById('loading').style.display = 'none';
+
+    }
+
+    /* Performance plug-ins */
+    function initStats() {
+
+        let stats = new Stats();
+
+        document.body.appendChild(stats.domElement);
+
+        return stats;
+
+    }
+
+    /* Window change trigger */
+    function onWindowResize() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+    }
+
+    /* Data updating */
+    function update() {
+
+        stats.update();
+
+        controls.update();
+
+
+    }
+
+    /* Initialization */
+    function init() {
+
+        if (!Detector.webgl) Detector.addGetWebGLMessage();
+
+        initScene();
+        initCamera();
+        initRender();
+        initLight();
+        initControls();
+        initContent();
+        initGui();
+
+        /* Monitoring events */
+        window.addEventListener('resize', onWindowResize, false);
+
+    }
+
+    /* Circular rendering */
+    function animate() {
+
+        requestAnimationFrame(animate);
+        renderer.render(scene, camera);
+        update();
+
+    }
+
+    /* Initial loading */
+    (function () {
+        console.log("three init start...");
+
+        init();
+        animate();
+
+        console.log("three init end...");
+    })();
+
+</script>
+</body>
+</html>
