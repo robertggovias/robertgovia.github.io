@@ -7,6 +7,7 @@ ytriggernome = 265
 ywritenome = 200
 ycolor = 289
 suma = 19
+oi = 23
 def createName():    
     
     pyautogui.moveTo(x=1139, y=ynome)
