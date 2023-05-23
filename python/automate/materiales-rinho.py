@@ -27,8 +27,13 @@ def createName():
 
 
 
+for ja in range(9):
+    ynome = ynome + suma
+    ytriggernome = ytriggernome + suma
+    ywritenome = ywritenome + suma
+    ycolor = ycolor + suma
 
-for i in range(10):
+for i in range(19):
     createName()  
     ynome = ynome + suma
     ytriggernome = ytriggernome + suma
