@@ -5,9 +5,9 @@ pyautogui.hotkey("alt", "tab")
 
 def takeOfLInes():
     with pyautogui.hold('shift'):
-        pyautogui.press(['end','down','delete'])
+        pyautogui.press(['end','delete'])
     pyautogui.press('delete')
     for i in range (2):
         pyautogui.press("down")                
-for i in range (29):
+for i in range (10):
     takeOfLInes()
