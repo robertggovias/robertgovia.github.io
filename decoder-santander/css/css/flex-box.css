@@ -1,0 +1,46 @@
+.flex-container{
+    height: 100vh;
+    display: flex;
+    /*la suma de flex-wrap y flex direction es felx-flow
+    flex-wrap: wrap-reverse;
+    flex-direction: column;*/
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: space-around;
+    align-items: center;
+    row-gap: 1%;
+    column-gap: 1%;
+    gap: 5rem 2rem;
+
+
+}
+.flex-container > div {
+    /*flex: 1;
+    ajusta para que aprovechentodo el espacio interno
+    */
+    background-color: cornflowerblue;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 15px;
+    
+    /* para que tenga el mismo numero de cajas en cada linea*/
+    flex-basis: 20%;
+    
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    
+
+}
+.flex-container > div:nth-child(3){
+    order: -1;
+    background-color: rebeccapurple;
+}
+.flex-container > div:nth-child(5){
+    order: -2;
+    background-color: rebeccapurple;
+}
+.flex-container > div:nth-child(9){
+    order: -3;
+    background-color: rebeccapurple;
+}
