@@ -9,5 +9,5 @@ def takeOfLInes():
     pyautogui.press('delete')
     for i in range (2):
         pyautogui.press("down")                
-for i in range (20):
+for i in range (17):
     takeOfLInes()

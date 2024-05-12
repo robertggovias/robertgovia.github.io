@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap');
+$big:2em;
+$mid:1.5em;
+$smid:1.1em;
+$small:0.8em;
+p, h1, h2, div{font-family: 'Baloo Chettan 2', cursive;}
+ul{
+    display: inline;
+}
+.section-title{
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1em 2em; 
+}
+
+.apt-title{font-size:$mid;}
+.apt-enderço{}
+.apt-desc, .apt-check{
+    width: 100%;
+    font-size: $small;    
+}
+.apt-check{
+    font-size: $small;    
+}
+.apt-espaço:after{content:" m²";}
+.apt-quartos:after{content:" Quartos";}
+.apt-banheiros:after{content:" Banheiros";}
+.apt-vagas:after{content:" Vaga";}
+.apt-checks{}
+.apt-check{}
+.apt-preço{font-size: $big;}
+.apt-condominio{}
+.apt-preço:before{content: "R$ ";}
+.apt-final{}
+.apt-condominio:before{content: "Condominio R$ ";}
+.apt-logo{}
+@media only screen and (min-width: 600px) {
+    .apt-desc, .apt-check{font-size:1em;}
+}

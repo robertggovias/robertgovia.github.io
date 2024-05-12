@@ -1,0 +1,151 @@
+header {
+    display: none;
+}
+
+nav {
+    display: none;
+}
+
+ul {
+    display: inline;
+}
+
+.section-title {
+    display: none;
+}
+
+.apt-inf {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+}
+
+article {
+    margin: 0 auto;
+    
+    
+}
+
+.apt-img img {
+    height: 100%;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.apt-img {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.apt-title {}
+
+.apt-endereço {}
+
+.apt-details {
+    flex-shrink: 0;
+}
+
+.apt-espaço, .apt-quartos, .apt-banheiros, .apt-vagas,
+{
+    display: inline-block;
+}
+
+.apt-check {
+    padding: .05em .5em;
+    border-radius: 1em;
+    margin: 0.1em .2em;
+    display: inline;
+    line-height: 1em;
+}
+.apt-espaço {
+    padding: 0.5em;
+}
+
+.apt-quartos {
+    padding: .5em;
+}
+
+.apt-banheiros {
+    padding: .5em;
+}
+
+.apt-vagas {
+    padding: .5em;
+}
+
+.apt-final {
+    display: flexbox;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.apt-custo {
+    float: left;
+}
+
+.apt-preço {}
+
+.apt-condominio {}
+
+.apt-logo {
+    float: right;
+}
+.agir {
+    display:none;
+}
+@media only screen and (min-width: 600px) {
+    article {
+        display: grid;
+        grid-template-columns: 1.5fr 2fr;
+        column-gap: 1em;
+        height: 237px;
+        max-width: 1000px;
+    }
+
+    .apt-img {
+        height: 237px;
+        max-width: 100%;
+        height: 100%;
+    }    
+
+    .apt-inf {
+        flex-direction: column;
+    }
+    .right-corner img{
+        display: none;
+     }
+     .right-corner {
+         float: right;
+
+     }
+    .agir {
+        display:inline-flex;
+        align-self: flex-end;}
+    
+
+.boton{
+    padding: .5em;
+    border: solid 1px orange;
+}   
+
+
+    
+}
+
+@media only screen and (min-width: 800px) {
+    .agir {
+        display: none;
+    }
+    
+
+}
+
+/*detalhes
+    boton
+    contatar
+    mapa*/
