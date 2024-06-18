@@ -1,0 +1,20 @@
+Marca,Modelo,Precio (aproximado),Giroscopio,Compatibilidad con Controles Bluetooth,Acelerómetro,Magnetómetro,Barómetro,Procesador,Durabilidad,Dureza de pantalla,Resistencia a caídas (metros),Resistencia al agua,Tamaño de pantalla (pulgadas),FPS,Saludable para los ojos,Mejora VR con cámara trasera,Reconocimiento de manos,Seguimiento de posición 3D,Cámara (Estabilización, Colores Reales, Resolución, FPS),Batería (mAh),RAM (GB)
+Samsung,Gear VR,400,Sí,Sí,Sí,Sí,Sí,Exynos 7420,Alta,3 Mohs,0.4,No,4.2,60,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 60),2600,2
+LG,360 VR,300,Sí,Sí,Sí,Sí,Sí,Snapdragon 821,Media,3 Mohs,0.4,No,5.2,60,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 60),2300,2
+HTC,Vive Pro 2,800,Sí,Sí,Sí,Sí,Sí,Snapdragon 835,Alta,3 Mohs,0.4,No,5.6,120,Sí,Sí,Sí,Sí,(Sí, Sí, 2448x2448, 120),4200,6
+Oculus,Rift S,400,Sí,Sí,Sí,Sí,Sí,Intel Core i5-7300HQ,Media,3 Mohs,0.4,No,5.4,80,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 80),3600,8
+Sony,PlayStation VR,400,Sí,Sí,Sí,Sí,Sí,AMD Jaguar 8-core,Media,3 Mohs,0.4,No,5.7,90,Sí,Sí,Sí,Sí,(No, No, 1920x1080, 90),3000,4
+Huawei,FreeSpace VR,300,Sí,Sí,Sí,Sí,Sí,Kirin 970,Media,2.5 Mohs,0.5,No,6.2,60,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 60),3700,4
+Lenovo,Mirage Solo,400,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 835,Media,3 Mohs,0.4,No,5.5,70,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 70),4000,4
+Pico,G2 4K,600,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 835,Alta,3 Mohs,0.5,No,5.5,120,Sí,Sí,Sí,Sí,(Sí, Sí, 4000x2000, 120),5500,6
+Nreal,Light,500,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 870,Media,3 Mohs,0.5,No,5.2,90,Sí,Sí,Sí,Sí,(Sí, Sí, 2560x1440, 90),4200,6
+DPVR,P1 4K,400,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 835,Media,3 Mohs,0.5,No,5.8,90,Sí,Sí,Sí,Sí,(Sí, Sí, 4000x2000, 90),4500,6
+Lynx,R-1,800,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 835,Alta,3 Mohs,0.5,No,5.5,120,Sí,Sí,Sí,Sí,(Sí, Sí, 2560x1440, 120),5600,8
+VRGlasses,Bobo Z4,300,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 835,Media,3 Mohs,0.4,No,5.3,60,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 60),3000,4
+Arpara,Nomad,600,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 870,Media,3 Mohs,0.5,No,5.2,90,Sí,Sí,Sí,Sí,(Sí, Sí, 2560x1440, 90),4600,6
+Miramax,G1,400,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon 821,Media,3 Mohs,0.4,No,5.3,60,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 60),3500,4
+HTC,Vive Focus 3,1300,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon XR2,Alta,3 Mohs,0.5,No,5.5,120,Sí,Sí,Sí,Sí,(Sí, Sí, 2448x2448, 120),6100,6
+Oculus,Quest 2,300,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon XR2,Media,3 Mohs,0.4,No,5.4,90,Sí,Sí,Sí,Sí,(No, No, 2560x1440, 90),3600,6
+Pico,Neo 3,500,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon XR2,Media,3 Mohs,0.5,No,5.5,90,Sí,Sí,Sí,Sí,(Sí, Sí, 3840x2160, 90),5300,8
+Nreal,Air,600,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon XR2,Media,3 Mohs,0.5,No,5.2,90,Sí,Sí,Sí,Sí,(Sí, Sí, 2560x1440, 90),4200,6
+Lynx,Lynx R-1 Pro,1000,Sí,Sí,Sí,Sí,Sí,Qualcomm Snapdragon XR2,Alta,3 Mohs,0.5,No,5.5,120,Sí,Sí,Sí,Sí,(Sí, Sí, 2560x1440, 120),5600,8

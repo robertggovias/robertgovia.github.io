@@ -9,5 +9,5 @@ def takeOfLInes():
     pyautogui.press('space')
     pyautogui.press('home')
     
-for i in range (17):
+for i in range (19):
     takeOfLInes()
