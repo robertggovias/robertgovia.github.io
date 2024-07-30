@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Collision with Emoji</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #console {
+            width: 300px;
+            height: 200px;
+            background-color: #000;
+            position: relative;
+            overflow: hidden;
+        }
+        .color {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        #emoji {
+            position: absolute;
+            font-size: 24px;
+            cursor: pointer;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="console">
+        <div id="color1" class="color"></div>
+        <div id="color2" class="color"></div>
+        <div id="color3" class="color"></div>
+        <div id="color4" class="color"></div>
+        <div id="emoji"></div>
+    </div>
+
+    <script>
+        const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+        const emojis = ['😀', '😎', '🤩', '🚀', '🌈', '🎉', '🦄', '🍕'];
+        const console = document.getElementById('console');
+        const color1 = document.getElementById('color1');
+        const color2 = document.getElementById('color2');
+        const color3 = document.getElementById('color3');
+        const color4 = document.getElementById('color4');
+        const emojiElement = document.getElementById('emoji');
+
+        function getRandomColor() {
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        function getRandomEmoji() {
+            return emojis[Math.floor(Math.random() * emojis.length)];
+        }
+
+        function updateColors() {
+            color1.style.backgroundColor = getRandomColor();
+            color2.style.backgroundColor = getRandomColor();
+            color3.style.backgroundColor = getRandomColor();
+            color4.style.backgroundColor = getRandomColor();
+        }
+
+        function updateEmoji() {
+            emojiElement.textContent = getRandomEmoji();
+            emojiElement.style.left = `${Math.random() * (console.clientWidth - 24)}px`;
+            emojiElement.style.top = `${Math.random() * (console.clientHeight - 24)}px`;
+        }
+
+        function animate() {
+            let x1 = 0, y1 = 0;
+            let x2 = console.clientWidth - 50, y2 = 0;
+            let x3 = 0, y3 = console.clientHeight - 50;
+            let x4 = console.clientWidth - 50, y4 = console.clientHeight - 50;
+            let dx1 = 2, dy1 = 1.5;
+            let dx2 = -2, dy2 = 1.5;
+            let dx3 = 2, dy3 = -1.5;
+            let dx4 = -2, dy4 = -1.5;
+
+            function move() {
+                x1 += dx1;
+                y1 += dy1;
+                x2 += dx2;
+                y2 += dy2;
+                x3 += dx3;
+                y3 += dy3;
+                x4 += dx4;
+                y4 += dy4;
+
+                if (x1 < 0 || x1 > console.clientWidth - 50) dx1 = -dx1;
+                if (y1 < 0 || y1 > console.clientHeight - 50) dy1 = -dy1;
+                if (x2 < 0 || x2 > console.clientWidth - 50) dx2 = -dx2;
+                if (y2 < 0 || y2 > console.clientHeight - 50) dy2 = -dy2;
+                if (x3 < 0 || x3 > console.clientWidth - 50) dx3 = -dx3;
+                if (y3 < 0 || y3 > console.clientHeight - 50) dy3 = -dy3;
+                if (x4 < 0 || x4 > console.clientWidth - 50) dx4 = -dx4;
+                if (y4 < 0 || y4 > console.clientHeight - 50) dy4 = -dy4;
+
+                color1.style.left = `${x1}px`;
+                color1.style.top = `${y1}px`;
+                color2.style.left = `${x2}px`;
+                color2.style.top = `${y2}px`;
+                color3.style.left = `${x3}px`;
+                color3.style.top = `${y3}px`;
+                color4.style.left = `${x4}px`;
+                color4.style.top = `${y4}px`;
+
+                requestAnimationFrame(move);
+            }
+
+            move();
+        }
+
+        updateColors();
+        updateEmoji();
+        animate();
+
+        emojiElement.addEventListener('click', () => {
+            updateColors();
+            updateEmoji();
+        });
+    </script>
+</body>
+</html>
