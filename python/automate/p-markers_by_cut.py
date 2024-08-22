@@ -13,5 +13,5 @@ def marcar():
     pyautogui.PAUSE = .4
     pyautogui.press("m")
 
-for i in range(21):
+for i in range(37):
     marcar()
