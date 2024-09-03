@@ -9,5 +9,5 @@ def pepe():
     pyautogui.press('down')
     pyautogui.press('delete')    
 
-for i in range(62):
+for i in range(6):
     pepe()
