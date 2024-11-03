@@ -14,5 +14,5 @@ def marcar():
     pyautogui.click(x=593, y=938)    
     pyautogui.press("m")
 
-for i in range(30):
+for i in range(8MM0):
     marcar()

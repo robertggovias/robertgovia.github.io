@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente Servicios</title>
+    <script src="test_opp.js" defer></script>
+    <script>
+        function mostrarServiciosCliente() {
+            // Llama al método mostrarServicios de cliente1
+            const servicios = cliente1.mostrarServicios();
+            console.log(servicios);  // Imprimir en la consola
+            document.getElementById("output").innerText = servicios;  // Mostrar en HTML
+        }
+    </script>
+</head>
+<body onload="mostrarServiciosCliente()">
+    <h1>Servicios adquiridos por el cliente</h1>
+    <div id="output"></div>
+</body>
+</html>

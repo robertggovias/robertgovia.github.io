@@ -10,5 +10,5 @@ def marcar():
     pyautogui.hotkey("shift","down")    
     pyautogui.press("m")
 
-for i in range(27):
+for i in range(12):
     marcar()

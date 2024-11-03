@@ -5,5 +5,5 @@ def pepinho():
     pyautogui.hotkey('shift','m')
     pyautogui.hotkey('ctrl','k')
 
-for i in range(30):
+for i in range(70):
     pepinho()

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div>Elemento 1</div>
+  <span>Elemento 2</span>
+  <ul>
+    <li>Elemento 3</li>
+  </ul>
+  <script>
+    const body = document.body;
+    //alert("Cantidad de hijos: " + body.childNodes.length); 
+    //alert("Último elemento hijo: " + body.lastChild);
+    //alert("Último elemento hijo: " + body.lastChild);
+    //alert("hermano de head: " + document.head.nextSibling);
+    //alert("hermano de preivio body: " + document.body.previousSibling);
+    //for (let node of body.childNodes){
+    //alert(node);    
+    //}
+    for (let i of body.children){
+        alert(i);    
+    }
+    //Por favor, no lo hagas. El for..inbucle itera sobre todas las propiedades enumerables. Y las colecciones tienen algunas propiedades "adicionales" que rara vez se usan y que, por lo general, no queremos obtener: 
+    //for (let prop in body.childNodes) alert(prop);
+    //alert(Array.from(body.childNodes).filter);
+  </script>
+  
+</body>
+</html>

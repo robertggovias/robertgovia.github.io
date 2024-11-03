@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div>Primero</div>
+  <ul>
+    <li>Elemento 1</li>
+    <li>Elemento 2</li>
+  </ul>
+  <div>Último</div>
+  
+  <script>
+    const body = document.body;
+    alert("Cantidad de hijos en body: " + body.childNodes.length);
+    alert("Primer hijo: " + body.firstChild.tagName);  // Muestra el primer hijo de <body>
+    alert("Último hijo: " + body.lastChild.tagName);   // Muestra el último hijo de <body>
+  </script>
+</body>
+</html>
