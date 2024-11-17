@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    
+</head>
+<body>
+    <h1 id="countdown"></h1>
+    <button id="startingButton">Start</button>
+
+
+
+    <script>
+        //let counting = document.getElementById("countdown");
+        var startT = 10;
+        let trying = document.getElementById("countdown");
+        const startTbuton = document.getElementById("startingButton");
+        
+        startTbuton.addEventListener('clic', ()=>{
+            setInterval (()=>{
+                trying.textContent = startT;
+                startT--;
+            },1000);
+        });
+        
+
+
+    </script>
+</body>
+
+</html>

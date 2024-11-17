@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product List</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Product Catalog</h1>
+  </header>
+  <main>
+    <!-- Template for the product card -->
+    <template id="product-template">
+      <div class="product-card">
+        <img src="" alt="Product Image" class="product-image">
+        <h2 class="product-name"></h2>
+        <p class="product-description"></p>
+        <div class="product-details">
+          <span class="brand"></span>
+          <span class="price"></span>
+        </div>
+      </div>
+    </template>
+
+    <!-- Container for the dynamically generated product list -->
+    <section id="product-list"></section>
+  </main>
+  <script src="template_literal_html.js" type="module"></script>
+</body>
+</html>

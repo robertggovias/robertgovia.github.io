@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic JSON Template</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px;
+            width: 300px;
+            text-align: center;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Product List</h1>
+    <!-- Template -->
+    <template id="product-template">
+        <div class="card">
+            <img src="" alt="Product Image">
+            <h2></h2>
+            <p class="description"></p>
+            <p><strong>Price:</strong> $<span class="price"></span></p>
+        </div>
+    </template>
+
+    <!-- Container where cards will appear -->
+    <div id="product-list"></div>
+
+    <script>
+        // JSON Data
+        const products = [
+            {
+                "Id": "880RR",
+                "Name": "Marmot Ajax Tent - 3-Person, 3-Season",
+                "Image": "../images/tents/marmot-ajax-tent-3-person-3-season-in-pale-pumpkin-terracotta~p~880rr_01~320.jpg",
+                "DescriptionHtmlSimple": "Get out and enjoy nature with Marmot&#39;s Ajax tent...",
+                "FinalPrice": 199.99
+            },
+            {
+                "Id": "985RF",
+                "Name": "The North Face Talus Tent - 4-Person, 3-Season",
+                "Image": "../images/tents/the-north-face-talus-tent-4-person-3-season-in-golden-oak-saffron-yellow~p~985rf_01~320.jpg",
+                "DescriptionHtmlSimple": "Enjoy a fun night under the stars...",
+                "FinalPrice": 199.99
+            }
+        ];
+
+        // Use the template
+        const template = document.getElementById('product-template');
+        const container = document.getElementById('product-list');
+
+        products.forEach(product => {
+            const clone = template.content.cloneNode(true);
+            clone.querySelector('img').src = product.Image;
+            clone.querySelector('img').alt = product.Name;
+            clone.querySelector('h2').textContent = product.Name;
+            clone.querySelector('.description').innerHTML = product.DescriptionHtmlSimple;
+            clone.querySelector('.price').textContent = product.FinalPrice;
+            container.appendChild(clone);
+        });
+    </script>
+</body>
+</html>
