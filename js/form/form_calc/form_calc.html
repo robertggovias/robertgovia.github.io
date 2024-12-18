@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head><link rel="stylesheet" href="style.css">
+    <script src="form_calc.js"></script></head>
+<header>
+	<h1>Example Form Layout using CSS Grid</h1>
+    
+</header>
+<main>
+	<h3>Future Value</h3>
+	<div class="gridform">
+		<label for="principle">Principle: </label>
+		<input
+        required type="number" id="principle">
+        <label for="again_principle">Enter the Principle amount again for verification: </label>
+		<input required type="number" id="again_principle">
+		<label for="annualrate">Annual rate: </label>
+		<input min="0" max="1" type="number" id="annualrate" placeholder=".08">
+		<label for="years">Years:  </label>
+		<input type="number" id="years">
+		<label for="periods">Periods: </label>
+		<input type="number" id="periods">
+	</div>
+	<button onclick="doFV()">Compute Future Value</button>
+	<hr> Future Value: <span id="output"></span>
+</main>
+
+<footer>
+	&copy;<span id="theyear"></span> • Antonia Francesca • Utah • WDD</footer>
+
+    </html>

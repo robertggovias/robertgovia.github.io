@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>Vincular elemento SELECT com JSON via JavaScript</title>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" 
+integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" 
+crossorigin="anonymous"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" 
+integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" 
+crossorigin="anonymous">
+    <script>
+        function popularSelect() {
+            // O Array JSON
+            var estados = [
+                {
+                    "ID": "001",
+                    "Nome": "São Paulo"
+                },
+                {
+                    "ID": "002",
+                    "Nome": "Rio de Janeiro"
+                },
+                {
+                    "ID": "003",
+                    "Nome": "Minas Gerais"
+                },
+                {
+                    "ID": "004",
+                    "Nome": "Curitiba"
+                },
+                {
+                    "ID": "005",
+                    "Nome": "Porto Alegre"
+                },
+            ];
+            var ele = document.getElementById('sel');
+            for (var i = 0; i < estados.length; i++) {
+                // Popular SELECT com JSON.
+                ele.innerHTML = ele.innerHTML +
+                    '<option value="' + estados[i]['ID'] + '">' + estados[i]['Nome'] + '</option>';
+            }
+        }
+        function show(ele) {
+            // Obtém o valor Selecionado a partir do elemento <select> e exibe
+            var msg = document.getElementById('msg');
+            msg.innerHTML = 'Estado selecionado: <b>' + ele.options[ele.selectedIndex].text + '</b> </br>' +
+                'ID: <b>' + ele.value + '</b>';
+        }
+    </script>
+</head>
+<body>
+    <p>
+        <input type="button" 
+               class="btn btn-info"
+               onclick="popularSelect()"
+               value="Popular SELECT via JSON" />
+    </p>
+    <select class="custom-select" id="sel" onchange="show(this)">
+        <option value="">-- Selecione o estado --</option>
+    </select>
+    <p id="msg"></p>
+</body>
+</html>
