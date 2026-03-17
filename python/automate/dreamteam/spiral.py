@@ -19,5 +19,5 @@ def spiral():
     pyautogui.moveTo(x=1038, y=1201, duration=0.5)
     # pyautogui.press("esc")
 
-for i in range(300):
+for i in range(301):
     spiral()
